@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.default_lang }}" dir="{{ site.data.i18n[page.lang].dir | default: 'ltr' }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+
+    <!-- hreflang for SEO -->
+    {% for lang in site.languages %}
+    <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}/{{ lang }}{{ page.permalink }}" />
+    {% endfor %}
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        nav { background: #2c3e50; padding: 1rem; }
+        nav a { color: white; margin-right: 1rem; text-decoration: none; }
+        .lang-switcher { margin: 1rem; padding: 0.5rem; }
+        {% if site.data.i18n[page.lang].dir == "rtl" %}
+          body { direction: rtl; text-align: right; }
+          nav a { margin-left: 1rem; margin-right: 0; }
+        {% endif %}
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/{{ page.lang }}/">{{ site.data.i18n[page.lang].home }}</a>
+    <a href="/{{ page.lang }}/safaris/">{{ site.data.i18n[page.lang].safaris }}</a>
+    <a href="/{{ page.lang }}/about/">{{ site.data.i18n[page.lang].about }}</a>
+    <a href="/{{ page.lang }}/contact/">{{ site.data.i18n[page.lang].contact }}</a>
+</nav>
+
+<main>
+    {{ content }}
+</main>
+
+<footer style="padding: 1rem; background: #ecf0f1; text-align: center;">
+    {{ site.data.i18n[page.lang].footer_copyright }}
+</footer>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+    <label for="lang-select">{{ site.data.i18n[page.lang].lang_name }}:</label>
+    <select id="lang-select" onchange="location = this.value">
+        {% for lang in site.languages %}
+        <option value="/{{ lang }}{{ page.url }}" {% if page.lang == lang %}selected{% endif %}>
+            {{ site.data.i18n[lang].lang_name }}
+        </option>
+        {% endfor %}
+    </select>
+</div>
+</body>
+</html>

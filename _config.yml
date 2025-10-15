@@ -1,0 +1,16 @@
+# Site settings
+title: Best Safari Adventures East-Africa
+email: bestsafariadventureseastafrica@gmail.com
+description: >-
+  Expert-guided safaris in Uganda, Rwanda, Kenya & Tanzania.
+baseurl: ""
+url: "https://OwenIgaLubeg.github.io"
+github_username: OwenIgaLubeg
+
+# Build settings
+markdown: kramdown
+theme: minima  # We’ll override this with our own layout soon
+
+# Multilingual setup
+default_lang: "en"
+languages: ["en", "fr", "de", "es", "pt", "nl", "ru", "ar"]
