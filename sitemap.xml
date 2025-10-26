@@ -43,28 +43,32 @@
 
     <!-- Gorilla Trekking -->
     <url>
-        <loc>https://bestsafariadventureseastafrica.com/en/gorilla-trekking-uganda/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://bestsafariadventureseastafrica.com/en/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://bestsafariadventureseastafrica.com/fr/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://bestsafariadventureseastafrica.com/de/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://bestsafariadventureseastafrica.com/es/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="pt" href="https://bestsafariadventureseastafrica.com/pt/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://bestsafariadventureseastafrica.com/nl/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://bestsafariadventureseastafrica.com/ru/gorilla-trekking-uganda/"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://bestsafariadventureseastafrica.com/ar/gorilla-trekking-uganda/"/>
+        <loc>https://bestsafariadventureseastafrica.com/en/gorilla-trekking/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bestsafariadventureseastafrica.com/en/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://bestsafariadventureseastafrica.com/fr/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://bestsafariadventureseastafrica.com/de/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://bestsafariadventureseastafrica.com/es/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://bestsafariadventureseastafrica.com/pt/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://bestsafariadventureseastafrica.com/nl/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bestsafariadventureseastafrica.com/ru/gorilla-trekking/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bestsafariadventureseastafrica.com/ar/gorilla-trekking/"/>
     </url>
 
-    <!-- existing pages -->
+    <!-- Park Pages (flat structure) -->
+    <url><loc>https://bestsafariadventureseastafrica.com/bwindi-impenetrable-forest/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/kibale-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/kidepo-valley-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/lake-mburo-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/mgahinga-gorilla-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/mt.elgon-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/mt.rwenzori-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/murchison-falls-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/queen-elizabeth-park/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/semuliki-park/</loc></url>
+
+    <!-- Itinerary Pages -->
     <url><loc>https://bestsafariadventureseastafrica.com/14days-bigfive/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/15days-serengeti/</loc></url>
-
-    <url><loc>https://bestsafariadventureseastafrica.com/blog/</loc></url>
-    <url><loc>https://bestsafariadventureseastafrica.com/blog-single/</loc></url>
-    <url><loc>https://bestsafariadventureseastafrica.com/car-services/</loc></url>
-
-    <url><loc>https://bestsafariadventureseastafrica.com/destination-single/</loc></url>
-    <url><loc>https://bestsafariadventureseastafrica.com/destinations/</loc></url>
-    <url><loc>https://bestsafariadventureseastafrica.com/gallery/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/itinerar-3day-masaiMara/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/itinerary1/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/itinerary2/</loc></url>
@@ -81,10 +85,17 @@
     <url><loc>https://bestsafariadventureseastafrica.com/itinerary13/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/itinerary202/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/itinerary212/</loc></url>
+
+    <!-- Destination & Package Pages -->
     <url><loc>https://bestsafariadventureseastafrica.com/kenya-destinations/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/rwanda-destinations/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/tanzania-destinations/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/tour-packages/</loc></url>
     <url><loc>https://bestsafariadventureseastafrica.com/tour-packages2/</loc></url>
+
+    <!-- Blog & Other -->
+    <url><loc>https://bestsafariadventureseastafrica.com/blog/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/gallery/</loc></url>
+    <url><loc>https://bestsafariadventureseastafrica.com/car-services/</loc></url>
 
 </urlset>
