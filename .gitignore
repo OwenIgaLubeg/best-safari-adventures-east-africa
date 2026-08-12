@@ -3,4 +3,8 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 node_modules
 dist
-.cache
+.cache.idea/
+.vscode/
+node_modules/
+.env
+Thumbs.db
