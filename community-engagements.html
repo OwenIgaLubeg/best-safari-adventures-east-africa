@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Authentic community engagement and cultural tourism experiences in East Africa. Visit local communities around national parks, participate in traditional activities, support sustainable community-based tourism in Uganda, Kenya, Tanzania, and Rwanda.">
+  <meta name="keywords" content="community engagement tourism East Africa, cultural tourism Uganda Kenya Tanzania Rwanda, village visits safari, community-based tourism, traditional cultural activities, sustainable tourism East Africa, local community experiences, cultural immersion tours">
+  <title>Community Engagement & Cultural Tourism | Best Safari Adventures East-Africa</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       PROVIDED CONSTANT FEATURES (Navbar, Footer, Colors, Fonts)
+    ====================================================== */
+    :root {
+      --color-safari-dark: #0E1B16;
+      --color-safari-darker: #08110E;
+      --color-safari-gold: #D4AF37;
+      --color-safari-gold-light: #F1D27A;
+      --color-safari-orange: #C85A17;
+      --color-safari-mint: #98D8AA;
+      --color-safari-mint-dim: rgba(152, 216, 170, 0.12);
+      --color-parchment: #FAF9F6;
+      --color-white: #FFFFFF;
+
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-mono: 'Cinzel', serif;
+
+      --container-max: 1280px;
+      --container-pad: 24px;
+      --radius-md: 8px;
+      --radius-pill: 999px;
+      --radius-sm: 4px;
+
+      --dur-fast: 0.2s;
+      --dur-base: 0.3s;
+      --dur-slow: 0.5s;
+      --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+      --shadow-md: 0 10px 30px -5px rgba(0,0,0,0.15), 0 8px 12px -6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.25), 0 15px 25px -10px rgba(0,0,0,0.15);
+      --shadow-warm: 0 15px 40px rgba(212, 175, 55, 0.2);
+      --shadow-mint: 0 20px 40px rgba(152, 216, 170, 0.25);
+
+      --border-on-dark: rgba(212, 175, 55, 0.18);
+      --border-hairline: rgba(0,0,0,0.08);
+      --fg-1: #1a1a1a;
+      --fg-2: #555555;
+      --fg-3: #888888;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--color-parchment); color: var(--fg-1); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad); }
+
+    /* ============ NAV ============ */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--color-safari-dark);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid var(--border-on-dark);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .nav-inner { display: flex; align-items: center; gap: 36px; height: 84px; }
+    .logo { display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 600; font-size: 20px; color: #fff; text-decoration: none; letter-spacing: -0.005em; }
+    .logo img { height: 50px; width: auto; display: block; flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+    .logo .logo-word { display: flex; flex-direction: column; line-height: 1; }
+    .logo .logo-word .lw-1 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--color-safari-gold-light); }
+    .logo .logo-word .lw-2 { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-safari-gold); text-transform: uppercase; margin-top: 4px; }
+
+    .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; margin-left: auto; }
+    .nav-links a { position: relative; color: rgba(255,255,255,0.78); padding: 6px 0; transition: color var(--dur-fast) var(--ease-standard); }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 0; background: var(--color-safari-gold); transition: width var(--dur-base) var(--ease-standard); }
+    .nav-links a:hover { color: var(--color-safari-gold-light); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a.active { color: var(--color-safari-gold-light); }
+
+    .nav-cta { margin-left: 24px; }
+    .nav-toggle { display: none; background: transparent; border: 0; color: #fff; padding: 8px; margin-left: auto; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 14px; padding: 13px 24px; border-radius: var(--radius-pill); border: 0; line-height: 1; text-decoration: none; transition: all var(--dur-base) var(--ease-standard); }
+    .btn-primary { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-primary:hover { background: var(--color-safari-gold-light); color: var(--color-safari-dark); box-shadow: var(--shadow-warm); }
+    .btn-primary.on-dark { box-shadow: var(--shadow-warm); }
+    .btn-secondary { background: transparent; border: 1.5px solid var(--color-safari-gold); color: var(--color-safari-gold); padding: 11.5px 22.5px; }
+    .btn-secondary:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-secondary.on-dark { border-color: #fff; color: #fff; }
+    .btn-secondary.on-dark:hover { background: #fff; color: var(--color-safari-dark); }
+    .btn-lg { padding: 16px 30px; font-size: 15px; }
+
+    /* ============ TRUST STRIP ============ */
+    .trust { background: var(--color-safari-darker); color: rgba(255,255,255,0.85); padding: 24px 0; border-top: 1px solid var(--border-on-dark); border-bottom: 1px solid var(--border-on-dark); }
+    .trust-inner { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
+    .trust-num { font-family: var(--font-mono); color: var(--color-safari-gold-light); font-weight: 600; font-size: 14px; }
+    .trust-sep { color: rgba(255,255,255,0.2); }
+
+    /* ============ SECTION SHARED ============ */
+    section { padding: clamp(72px, 10vw, 128px) 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 56px; flex-wrap: wrap; }
+    .section-head .left { max-width: 640px; }
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-safari-orange); display: inline-block; margin-bottom: 18px; }
+    .eyebrow.on-dark { color: var(--color-safari-gold-light); }
+    h2.section-title { font-family: var(--font-display); font-size: clamp(34px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.01em; font-weight: 600; margin: 0 0 16px; text-wrap: balance; }
+    .section-sub { font-size: 18px; color: var(--fg-2); line-height: 1.6; margin: 0; max-width: 580px; }
+    .on-dark .section-sub { color: rgba(255,255,255,0.72); }
+
+    /* ============ UNIQUE COMMUNITY PAGE STYLES ============ */
+
+    /* Hero with Video Background */
+    .community-hero {
+      position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 0;
+      background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD859F 100%);
+    }
+
+    /* Video Background Styling */
+    .community-video-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.35;
+      mix-blend-mode: overlay;
+      z-index: 1;
+    }
+
+    .community-hero-content {
+      position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px;
+    }
+    .community-hero-content h1 {
+      font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5.5rem); color: #fff;
+      margin-bottom: 1.5rem; text-shadow: 0 10px 40px rgba(0,0,0,0.4); line-height: 1.1;
+    }
+    .community-hero-content p {
+      font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.95);
+      font-style: italic; line-height: 1.6; margin-bottom: 2.5rem;
+    }
+    .hero-cultural-badges {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .cultural-badge {
+      background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+      padding: 12px 24px; border-radius: var(--radius-pill); color: #fff;
+      font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    /* Cultural Introduction */
+    .cultural-intro {
+      background: linear-gradient(180deg, #FFF8DC 0%, var(--color-parchment) 100%);
+      position: relative;
+    }
+    .cultural-intro::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px;
+      background: linear-gradient(90deg, #8B4513, #D2691E, #CD853F, #D2691E, #8B4513);
+    }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .intro-content h2 { font-family: var(--font-display); font-size: 2.5rem; color: var(--color-safari-dark); margin-bottom: 1.5rem; line-height: 1.2; }
+    .intro-content p { font-family: var(--font-display); font-size: 1.15rem; color: var(--fg-2); margin-bottom: 1.5rem; line-height: 1.8; font-style: italic; }
+    .intro-image {
+      position: relative; border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: 0 30px 60px rgba(139, 69, 19, 0.3);
+    }
+    .intro-image img { width: 100%; height: auto; transition: transform var(--dur-slow) var(--ease-standard); }
+    .intro-image:hover img { transform: scale(1.03); }
+    .intro-image::after {
+      content: ""; position: absolute; inset: 16px; border: 3px solid rgba(212, 175, 55, 0.4);
+      border-radius: 4px; pointer-events: none;
+    }
+
+    /* Community Cards - Unique Design */
+    .communities-section {
+      background: linear-gradient(180deg, var(--color-parchment) 0%, #FFF8DC 100%);
+      position: relative;
+    }
+    .communities-section::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px;
+      background: linear-gradient(90deg, #CD853F, #D2691E, #8B4513, #D2691E, #CD853F);
+    }
+    .communities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .community-card {
+      background: #fff; border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15);
+      transition: all var(--dur-slow) var(--ease-standard);
+      border-top: 5px solid #D2691E;
+    }
+    .community-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 60px rgba(139, 69, 19, 0.25);
+    }
+    .community-card-image {
+      height: 280px; overflow: hidden; position: relative;
+    }
+    .community-card-image img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform var(--dur-slow) var(--ease-standard);
+    }
+    .community-card:hover .community-card-image img { transform: scale(1.1); }
+    .community-card-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: #D2691E; color: #fff;
+      padding: 8px 16px; border-radius: var(--radius-pill);
+      font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .community-card-content { padding: 28px; }
+    .community-card-content h3 {
+      font-family: var(--font-display); font-size: 1.6rem;
+      color: var(--color-safari-dark); margin-bottom: 12px;
+    }
+    .community-card-content .location {
+      font-family: var(--font-mono); font-size: 0.85rem;
+      color: #D2691E; letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 16px; display: block;
+    }
+    .community-card-content p {
+      font-family: var(--font-display); font-size: 1rem;
+      color: var(--fg-2); line-height: 1.7; font-style: italic;
+      margin-bottom: 20px;
+    }
+    .activity-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .activity-list li {
+      padding: 8px 0; font-size: 0.95rem; color: var(--fg-2);
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    .activity-list li:last-child { border-bottom: none; }
+    .activity-list li::before {
+      content: "🌍"; font-size: 1.1rem;
+    }
+
+    /* Cultural Activities Section - Unique Zigzag Layout */
+    .activities-section {
+      background: linear-gradient(135deg, #F5DEB3 0%, #DEB887 100%);
+      position: relative;
+    }
+    .activities-section::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px;
+      background: linear-gradient(90deg, #8B4513, #D2691E, #CD853F, #D2691E, #8B4513);
+    }
+    .activity-block {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+      margin-bottom: 80px;
+    }
+    .activity-block:last-child { margin-bottom: 0; }
+    .activity-block.reverse { direction: rtl; }
+    .activity-block.reverse .activity-content { direction: ltr; }
+    .activity-image {
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: 0 25px 50px rgba(139, 69, 19, 0.25);
+      aspect-ratio: 4/3; position: relative;
+    }
+    .activity-image img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform var(--dur-slow) var(--ease-standard);
+    }
+    .activity-image:hover img { transform: scale(1.05); }
+    .activity-content h3 {
+      font-family: var(--font-display); font-size: 2.2rem;
+      color: var(--color-safari-dark); margin-bottom: 16px;
+    }
+    .activity-content p {
+      font-family: var(--font-display); font-size: 1.1rem;
+      color: var(--fg-2); line-height: 1.8; font-style: italic;
+      margin-bottom: 24px;
+    }
+    .activity-tags {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .activity-tag {
+      background: rgba(210, 105, 30, 0.15); color: #D2691E;
+      padding: 8px 16px; border-radius: var(--radius-pill);
+      font-family: var(--font-mono); font-size: 0.85rem;
+      font-weight: 600; border: 1px solid rgba(210, 105, 30, 0.3);
+    }
+
+    /* Impact Section */
+    .impact-section {
+      background: linear-gradient(135deg, var(--color-safari-dark) 0%, var(--color-safari-darker) 100%);
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .impact-section::before {
+      content: ""; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .impact-section .section-title { color: var(--color-safari-gold-light); }
+    .impact-section .section-sub { color: rgba(255,255,255,0.75); }
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .impact-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: var(--radius-md); padding: 32px 24px; text-align: center;
+      transition: all var(--dur-base); backdrop-filter: blur(10px);
+    }
+    .impact-card:hover {
+      background: rgba(255,255,255,0.08); border-color: var(--color-safari-gold);
+      transform: translateY(-6px);
+    }
+    .impact-icon { font-size: 3rem; margin-bottom: 16px; }
+    .impact-card .number {
+      font-family: var(--font-display); font-size: 2.5rem;
+      color: var(--color-safari-gold); font-weight: 700;
+      display: block; margin-bottom: 8px;
+    }
+    .impact-card .label {
+      font-family: var(--font-body); font-size: 0.9rem;
+      color: rgba(255,255,255,0.7); text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+      padding: 100px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+    .cta-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .cta-content h2 {
+      font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+      color: #fff; margin-bottom: 1.5rem;
+    }
+    .cta-content p {
+      font-family: var(--font-display); font-size: 1.3rem;
+      color: rgba(255,255,255,0.95); margin-bottom: 3rem;
+      font-style: italic; line-height: 1.6;
+    }
+
+    /* ============ FOOTER ============ */
+    footer.site-footer { background: var(--color-safari-darker); color: rgba(255,255,255,0.7); padding: 80px 0 28px; border-top: 1px solid var(--border-on-dark); }
+    .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+    .foot-brand .logo { margin-bottom: 18px; color: #fff; }
+    .foot-tagline { font-family: var(--font-display); font-style: italic; font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.4; margin: 0 0 22px; max-width: 280px; }
+    .foot-addr { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.55); font-style: normal; }
+    .foot-addr a { color: var(--color-safari-gold); }
+    .foot-col h4 { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-safari-gold); margin: 0 0 18px; }
+    .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .foot-col a { color: rgba(255,255,255,0.7); font-size: 14px; transition: color var(--dur-fast); }
+    .foot-col a:hover { color: var(--color-safari-gold-light); }
+    .foot-social { display: flex; gap: 12px; margin-top: 24px; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all var(--dur-base); }
+    .foot-social a:hover { border-color: var(--color-safari-gold); color: var(--color-safari-gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+    .foot-bottom { padding-top: 24px; border-top: 1px solid var(--border-on-dark); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.4); font-family: var(--font-mono); letter-spacing: 0.02em; }
+
+    /* Floating Elements */
+    .floating-whatsapp { position: fixed; right: 32px; bottom: 32px; z-index: 999; }
+    .whatsapp-btn { width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(37,211,102,0.4); border: 3px solid #fff; }
+    .whatsapp-btn img { width: 36px; height: 36px; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+
+    .floating-social { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 998; display: flex; flex-direction: column; gap: 8px; background: var(--color-safari-dark); padding: 12px 8px; border-radius: 0 8px 8px 0; border: 1px solid var(--border-on-dark); border-left: none; box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-safari-gold); font-size: 1.1rem; text-decoration: none; transition: all 0.3s; border-radius: 50%; }
+    .social-icon svg { width: 20px; height: 20px; }
+    .social-icon:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); transform: translateX(4px); }
+
+    /* =====================================================
+       PREMIUM SAFARI HAMBURGER MENU
+    ====================================================== */
+    .safari-menu-toggle {
+      position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; border: none; border-radius: 50%;
+      background: #0b3d2e; display: none; align-items: center; justify-content: center; flex-direction: column;
+      gap: 5px; cursor: pointer; z-index: 100001; box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .safari-menu-toggle:hover { transform: scale(1.08); background: #145c43; }
+    .safari-menu-toggle span { display: block; width: 23px; height: 2px; background: #ffffff; border-radius: 10px; transition: transform 0.35s ease, opacity 0.25s ease, width 0.35s ease; }
+    .safari-menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .safari-menu-toggle.active span:nth-child(2) { opacity: 0; width: 0; }
+    .safari-menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .safari-menu-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.60); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+      opacity: 0; visibility: hidden; z-index: 99998; transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .safari-menu-overlay.active { opacity: 1; visibility: visible; }
+
+    .safari-mobile-menu {
+      position: fixed; top: 0; right: 0; width: min(390px, 88%); height: 100vh; height: 100dvh;
+      background: linear-gradient(145deg, #073526, #0c4634 60%, #082c20); z-index: 100000;
+      transform: translateX(105%); transition: transform 0.45s cubic-bezier(.77,0,.18,1);
+      display: flex; flex-direction: column; overflow-y: auto; box-shadow: -15px 0 45px rgba(0,0,0,0.25);
+    }
+    .safari-mobile-menu.active { transform: translateX(0); }
+
+    .safari-menu-header { display: flex; align-items: center; justify-content: space-between; padding: 25px 25px 20px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .safari-menu-brand img { height: 45px; width: auto; }
+    .safari-menu-close {
+      width: 42px; height: 42px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
+      color: #ffffff; border-radius: 50%; font-size: 30px; line-height: 1; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    }
+    .safari-menu-close:hover { transform: rotate(90deg); background: #d4a853; color: #082c20; }
+
+    .safari-menu-links { display: flex; flex-direction: column; padding: 15px 25px; flex: 1; }
+    .safari-menu-links a {
+      position: relative; display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 5px; color: #ffffff; text-decoration: none; font-size: 18px; font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.10); transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+    .safari-menu-links a:hover { color: #d4a853; padding-left: 12px; }
+    .safari-menu-links a small { color: rgba(255,255,255,0.35); font-size: 11px; letter-spacing: 1px; }
+    .safari-menu-links .safari-menu-contact { color: #d4a853; }
+
+    .safari-menu-footer { padding: 25px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .safari-menu-footer p { color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.6; margin-bottom: 18px; }
+    .safari-menu-cta {
+      display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px 20px;
+      background: #d4a853; color: #102e22; text-decoration: none; border-radius: 30px; font-weight: 700;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .safari-menu-cta:hover { transform: translateY(-2px); background: #e6bd6a; }
+
+    @media (max-width: 991px) { .safari-menu-toggle { display: flex; } }
+    @media (max-width: 480px) {
+      .safari-menu-toggle { top: 14px; right: 14px; width: 48px; height: 48px; }
+      .safari-mobile-menu { width: 92%; }
+      .safari-menu-links a { font-size: 17px; padding: 16px 5px; }
+    }
+    body.safari-menu-open { overflow: hidden; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 960px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .intro-grid { grid-template-columns: 1fr; gap: 48px; }
+      .communities-grid { grid-template-columns: 1fr; }
+      .activity-block { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; }
+      .activity-block.reverse { direction: ltr; }
+      .impact-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .floating-social { display: none; }
+    }
+    @media (max-width: 768px) {
+      .impact-grid { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .foot-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .hero-cultural-badges { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+      <span class="logo-word">
+        <span class="lw-1">BEST SAFARI</span>
+        <span class="lw-2">Adventures East-Africa</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="safari-packages.html">Safari Packages</a>
+      <a href="community-engagements.html" class="active">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav-cta">Book Cultural Tour</a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('mm').classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- =====================================================
+     PREMIUM SAFARI MOBILE HAMBURGER MENU
+====================================================== -->
+<button class="safari-menu-toggle" id="safariMenuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="safariMobileMenu">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="safari-menu-overlay" id="safariMenuOverlay"></div>
+
+<nav class="safari-mobile-menu" id="safariMobileMenu" aria-hidden="true">
+  <div class="safari-menu-header">
+    <div class="safari-menu-brand">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+    </div>
+    <button class="safari-menu-close" id="safariMenuClose" aria-label="Close menu">×</button>
+  </div>
+  <div class="safari-menu-links">
+    <a href="index.html"><span>Home</span><small>01</small></a>
+    <a href="about.html"><span>About Us</span><small>02</small></a>
+    <a href="safari-packages.html"><span>Safari Packages</span><small>03</small></a>
+    <a href="community-engagements.html" class="active"><span>Community</span><small>04</small></a>
+    <a href="contact.html" class="safari-menu-contact"><span>Contact Us</span><small>05</small></a>
+  </div>
+  <div class="safari-menu-footer">
+    <p>Adventure . Learn . Love . Nature<br>Experience Unforgettable East-Africa Safaris.</p>
+    <a href="contact.html" class="safari-menu-cta">Plan Your Safari</a>
+  </div>
+</nav>
+
+<!-- Floating Social Media (Left Side) -->
+<div class="floating-social">
+  <a href="https://www.youtube.com/@bestsafariadventureseastafrica" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+  <a href="https://www.instagram.com/bestsafariadventureseastafrica/" target="_blank" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+  <a href="https://x.com" target="_blank" class="social-icon" title="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8" cy="8" r="1"/>
+    <path d="M8 11V17"/>
+    <path d="M12 17V13.8C12 12.2 13 11 14.6 11C16.2 11 17 12.1 17 13.8V17"/>
+    <path d="M12 13V11"/>
+  </svg></a>
+  <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" target="_blank" class="social-icon" title="Tiktok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+    <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+  </svg></a>
+  <a href="https://snapchat.com" target="_blank" class="social-icon" title="Snapchat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3
+             C10 3 8.5 4.6 8.5 6.8
+             V8.2
+             C8.5 9.5 7.7 10.6 6.6 11
+             C7.3 11.8 8.1 12.2 9 12.3
+             C9.2 14.5 10.4 16 12 16
+             C13.6 16 14.8 14.5 15 12.3
+             C15.9 12.2 16.7 11.8 17.4 11
+             C16.3 10.6 15.5 9.5 15.5 8.2
+             V6.8
+             C15.5 4.6 14 3 12 3Z"/>
+    <path d="M8.5 16.5C9.8 17.2 10.9 17.6 12 17.6C13.1 17.6 14.2 17.2 15.5 16.5"/>
+  </svg></a>
+  <a href="https://threads.com" target="_blank" class="social-icon" title="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4C8.5 4 6 6.3 6 10C6 13.7 8.5 16 12 16C15 16 17 14.5 17 12C17 9.8 15.2 8.5 12.8 8.5C10.9 8.5 9.5 9.6 9.5 11.2C9.5 12.8 10.8 14 12.8 14C15.5 14 18 12.5 18 9.2C18 5.8 15.5 4 12 4Z"/>
+  </svg></a>
+  <a href="https://telegram.com" target="_blank" class="social-icon" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3L3 11L10 13L12 20L21 3Z"/>
+    <path d="M10 13L21 3"/>
+  </svg></a>
+</div>
+
+<!-- ============ COMMUNITY HERO ============ -->
+<section class="community-hero">
+  <!-- Auto-playing, looping video background -->
+  <video class="community-video-bg" autoplay muted loop playsinline>
+    <source src="./img/communi-video2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="community-hero-content">
+    <div class="hero-cultural-badges">
+      <span class="cultural-badge">🌍 Authentic Experiences</span>
+      <span class="cultural-badge"> Community Support</span>
+      <span class="cultural-badge">🎭 Cultural Immersion</span>
+      <span class="cultural-badge">🌱 Sustainable Tourism</span>
+    </div>
+    <h1>Connect with East African Communities</h1>
+    <p>Experience authentic cultural tourism through meaningful community engagements around national parks. Participate in traditional activities, support local livelihoods, and create lasting connections with the heart of East Africa.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg on-dark">Book a Cultural Experience</a>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust" style="padding:0;">
+  <div class="container trust-inner" style="padding-top:24px;padding-bottom:24px;">
+    <div class="trust-item"><span class="trust-num">50+</span><span>Partner Communities</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span class="trust-num">100%</span><span>Community Benefits</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span class="trust-num">Sustainable</span><span>Tourism Model</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span>Cultural</span><span>Preservation</span></div>
+  </div>
+</section>
+
+<!-- ============ CULTURAL INTRODUCTION ============ -->
+<section class="cultural-intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-content">
+        <span class="eyebrow">Community-Based Tourism</span>
+        <h2>Authentic Cultural Experiences Around East Africa's Parks</h2>
+        <p>
+          Our <strong>community engagement tourism</strong> programs offer you the opportunity to visit local communities living around East Africa's magnificent national parks. These <strong>cultural tourism experiences</strong> go beyond traditional safaris, allowing you to participate in daily life, learn traditional crafts, taste authentic cuisine, and understand the rich cultural heritage of the region.
+        </p>
+        <p>
+          Through <strong>sustainable community-based tourism</strong>, your visit directly supports local livelihoods, education, healthcare, and conservation efforts. Experience the warmth of East African hospitality while contributing to the preservation of indigenous cultures and traditions around parks like Bwindi, Queen Elizabeth, Serengeti, and Volcanoes National Parks.
+        </p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Explore Community Visits</a>
+      </div>
+      <div class="intro-image">
+        <img src="./img/ter-masai-tribe.jpg" alt="Community engagement cultural tourism East Africa">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITIES AROUND PARKS ============ -->
+<section class="communities-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">Visit Local Communities</span>
+        <h2 class="section-title">Communities Around National Parks</h2>
+        <p class="section-sub">Meet the people who call East Africa's wilderness areas home and learn about their traditions, challenges, and conservation efforts.</p>
+      </div>
+    </div>
+
+    <div class="communities-grid">
+      <!-- Community 1: Batwa Pygmies -->
+      <div class="community-card">
+        <div class="community-card-image">
+          <img src="./img/ter-community-3.jpg" alt="Batwa Pygmy Community Uganda">
+          <span class="community-card-badge">Uganda</span>
+        </div>
+        <div class="community-card-content">
+          <h3>Batwa Pygmy Community</h3>
+          <span class="location">Around Bwindi & Mgahinga Parks</span>
+          <p>Experience the ancient forest-dwelling culture of the Batwa people, traditional guardians of the gorilla forests.</p>
+          <ul class="activity-list">
+            <li>Traditional forest walks</li>
+            <li>Cultural performances</li>
+            <li>Archery demonstrations</li>
+            <li>Medicinal plant education</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Community 2: Maasai -->
+      <div class="community-card">
+        <div class="community-card-image">
+          <img src="./img/c2.jpg" alt="Maasai Community Kenya Tanzania">
+          <span class="community-card-badge">Kenya/Tanzania</span>
+        </div>
+        <div class="community-card-content">
+          <h3>Maasai Manyatta</h3>
+          <span class="location">Around Serengeti & Masai Mara</span>
+          <p>Visit authentic Maasai villages and learn about their pastoral lifestyle, warrior traditions, and vibrant culture.</p>
+          <ul class="activity-list">
+            <li>Manyatta homestead tours</li>
+            <li>Traditional dance (Adumu)</li>
+            <li>Beadwork workshops</li>
+            <li>Cattle herding experiences</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Community 3: Baganda -->
+      <div class="community-card">
+        <div class="community-card-image">
+          <img src="./img/banner-8.jpg" alt="Baganda Cultural Experience Uganda">
+          <span class="community-card-badge">Uganda</span>
+        </div>
+        <div class="community-card-content">
+          <h3>Baganda Kingdom</h3>
+          <span class="location">Around Lake Victoria & Kampala</span>
+          <p>Discover the rich heritage of Uganda's largest ethnic group through royal traditions, music, and crafts.</p>
+          <ul class="activity-list">
+            <li>Royal palace visits</li>
+            <li>Traditional drumming</li>
+            <li>Bark cloth making</li>
+            <li>Local cuisine tasting</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Community 4: Samburu -->
+      <div class="community-card">
+        <div class="community-card-image">
+          <img src="./img/c10.jpg" alt="Samburu Community Kenya">
+          <span class="community-card-badge">Kenya</span>
+        </div>
+        <div class="community-card-content">
+          <h3>Samburu Village</h3>
+          <span class="location">Northern Kenya Rangelands</span>
+          <p>Meet the resilient Samburu people and experience their unique semi-nomadic pastoralist lifestyle.</p>
+          <ul class="activity-list">
+            <li>Village homestead tours</li>
+            <li>Traditional singing</li>
+            <li>Jewelry making</li>
+            <li>Camel trekking</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Community 5: Chagga -->
+      <div class="community-card">
+        <div class="community-card-image">
+          <img src="./img/communities-pic-1.jpg" alt="Chagga Community Tanzania">
+          <span class="community-card-badge">Tanzania</span>
+        </div>
+        <div class="community-card-content">
+          <h3>Chagga Coffee Farms</h3>
+          <span class="location">Mount Kilimanjaro Slopes</span>
+          <p>Explore the agricultural traditions of the Chagga people on the fertile slopes of Kilimanjaro.</p>
+          <ul class="activity-list">
+            <li>Coffee farm tours</li>
+            <li>Banana plantation visits</li>
+            <li>Traditional cooking</li>
+            <li>Irrigation systems learning</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Community 6: Kiga -->
+      <div class="community-card">
+        <div class="community-card-image">
+          <img src="./img/c1.jpg" alt="Kiga Community Uganda">
+          <span class="community-card-badge">Uganda</span>
+        </div>
+        <div class="community-card-content">
+          <h3>Bakiga Highlanders</h3>
+          <span class="location">Southwestern Uganda</span>
+          <p>Experience the terraced farming culture and warm hospitality of Uganda's highland communities.</p>
+          <ul class="activity-list">
+            <li>Terrace farming tours</li>
+            <li>Traditional brewing</li>
+            <li>Folk dance performances</li>
+            <li>Local market visits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CULTURAL ACTIVITIES ============ -->
+<section class="activities-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">Participate & Learn</span>
+        <h2 class="section-title">Traditional Cultural Activities</h2>
+        <p class="section-sub">Immerse yourself in hands-on cultural experiences that connect you with East African traditions and ways of life.</p>
+      </div>
+    </div>
+
+    <!-- Activity 1 -->
+    <div class="activity-block">
+      <div class="activity-image">
+        <img src="./img/c9.jpg" alt="Traditional Cooking Class East Africa">
+      </div>
+      <div class="activity-content">
+        <h3>Traditional Cooking Classes</h3>
+        <p>Learn to prepare authentic East African dishes using traditional methods and locally-sourced ingredients. From Ugandan matooke to Tanzanian pilau, master the flavors of the region under the guidance of local women chefs.</p>
+        <div class="activity-tags">
+          <span class="activity-tag">Hands-on Learning</span>
+          <span class="activity-tag">Local Ingredients</span>
+          <span class="activity-tag">Cultural Exchange</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 2 -->
+    <div class="activity-block reverse">
+      <div class="activity-image">
+        <img src="./img/community-play.jpg" alt="Traditional Craft Making East Africa">
+      </div>
+      <div class="activity-content">
+        <h3>Traditional Craft Making</h3>
+        <p>Participate in age-old artisan crafts including beadwork, basket weaving, pottery, and bark cloth production. Learn from master craftspeople who have preserved these skills for generations, and create your own souvenir to take home.</p>
+        <div class="activity-tags">
+          <span class="activity-tag">Artisan Skills</span>
+          <span class="activity-tag">Heritage Crafts</span>
+          <span class="activity-tag">Take Home Creations</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 3 -->
+    <div class="activity-block">
+      <div class="activity-image">
+        <img src="./img/c6.jpg" alt="Traditional Dance Performance East Africa">
+      </div>
+      <div class="activity-content">
+        <h3>Traditional Dance & Music</h3>
+        <p>Experience the vibrant rhythms and movements of East African traditional dance. Join in drumming circles, learn traditional songs, and participate in cultural performances that tell the stories of various ethnic groups.</p>
+        <div class="activity-tags">
+          <span class="activity-tag">Live Performances</span>
+          <span class="activity-tag">Drumming</span>
+          <span class="activity-tag">Cultural Stories</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 4 -->
+    <div class="activity-block reverse">
+      <div class="activity-image">
+        <img src="./img/Tea-tours-in-Uganda.jpg" alt="Agricultural Activities East Africa">
+      </div>
+      <div class="activity-content">
+        <h3>Agricultural Activities</h3>
+        <p>Participate in traditional farming practices including coffee picking, banana harvesting, and terrace farming. Learn about sustainable agriculture and the importance of farming in East African communities.</p>
+        <div class="activity-tags">
+          <span class="activity-tag">Farm-to-Table</span>
+          <span class="activity-tag">Sustainable Practices</span>
+          <span class="activity-tag">Rural Life</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ IMPACT SECTION ============ -->
+<section class="impact-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow on-dark">Your Impact</span>
+        <h2 class="section-title">How Your Visit Makes a Difference</h2>
+        <p class="section-sub">Community-based tourism creates positive change for local people, conservation, and cultural preservation.</p>
+      </div>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">💰</div>
+        <span class="number">100%</span>
+        <span class="label">Direct Community Benefits</span>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🎓</div>
+        <span class="number">500+</span>
+        <span class="label">Children's Education Supported</span>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🏥</div>
+        <span class="number">50+</span>
+        <span class="label">Healthcare Projects Funded</span>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🌿</div>
+        <span class="number">200+</span>
+        <span class="label">Conservation Initiatives</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA SECTION ============ -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Experience the Heart of East Africa</h2>
+    <p class="serif-text">Join us for authentic community engagements that create meaningful connections, support local livelihoods, and preserve cultural heritage for future generations.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg on-dark">Book Your Cultural Experience</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+          <span class="logo-word">
+            <span class="lw-1">BEST SAFARI</span>
+            <span class="lw-2">Adventures East-Africa</span>
+          </span>
+        </a>
+        <p class="foot-tagline">Trusted Local Experts <em style="font-style:italic;color:rgba(255,255,255,0.6);">Experience the wild with us.</em></p>
+        <address class="foot-addr">
+          Makindye Boston, Kampala, Uganda<br>
+          (opposite Boston International school)<br>
+          <a href="tel:+256757212707">+256 757 212707</a><br>
+          <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a>
+        </address>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@bestsafariadventureseastafrica" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+          <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+            <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="safari-packages.html">Safari Packages</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shoebill.html">Shoebill Home Safari</a></li>
+          <li><a href="city-tours.html">Kampala City Tours</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="gorilla-trekking.html">Gorilla trekking</a></li>
+          <li><a href="bird-watching.html">Bird Watching</a></li>
+          <li><a href="accomodations.html">Accommodation</a></li>
+          <li><a href="car-hire-services.html">Car hire services</a></li>
+          <li><a href="community-engagements.html">Community Engagements</a></li>
+          <li><a href="bike-safaris.html">Bike Safaris</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#">Uganda</a></li>
+          <li><a href="#">Kenya</a></li>
+          <li><a href="#">Tanzania</a></li>
+          <li><a href="#">Rwanda</a></li>
+          <li><a href="safari-packages.html">Multi-Country Tours</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Best Safari Adventures East-Africa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp (Right Bottom) -->
+<div class="floating-whatsapp">
+  <a href="https://wa.me/256757212707" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+</div>
+
+<script>
+  /* =====================================================
+     PREMIUM SAFARI HAMBURGER MENU
+  ====================================================== */
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("safariMenuToggle");
+    const mobileMenu = document.getElementById("safariMobileMenu");
+    const menuOverlay = document.getElementById("safariMenuOverlay");
+    const menuClose = document.getElementById("safariMenuClose");
+    const menuLinks = document.querySelectorAll(".safari-menu-links a, .safari-menu-cta");
+
+    function openSafariMenu() {
+      mobileMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+      menuToggle.classList.add("active");
+      menuToggle.setAttribute("aria-expanded", "true");
+      mobileMenu.setAttribute("aria-hidden", "false");
+      document.body.classList.add("safari-menu-open");
+    }
+
+    function closeSafariMenu() {
+      mobileMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("safari-menu-open");
+    }
+
+    menuToggle.addEventListener("click", function () {
+      if (mobileMenu.classList.contains("active")) {
+        closeSafariMenu();
+      } else {
+        openSafariMenu();
+      }
+    });
+
+    menuClose.addEventListener("click", closeSafariMenu);
+    menuOverlay.addEventListener("click", closeSafariMenu);
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeSafariMenu();
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+        closeSafariMenu();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 991) {
+        closeSafariMenu();
+      }
+    });
+  });
+
+  // Smooth Scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

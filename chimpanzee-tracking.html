@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chimpanzee tracking tours in Uganda. Trek through Kibale Forest, Budongo Forest, and Queen Elizabeth National Park to observe wild chimpanzees with expert primate guides.">
+  <meta name="keywords" content="chimpanzee tracking Uganda, Kibale Forest primate tours, chimpanzee habituation experience, primate watching East Africa, Budongo Forest chimps, Queen Elizabeth chimpanzee trekking, wildlife primate safaris">
+  <title>Chimpanzee Tracking & Primate Safaris | Kibale Forest | Best Safari Adventures</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-safari-dark: #0E1B16;
+      --color-safari-darker: #08110E;
+      --color-safari-gold: #D4AF37;
+      --color-safari-gold-light: #F1D27A;
+      --color-safari-orange: #C85A17;
+      --color-safari-mint: #98D8AA;
+      --color-safari-mint-dim: rgba(152, 216, 170, 0.12);
+      --color-parchment: #FAF9F6;
+      --color-white: #FFFFFF;
+
+      /* Unique Forest Colors for Chimp Page */
+      --color-forest-deep: #1A3A2E;
+      --color-forest-mid: #2D5A3D;
+      --color-forest-light: #4A7C59;
+      --color-bark-brown: #5D4E37;
+      --color-canopy-green: #6B8E4E;
+
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-mono: 'Cinzel', serif;
+
+      --container-max: 1280px;
+      --container-pad: 24px;
+      --radius-md: 8px;
+      --radius-pill: 999px;
+      --radius-sm: 4px;
+
+      --dur-fast: 0.2s;
+      --dur-base: 0.3s;
+      --dur-slow: 0.5s;
+      --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+      --shadow-md: 0 10px 30px -5px rgba(0,0,0,0.15), 0 8px 12px -6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.25), 0 15px 25px -10px rgba(0,0,0,0.15);
+      --shadow-warm: 0 15px 40px rgba(212, 175, 55, 0.2);
+
+      --border-on-dark: rgba(212, 175, 55, 0.18);
+      --border-hairline: rgba(0,0,0,0.08);
+      --fg-1: #1a1a1a;
+      --fg-2: #555555;
+      --fg-3: #888888;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--color-parchment); color: var(--fg-1); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad); }
+
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--color-safari-dark);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid var(--border-on-dark);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .nav-inner { display: flex; align-items: center; gap: 36px; height: 84px; }
+    .logo { display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 600; font-size: 20px; color: #fff; text-decoration: none; letter-spacing: -0.005em; }
+    .logo img { height: 50px; width: auto; display: block; flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+    .logo .logo-word { display: flex; flex-direction: column; line-height: 1; }
+    .logo .logo-word .lw-1 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--color-safari-gold-light); }
+    .logo .logo-word .lw-2 { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-safari-gold); text-transform: uppercase; margin-top: 4px; }
+
+    .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; margin-left: auto; }
+    .nav-links a { position: relative; color: rgba(255,255,255,0.78); padding: 6px 0; transition: color var(--dur-fast) var(--ease-standard); }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 0; background: var(--color-safari-gold); transition: width var(--dur-base) var(--ease-standard); }
+    .nav-links a:hover { color: var(--color-safari-gold-light); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a.active { color: var(--color-safari-gold-light); }
+
+    .nav-cta { margin-left: 24px; }
+    .nav-toggle { display: none; background: transparent; border: 0; color: #fff; padding: 8px; margin-left: auto; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 14px; padding: 13px 24px; border-radius: var(--radius-pill); border: 0; line-height: 1; text-decoration: none; transition: all var(--dur-base) var(--ease-standard); }
+    .btn-primary { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-primary:hover { background: var(--color-safari-gold-light); color: var(--color-safari-dark); box-shadow: var(--shadow-warm); }
+    .btn-primary.on-dark { box-shadow: var(--shadow-warm); }
+    .btn-secondary { background: transparent; border: 1.5px solid var(--color-safari-gold); color: var(--color-safari-gold); padding: 11.5px 22.5px; }
+    .btn-secondary:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-secondary.on-dark { border-color: #fff; color: #fff; }
+    .btn-secondary.on-dark:hover { background: #fff; color: var(--color-safari-dark); }
+    .btn-lg { padding: 16px 30px; font-size: 15px; }
+
+    .trust { background: var(--color-safari-darker); color: rgba(255,255,255,0.85); padding: 24px 0; border-top: 1px solid var(--border-on-dark); border-bottom: 1px solid var(--border-on-dark); }
+    .trust-inner { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
+    .trust-num { font-family: var(--font-mono); color: var(--color-safari-gold-light); font-weight: 600; font-size: 14px; }
+    .trust-sep { color: rgba(255,255,255,0.2); }
+
+    section { padding: clamp(72px, 10vw, 128px) 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 56px; flex-wrap: wrap; }
+    .section-head .left { max-width: 640px; }
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-safari-orange); display: inline-block; margin-bottom: 18px; }
+    .eyebrow.on-dark { color: var(--color-safari-gold-light); }
+    h2.section-title { font-family: var(--font-display); font-size: clamp(34px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.01em; font-weight: 600; margin: 0 0 16px; text-wrap: balance; }
+    .section-sub { font-size: 18px; color: var(--fg-2); line-height: 1.6; margin: 0; max-width: 580px; }
+    .on-dark .section-sub { color: rgba(255,255,255,0.72); }
+
+    /* FIXED HERO SECTION FOR VIDEO */
+    .chimp-hero {
+      position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 0;
+      background: linear-gradient(135deg, var(--color-forest-deep) 0%, var(--color-forest-mid) 100%);
+    }
+
+    /* Video Background Styling */
+    .chimp-video-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.35;
+      mix-blend-mode: overlay;
+      z-index: 1;
+    }
+
+    .chimp-hero-content {
+      position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px;
+    }
+    .chimp-hero-content h1 {
+      font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5.5rem); color: var(--color-safari-gold-light);
+      margin-bottom: 1.5rem; text-shadow: 0 10px 40px rgba(0,0,0,0.6); line-height: 1.1;
+    }
+    .chimp-hero-content p {
+      font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.95);
+      font-style: italic; line-height: 1.6; margin-bottom: 2.5rem;
+    }
+    .hero-primate-badges {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .primate-badge {
+      background: rgba(107, 142, 78, 0.2); backdrop-filter: blur(10px);
+      padding: 12px 24px; border-radius: var(--radius-pill); color: var(--color-safari-gold-light);
+      font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(107, 142, 78, 0.4);
+    }
+
+    .chimp-spotlight {
+      background: linear-gradient(180deg, var(--color-forest-light) 0%, var(--color-canopy-green) 100%);
+      position: relative;
+    }
+    .spotlight-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center; }
+    .spotlight-image {
+      border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 30px 60px rgba(26, 58, 46, 0.4);
+      aspect-ratio: 4/3; position: relative;
+    }
+    .spotlight-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-standard); }
+    .spotlight-image:hover img { transform: scale(1.03); }
+    .spotlight-image::after {
+      content: "CHIMPANZEE"; position: absolute; bottom: 20px; left: 20px;
+      background: var(--color-safari-gold); color: var(--color-safari-dark);
+      padding: 8px 16px; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
+    }
+    .spotlight-content h2 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 1.5rem; line-height: 1.2; }
+    .spotlight-content p { font-family: var(--font-display); font-size: 1.15rem; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; line-height: 1.8; font-style: italic; }
+    .spotlight-stats { display: flex; gap: 32px; margin-top: 32px; }
+    .spotlight-stat .value { font-family: var(--font-display); font-size: 2.5rem; color: var(--color-safari-gold-light); font-weight: 700; display: block; }
+    .spotlight-stat .label { font-family: var(--font-body); font-size: 0.85rem; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .locations-section {
+      background: var(--color-forest-deep);
+      color: #fff;
+    }
+    .locations-section .section-title { color: var(--color-safari-gold-light); }
+    .locations-section .section-sub { color: rgba(255,255,255,0.75); }
+    .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .location-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md); overflow: hidden; transition: all var(--dur-slow) var(--ease-standard);
+    }
+    .location-card:hover { background: rgba(255,255,255,0.08); border-color: var(--color-safari-gold); transform: translateY(-8px); }
+    .location-card-img { height: 220px; overflow: hidden; }
+    .location-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-standard); }
+    .location-card:hover .location-card-img img { transform: scale(1.1); }
+    .location-card-content { padding: 28px; }
+    .location-card-content h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--color-safari-gold-light); margin-bottom: 12px; }
+    .location-card-content .location-tag {
+      font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-canopy-green);
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; display: block;
+    }
+    .location-card-content p { font-family: var(--font-display); font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.7; font-style: italic; }
+
+    .experience-section {
+      background: linear-gradient(180deg, var(--color-parchment) 0%, var(--color-safari-mint-dim) 100%);
+    }
+    .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .experience-content h2 { font-family: var(--font-display); font-size: 2.5rem; color: var(--color-forest-deep); margin-bottom: 1.5rem; line-height: 1.2; }
+    .experience-content p { font-family: var(--font-display); font-size: 1.15rem; color: var(--fg-2); margin-bottom: 1.5rem; line-height: 1.8; font-style: italic; }
+    .experience-image {
+      border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 30px 60px rgba(26, 58, 46, 0.3);
+      aspect-ratio: 4/3;
+    }
+    .experience-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-standard); }
+    .experience-image:hover img { transform: scale(1.03); }
+
+    .habituation-section {
+      background: var(--color-bark-brown);
+      color: #fff;
+    }
+    .habituation-section .section-title { color: var(--color-safari-gold-light); }
+    .habituation-section .section-sub { color: rgba(255,255,255,0.8); }
+    .habituation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .habituation-card {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md); padding: 32px; transition: all var(--dur-base);
+    }
+    .habituation-card:hover { background: rgba(255,255,255,0.12); border-color: var(--color-safari-gold); transform: translateY(-4px); }
+    .habituation-card h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-safari-gold-light); margin-bottom: 16px; }
+    .habituation-card p { font-family: var(--font-display); font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.7; font-style: italic; }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-forest-deep) 0%, var(--color-forest-mid) 100%);
+      padding: 100px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ""; position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1920') center/cover no-repeat;
+      opacity: 0.15; mix-blend-mode: overlay;
+    }
+    .cta-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .cta-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-safari-gold-light); margin-bottom: 1.5rem; }
+    .cta-content p { font-family: var(--font-display); font-size: 1.3rem; color: rgba(255,255,255,0.95); margin-bottom: 3rem; font-style: italic; line-height: 1.6; }
+
+    footer.site-footer { background: var(--color-safari-darker); color: rgba(255,255,255,0.7); padding: 80px 0 28px; border-top: 1px solid var(--border-on-dark); }
+    .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+    .foot-brand .logo { margin-bottom: 18px; color: #fff; }
+    .foot-tagline { font-family: var(--font-display); font-style: italic; font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.4; margin: 0 0 22px; max-width: 280px; }
+    .foot-addr { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.55); font-style: normal; }
+    .foot-addr a { color: var(--color-safari-gold); }
+    .foot-col h4 { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-safari-gold); margin: 0 0 18px; }
+    .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .foot-col a { color: rgba(255,255,255,0.7); font-size: 14px; transition: color var(--dur-fast); }
+    .foot-col a:hover { color: var(--color-safari-gold-light); }
+    .foot-social { display: flex; gap: 12px; margin-top: 24px; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all var(--dur-base); }
+    .foot-social a:hover { border-color: var(--color-safari-gold); color: var(--color-safari-gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+    .foot-bottom { padding-top: 24px; border-top: 1px solid var(--border-on-dark); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.4); font-family: var(--font-mono); letter-spacing: 0.02em; }
+
+    .floating-whatsapp { position: fixed; right: 32px; bottom: 32px; z-index: 999; }
+    .whatsapp-btn { width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(37,211,102,0.4); border: 3px solid #fff; }
+    .whatsapp-btn img { width: 36px; height: 36px; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+
+    .floating-social { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 998; display: flex; flex-direction: column; gap: 8px; background: var(--color-safari-dark); padding: 12px 8px; border-radius: 0 8px 8px 0; border: 1px solid var(--border-on-dark); border-left: none; box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-safari-gold); font-size: 1.1rem; text-decoration: none; transition: all 0.3s; border-radius: 50%; }
+    .social-icon svg { width: 20px; height: 20px; }
+    .social-icon:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); transform: translateX(4px); }
+
+    .safari-menu-toggle {
+      position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; border: none; border-radius: 50%;
+      background: #0b3d2e; display: none; align-items: center; justify-content: center; flex-direction: column;
+      gap: 5px; cursor: pointer; z-index: 100001; box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .safari-menu-toggle:hover { transform: scale(1.08); background: #145c43; }
+    .safari-menu-toggle span { display: block; width: 23px; height: 2px; background: #ffffff; border-radius: 10px; transition: transform 0.35s ease, opacity 0.25s ease, width 0.35s ease; }
+    .safari-menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .safari-menu-toggle.active span:nth-child(2) { opacity: 0; width: 0; }
+    .safari-menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .safari-menu-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.60); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+      opacity: 0; visibility: hidden; z-index: 99998; transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .safari-menu-overlay.active { opacity: 1; visibility: visible; }
+
+    .safari-mobile-menu {
+      position: fixed; top: 0; right: 0; width: min(390px, 88%); height: 100vh; height: 100dvh;
+      background: linear-gradient(145deg, #073526, #0c4634 60%, #082c20); z-index: 100000;
+      transform: translateX(105%); transition: transform 0.45s cubic-bezier(.77,0,.18,1);
+      display: flex; flex-direction: column; overflow-y: auto; box-shadow: -15px 0 45px rgba(0,0,0,0.25);
+    }
+    .safari-mobile-menu.active { transform: translateX(0); }
+
+    .safari-menu-header { display: flex; align-items: center; justify-content: space-between; padding: 25px 25px 20px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .safari-menu-brand img { height: 45px; width: auto; }
+    .safari-menu-close {
+      width: 42px; height: 42px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
+      color: #ffffff; border-radius: 50%; font-size: 30px; line-height: 1; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    }
+    .safari-menu-close:hover { transform: rotate(90deg); background: #d4a853; color: #082c20; }
+
+    .safari-menu-links { display: flex; flex-direction: column; padding: 15px 25px; flex: 1; }
+    .safari-menu-links a {
+      position: relative; display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 5px; color: #ffffff; text-decoration: none; font-size: 18px; font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.10); transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+    .safari-menu-links a:hover { color: #d4a853; padding-left: 12px; }
+    .safari-menu-links a small { color: rgba(255,255,255,0.35); font-size: 11px; letter-spacing: 1px; }
+    .safari-menu-links .safari-menu-contact { color: #d4a853; }
+
+    .safari-menu-footer { padding: 25px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .safari-menu-footer p { color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.6; margin-bottom: 18px; }
+    .safari-menu-cta {
+      display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px 20px;
+      background: #d4a853; color: #102e22; text-decoration: none; border-radius: 30px; font-weight: 700;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .safari-menu-cta:hover { transform: translateY(-2px); background: #e6bd6a; }
+
+    @media (max-width: 991px) { .safari-menu-toggle { display: flex; } }
+    @media (max-width: 480px) {
+      .safari-menu-toggle { top: 14px; right: 14px; width: 48px; height: 48px; }
+      .safari-mobile-menu { width: 92%; }
+      .safari-menu-links a { font-size: 17px; padding: 16px 5px; }
+    }
+    body.safari-menu-open { overflow: hidden; }
+
+    @media (max-width: 960px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .spotlight-grid, .experience-grid { grid-template-columns: 1fr; gap: 48px; }
+      .locations-grid, .habituation-grid { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .floating-social { display: none; }
+    }
+    @media (max-width: 768px) {
+      .foot-grid { grid-template-columns: 1fr; }
+      .foot-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .hero-primate-badges { flex-direction: column; align-items: center; }
+      .spotlight-stats { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+      <span class="logo-word">
+        <span class="lw-1">BEST SAFARI</span>
+        <span class="lw-2">Adventures East-Africa</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="safari-packages.html">Safari Packages</a>
+      <a href="chimpanzee-tracking.html" class="active">Chimp Tracking</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav-cta">Book Chimp Trek</a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('mm').classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<button class="safari-menu-toggle" id="safariMenuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="safariMobileMenu">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="safari-menu-overlay" id="safariMenuOverlay"></div>
+
+<nav class="safari-mobile-menu" id="safariMobileMenu" aria-hidden="true">
+  <div class="safari-menu-header">
+    <div class="safari-menu-brand">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+    </div>
+    <button class="safari-menu-close" id="safariMenuClose" aria-label="Close menu">×</button>
+  </div>
+  <div class="safari-menu-links">
+    <a href="index.html"><span>Home</span><small>01</small></a>
+    <a href="about.html"><span>About Us</span><small>02</small></a>
+    <a href="safari-packages.html"><span>Safari Packages</span><small>03</small></a>
+    <a href="chimpanzee-tracking.html" class="active"><span>Chimp Tracking</span><small>04</small></a>
+    <a href="contact.html" class="safari-menu-contact"><span>Contact Us</span><small>05</small></a>
+  </div>
+  <div class="safari-menu-footer">
+    <p>Adventure . Learn . Love . Nature<br>Experience Unforgettable East-Africa Safaris.</p>
+    <a href="contact.html" class="safari-menu-cta">Plan Your Safari</a>
+  </div>
+</nav>
+
+<!-- Floating Social Media (Left Side) -->
+<div class="floating-social">
+  <a href="https://www.youtube.com/@bestsafariadventureseastafrica" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+  <a href="https://www.instagram.com/bestsafariadventureseastafrica/" target="_blank" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+  <a href="https://x.com" target="_blank" class="social-icon" title="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8" cy="8" r="1"/>
+    <path d="M8 11V17"/>
+    <path d="M12 17V13.8C12 12.2 13 11 14.6 11C16.2 11 17 12.1 17 13.8V17"/>
+    <path d="M12 13V11"/>
+  </svg></a>
+  <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" target="_blank" class="social-icon" title="Tiktok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+    <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+  </svg></a>
+  <a href="https://snapchat.com" target="_blank" class="social-icon" title="Snapchat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3
+             C10 3 8.5 4.6 8.5 6.8
+             V8.2
+             C8.5 9.5 7.7 10.6 6.6 11
+             C7.3 11.8 8.1 12.2 9 12.3
+             C9.2 14.5 10.4 16 12 16
+             C13.6 16 14.8 14.5 15 12.3
+             C15.9 12.2 16.7 11.8 17.4 11
+             C16.3 10.6 15.5 9.5 15.5 8.2
+             V6.8
+             C15.5 4.6 14 3 12 3Z"/>
+    <path d="M8.5 16.5C9.8 17.2 10.9 17.6 12 17.6C13.1 17.6 14.2 17.2 15.5 16.5"/>
+  </svg></a>
+  <a href="https://threads.com" target="_blank" class="social-icon" title="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4C8.5 4 6 6.3 6 10C6 13.7 8.5 16 12 16C15 16 17 14.5 17 12C17 9.8 15.2 8.5 12.8 8.5C10.9 8.5 9.5 9.6 9.5 11.2C9.5 12.8 10.8 14 12.8 14C15.5 14 18 12.5 18 9.2C18 5.8 15.5 4 12 4Z"/>
+  </svg></a>
+  <a href="https://telegram.com" target="_blank" class="social-icon" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3L3 11L10 13L12 20L21 3Z"/>
+    <path d="M10 13L21 3"/>
+  </svg></a>
+</div>
+
+<section class="chimp-hero">
+  <!-- Auto-playing, looping video background -->
+  <video class="chimp-video-bg" autoplay muted loop playsinline>
+    <source src="./img/Chimpanzee-Trekking-Kibale-Park.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="chimp-hero-content">
+    <div class="hero-primate-badges">
+      <span class="primate-badge">🦧 Our Closest Relatives</span>
+      <span class="primate-badge">🌳 Rainforest Trekking</span>
+      <span class="primate-badge">🔬 Habituation Experience</span>
+    </div>
+    <h1>Track Wild Chimpanzees in Uganda</h1>
+    <p>Embark on an unforgettable primate adventure through Uganda's ancient rainforests. Trek alongside expert guides to observe
+      chimpanzees in their natural habitat and witness their complex social behaviors up close.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg on-dark">Book Chimpanzee Tracking</a>
+  </div>
+</section>
+
+<section class="trust" style="padding:0;">
+  <div class="container trust-inner" style="padding-top:24px;padding-bottom:24px;">
+    <div class="trust-item"><span class="trust-num">98%</span><span>Sighting Success</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span class="trust-num">Expert</span><span>Primate Guides</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span class="trust-num">UWA</span><span>Licensed Permits</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span>Small</span><span>Group Sizes</span></div>
+  </div>
+</section>
+
+<section class="chimp-spotlight">
+  <div class="container">
+    <div class="spotlight-grid">
+      <div class="spotlight-image">
+        <img src="./img/chimp-1.jpg" alt="Chimpanzee Uganda Kibale Forest">
+      </div>
+      <div class="spotlight-content">
+        <span class="eyebrow on-dark">Meet Our Primate Cousins</span>
+        <h2>Chimpanzees: 98% Human DNA</h2>
+        <p>
+          Chimpanzees are our closest living relatives, sharing 98.7% of our DNA. These highly intelligent primates live in complex social groups, use tools, and exhibit behaviors remarkably similar to humans. Observing them in the wild is a profoundly moving experience that connects us to our evolutionary heritage.
+        </p>
+        <p>
+          Uganda is home to an estimated 5,000 chimpanzees, making it one of the best destinations in Africa for <strong>chimpanzee tracking</strong>. Our expert primate guides lead you through dense rainforest trails, using their intimate knowledge of chimp behavior and vocalizations to locate these elusive apes.
+        </p>
+        <div class="spotlight-stats">
+          <div class="spotlight-stat"><span class="value">5,000+</span><span class="label">Chimps in Uganda</span></div>
+          <div class="spotlight-stat"><span class="value">98.7%</span><span class="label">Shared DNA</span></div>
+          <div class="spotlight-stat"><span class="value">3-5 Hrs</span><span class="label">Trek Duration</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="locations-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow on-dark">Prime Chimp Habitats</span>
+        <h2 class="section-title">Where to Track Chimpanzees in Uganda</h2>
+        <p class="section-sub">Discover Uganda's premier chimpanzee tracking destinations, each offering unique primate experiences in stunning rainforest settings.</p>
+      </div>
+    </div>
+
+    <div class="locations-grid">
+      <div class="location-card">
+        <div class="location-card-img">
+          <img src="./img/ter-Kibale-Forest-National-Park-primates.jpg" alt="Kibale Forest Chimpanzee Tracking">
+        </div>
+        <div class="location-card-content">
+          <h3>Kibale Forest National Park</h3>
+          <span class="location-tag">Western Uganda</span>
+          <p>Uganda's primate capital with 1,500+ chimps. The most reliable chimpanzee tracking destination with 95% sighting success. Home to 13 primate species total.</p>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="location-card-img">
+          <img src="./img/photo-2.jpg" alt="Budongo Forest Chimpanzees">
+        </div>
+        <div class="location-card-content">
+          <h3>Budongo Forest</h3>
+          <span class="location-tag">Murchison Falls Area</span>
+          <p>Uganda's largest mahogany forest with 600+ chimps. Combine chimp tracking with Murchison Falls safari for the ultimate Uganda wildlife experience.</p>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="location-card-img">
+          <img src="./img/chimpanzee-1.jpg" alt="Queen Elizabeth Chimpanzees">
+        </div>
+        <div class="location-card-content">
+          <h3>Kyambura Gorge</h3>
+          <span class="location-tag">Queen Elizabeth NP</span>
+          <p>Track chimps in the stunning "Valley of Apes." This underground forest gorge offers dramatic scenery and the chance to combine primates with big game safaris.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience-section">
+  <div class="container">
+    <div class="experience-grid">
+      <div class="experience-content">
+        <span class="eyebrow">The Trekking Experience</span>
+        <h2>Into the Heart of the Rainforest</h2>
+        <p>
+          Your <strong>chimpanzee tracking adventure</strong> begins early morning with a briefing by experienced Uganda Wildlife Authority guides. You'll trek through dense tropical rainforest, following signs of chimp activity: feeding marks, nests, and vocalizations echoing through the canopy.
+        </p>
+        <p>
+          The trek typically lasts 2-5 hours depending on chimp location. Once located, you'll spend up to one hour observing these fascinating primates as they groom, play, feed, and interact. Witness mother-infant bonds, territorial displays, and the complex social dynamics that make chimpanzees so captivating.
+        </p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Plan Your Chimp Trek</a>
+      </div>
+      <div class="experience-image">
+        <img src="./img/chimp-2.jpg" alt="Chimpanzee Tracking Experience Uganda">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="habituation-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow on-dark">Exclusive Experiences</span>
+        <h2 class="section-title">Chimpanzee Habituation Experience</h2>
+        <p class="section-sub">For the ultimate primate encounter, join researchers as they habituate wild chimpanzees to human presence.</p>
+      </div>
+    </div>
+
+    <div class="habituation-grid">
+      <div class="habituation-card">
+        <h3>Full-Day Habituation</h3>
+        <p>Spend an entire day (6am-7pm) with researchers following chimpanzees from nest to nest. Witness the complete daily cycle of chimp life: waking, feeding, traveling, nesting. Limited to 4 visitors per day for an intimate, research-focused experience.</p>
+      </div>
+      <div class="habituation-card">
+        <h3>What You'll Experience</h3>
+        <p>Observe unhabituated chimps displaying natural, wary behavior. Learn about primate research methods, conservation challenges, and the ongoing effort to protect Uganda's chimpanzee populations. Contribute directly to conservation through your participation fees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Connect with Our Primate Cousins</h2>
+    <p class="serif-text">Book your chimpanzee tracking safari today and experience the thrill of observing our closest relatives in Uganda's magnificent rainforests. Permits are limited—reserve early to secure your spot.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg on-dark">Book Chimpanzee Tracking Now</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+          <span class="logo-word">
+            <span class="lw-1">BEST SAFARI</span>
+            <span class="lw-2">Adventures East-Africa</span>
+          </span>
+        </a>
+        <p class="foot-tagline">Trusted Local Experts <em style="font-style:italic;color:rgba(255,255,255,0.6);">Experience the wild with us.</em></p>
+        <address class="foot-addr">
+          Makindye Boston, Kampala, Uganda<br>
+          (opposite Boston International school)<br>
+          <a href="tel:+256757212707">+256 757 212707</a><br>
+          <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a>
+        </address>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@bestsafariadventureseastafrica" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+          <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+            <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="safari-packages.html">Safari Packages</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shoebill.html">Shoebill Home Safari</a></li>
+          <li><a href="city-tours.html">Kampala City Tours</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="gorilla-trekking.html">Gorilla trekking</a></li>
+          <li><a href="bird-watching.html">Bird Watching</a></li>
+          <li><a href="accomodations.html">Accommodation</a></li>
+          <li><a href="car-hire-services.html">Car hire services</a></li>
+          <li><a href="community-engagements.html">Community Engagements</a></li>
+          <li><a href="bike-safaris.html">Bike Safaris</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#">Uganda</a></li>
+          <li><a href="#">Kenya</a></li>
+          <li><a href="#">Tanzania</a></li>
+          <li><a href="#">Rwanda</a></li>
+          <li><a href="safari-packages.html">Multi-Country Tours</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Best Safari Adventures East-Africa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-whatsapp">
+  <a href="https://wa.me/256757212707" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("safariMenuToggle");
+    const mobileMenu = document.getElementById("safariMobileMenu");
+    const menuOverlay = document.getElementById("safariMenuOverlay");
+    const menuClose = document.getElementById("safariMenuClose");
+    const menuLinks = document.querySelectorAll(".safari-menu-links a, .safari-menu-cta");
+
+    function openSafariMenu() {
+      mobileMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+      menuToggle.classList.add("active");
+      menuToggle.setAttribute("aria-expanded", "true");
+      mobileMenu.setAttribute("aria-hidden", "false");
+      document.body.classList.add("safari-menu-open");
+    }
+
+    function closeSafariMenu() {
+      mobileMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("safari-menu-open");
+    }
+
+    menuToggle.addEventListener("click", function () {
+      if (mobileMenu.classList.contains("active")) {
+        closeSafariMenu();
+      } else {
+        openSafariMenu();
+      }
+    });
+
+    menuClose.addEventListener("click", closeSafariMenu);
+    menuOverlay.addEventListener("click", closeSafariMenu);
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeSafariMenu();
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+        closeSafariMenu();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 991) {
+        closeSafariMenu();
+      }
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luxury Safari Accommodations in East Africa. Book premium tented camps, eco-lodges, and 5-star hotels in Uganda, Kenya, Tanzania & Rwanda.">
+  <title>Luxury Safari Accommodations | Best Safari Adventures East-Africa</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --black-light: #1a1a1a;
+      --gold: #D4AF37;
+      --gold-light: #F4E8C1;
+      --gold-dark: #B8941F;
+      --forest-green: #1B4D3E;
+      --forest-green-light: #2D5F4F;
+      --mint: #98D8AA;
+      --mint-light: #C8E6C9;
+      --white: #FFFFFF;
+      --cream: #FAF9F6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .serif-text { font-family: 'Cormorant Garamond', serif; }
+
+    /* Preloader */
+    .preloader {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(135deg, var(--black) 0%, var(--forest-green) 100%);
+      display: flex; justify-content: center; align-items: center; z-index: 99999; transition: opacity 0.8s ease;
+    }
+    .preloader.hidden { opacity: 0; pointer-events: none; }
+    .preloader-content { text-align: center; }
+    .preloader-logo {
+      font-family: 'Cinzel', serif; font-size: 3.5rem; color: var(--gold); margin-bottom: 1.5rem;
+      animation: shimmer 2s infinite; text-shadow: 0 0 30px rgba(212,175,55,0.5);
+    }
+    @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    .preloader-line {
+      width: 200px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto; animation: loading 1.5s infinite;
+    }
+    @keyframes loading { 0% { transform: scaleX(0); } 50% { transform: scaleX(1); } 100% { transform: scaleX(0); } }
+
+    /* Navigation */
+    .navbar {
+      position: fixed; top: 0; width: 100%;
+      background: linear-gradient(180deg, rgba(10,10,10,0.98) 0%, rgba(27,77,62,0.9) 100%);
+      backdrop-filter: blur(20px); z-index: 1000; padding: 1rem 0;
+      transition: all 0.4s ease; border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+    .navbar.scrolled { padding: 0.8rem 0; background: rgba(10,10,10,0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+    .nav-logo img { height: 50px; width: auto; transition: transform 0.3s ease; }
+    .nav-logo:hover img { transform: scale(1.05); }
+    .nav-logo-text {
+      font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold);
+      letter-spacing: 2px; transition: all 0.3s ease; text-shadow: 0 0 20px rgba(212,175,55,0.3);
+    }
+    .nav-logo:hover .nav-logo-text { text-shadow: 0 0 30px rgba(212,175,55,0.6); }
+    .nav-menu { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+    .nav-menu a {
+      color: var(--white); text-decoration: none; font-weight: 400; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; position: relative; padding: 0.5rem 0;
+    }
+    .nav-menu a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px;
+      background: var(--gold); transition: width 0.4s ease;
+    }
+    .nav-menu a:hover, .nav-menu a.active { color: var(--gold); }
+    .nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer; padding: 0.5rem; z-index: 1001; }
+
+    /* Page Hero Section with Video */
+    .accom-hero {
+      position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 0;
+      background: linear-gradient(135deg, var(--black) 0%, var(--forest-green) 100%);
+    }
+    .accom-video-bg {
+      position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto;
+      transform: translate(-50%, -50%); object-fit: cover; opacity: 0.35; mix-blend-mode: overlay; z-index: 1;
+    }
+    .accom-hero-overlay {
+      position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(27,77,62,0.7) 50%, rgba(10,10,10,0.85) 100%); z-index: 2;
+    }
+    .accom-hero-content {
+      position: relative; z-index: 3; text-align: center; padding: 0 2rem; max-width: 900px;
+    }
+    .accom-hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--gold); margin-bottom: 1.5rem;
+      text-shadow: 0 5px 20px rgba(0,0,0,0.5); line-height: 1.2;
+    }
+    .accom-hero-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--mint-light); font-style: italic; }
+
+    /* Quick Booking Widget */
+    .booking-widget-section {
+      background: var(--black);
+      padding: 0 2rem;
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+    }
+    .booking-widget {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(27,77,62,0.4);
+      border: 1px solid rgba(212,175,55,0.3);
+      padding: 2.5rem;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+    }
+    .booking-widget h3 {
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+    .widget-form {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      align-items: end;
+    }
+    .widget-form .form-group { display: flex; flex-direction: column; }
+    .widget-form label {
+      color: var(--mint);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .widget-form input, .widget-form select {
+      padding: 1rem;
+      background: rgba(10,10,10,0.8);
+      border: 1px solid rgba(212,175,55,0.2);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .widget-form input:focus, .widget-form select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(212,175,55,0.2);
+    }
+    .widget-submit {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--black);
+      padding: 1rem;
+      border: none;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+    }
+    .widget-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+    }
+
+    /* Section Styles */
+    section { padding: 6rem 2rem; position: relative; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-tag {
+      font-family: 'Cormorant Garamond', serif; color: var(--mint); font-size: 1.3rem;
+      font-weight: 400; text-transform: uppercase; letter-spacing: 6px; margin-bottom: 1.5rem; display: block; font-style: italic;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif; font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--gold); margin-bottom: 2rem; font-weight: 600; letter-spacing: 3px;
+    }
+    .section-subtitle {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mint-light);
+      max-width: 800px; margin: 0 auto; font-weight: 300; font-style: italic;
+    }
+
+    /* Introduction Section */
+    .intro-section { background: var(--black); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .intro-content h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 2rem; line-height: 1.3; }
+    .intro-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--mint-light); line-height: 1.9; }
+    .intro-images { position: relative; height: 500px; }
+    .intro-img-main {
+      position: absolute; top: 0; left: 0; width: 75%; height: 75%; overflow: hidden;
+      border: 3px solid var(--gold); box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .intro-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .intro-img-secondary {
+      position: absolute; bottom: 0; right: 0; width: 60%; height: 50%; overflow: hidden;
+      border: 3px solid var(--mint); box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+    .intro-img-secondary img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Accommodation Categories */
+    .categories-section { background: linear-gradient(135deg, var(--forest-green) 0%, var(--black) 100%); }
+    .categories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .category-card {
+      background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.2);
+      overflow: hidden; transition: all 0.5s ease; text-align: center;
+    }
+    .category-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 25px 60px rgba(212,175,55,0.15); }
+    .category-image { height: 240px; overflow: hidden; position: relative; }
+    .category-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+    .category-card:hover .category-image img { transform: scale(1.1); }
+    .category-content { padding: 2rem; }
+    .category-content h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 1rem; }
+    .category-content p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; }
+
+    /* Featured Lodges */
+    .lodges-section { background: var(--black-light); }
+    .lodges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .lodge-card {
+      background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.2);
+      overflow: hidden; transition: all 0.5s ease;
+    }
+    .lodge-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 25px 60px rgba(212,175,55,0.15); }
+    .lodge-image { height: 260px; overflow: hidden; position: relative; }
+    .lodge-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+    .lodge-card:hover .lodge-image img { transform: scale(1.1); }
+    .lodge-badge {
+      position: absolute; top: 15px; right: 15px; background: var(--gold); color: var(--black);
+      padding: 0.4rem 1rem; font-family: 'Cinzel', serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
+    }
+    .lodge-content { padding: 2rem; }
+    .lodge-content h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .lodge-location { color: var(--mint); font-size: 0.9rem; margin-bottom: 1rem; font-weight: 500; }
+    .lodge-content p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .lodge-features { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .lodge-feature { font-size: 0.85rem; color: var(--mint-light); background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 4px; }
+    .btn-luxury {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: var(--black);
+      padding: 0.8rem 1.5rem; border: 2px solid var(--gold); border-radius: 0;
+      font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+      text-decoration: none; display: inline-block; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      text-transform: uppercase; letter-spacing: 2px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(212,175,55,0.4);
+    }
+    .btn-luxury::before {
+      content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: left 0.7s ease;
+    }
+    .btn-luxury:hover::before { left: 100%; }
+    .btn-luxury:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(212,175,55,0.6); background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%); }
+
+    /* Amenities Section */
+    .amenities-section { background: var(--black); }
+    .amenities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .amenity-card {
+      background: rgba(27,77,62,0.2); padding: 2.5rem; border-left: 3px solid var(--gold);
+      transition: all 0.4s ease; text-align: center;
+    }
+    .amenity-card:hover { background: rgba(27,77,62,0.3); transform: translateY(-8px); }
+    .amenity-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+    .amenity-card h4 { color: var(--gold); font-size: 1.3rem; margin-bottom: 1rem; }
+    .amenity-card p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.7; }
+
+    /* FAQ Section */
+    .faq-section { background: linear-gradient(135deg, var(--forest-green) 0%, var(--black) 100%); }
+    .faq-container { max-width: 900px; margin: 0 auto; }
+    .faq-item { background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.2); margin-bottom: 1.5rem; overflow: hidden; }
+    .faq-question { padding: 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease; }
+    .faq-question:hover { background: rgba(212,175,55,0.05); }
+    .faq-question h3 { color: var(--gold); font-size: 1.2rem; font-weight: 600; }
+    .faq-icon { font-size: 1.8rem; color: var(--mint); transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+    .faq-answer-content { padding: 0 2rem 2rem; font-family: 'Cormorant Garamond', serif; color: var(--mint-light); font-size: 1.1rem; line-height: 1.8; }
+    .faq-item.active .faq-answer { max-height: 400px; }
+
+    /* CTA Section */
+    .cta-section { background: linear-gradient(135deg, var(--forest-green) 0%, var(--black) 100%); padding: 6rem 2rem; text-align: center; }
+    .cta-content { max-width: 800px; margin: 0 auto; }
+    .cta-content h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 1.5rem; }
+    .cta-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--mint-light); margin-bottom: 3rem; }
+
+    /* Partners Section */
+    .partners { background: var(--black-light); padding: 4rem 2rem; }
+    .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; align-items: center; justify-items: center; }
+    .partner-item {
+      background: rgba(212,175,55,0.05); padding: 2rem 1.5rem; border: 1px solid rgba(212,175,55,0.2);
+      text-align: center; min-height: 100px; display: flex; align-items: center; justify-content: center; width: 100%; transition: all 0.4s ease;
+    }
+    .partner-item:hover { background: rgba(212,175,55,0.1); border-color: var(--gold); }
+    .partner-item a { color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+
+    /* Footer */
+    footer.site-footer { background: var(--black); border-top: 1px solid rgba(212,175,55,0.2); padding: 5rem 2rem 2rem; }
+    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; }
+    .foot-brand .logo { margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+    .foot-brand .logo img { height: 50px; width: auto; }
+    .foot-brand .logo-word { display: flex; flex-direction: column; line-height: 1; }
+    .foot-brand .logo-word .lw-1 { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--gold); }
+    .foot-brand .logo-word .lw-2 { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-top: 4px; }
+    .foot-tagline { color: var(--mint-light); line-height: 1.8; margin-bottom: 2rem; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+    .foot-addr { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.55); font-style: normal; margin-bottom: 1.5rem; }
+    .foot-addr a { color: var(--gold); text-decoration: none; }
+    .footer-column h4 { color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .footer-column ul { list-style: none; }
+    .footer-column ul li { margin-bottom: 0.8rem; }
+    .footer-column ul li a { color: var(--mint-light); text-decoration: none; transition: all 0.3s ease; font-family: 'Cormorant Garamond', serif; }
+    .footer-column ul li a:hover { color: var(--gold); padding-left: 5px; }
+    .footer-contact p { color: var(--mint-light); margin-bottom: 0.8rem; font-family: 'Cormorant Garamond', serif; }
+    .footer-contact strong { color: var(--gold); }
+    .newsletter-form { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
+    .newsletter-form input { flex: 1; padding: 0.8rem; border: 1px solid rgba(212,175,55,0.3); background: rgba(255,255,255,0.05); color: var(--white); }
+    .newsletter-form button { padding: 0.8rem 1.5rem; background: var(--gold); color: var(--black); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+    .newsletter-form button:hover { background: var(--gold-light); }
+    .footer-bottom { border-top: 1px solid rgba(212,175,55,0.2); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+
+    /* Floating Elements */
+    .floating-whatsapp { position: fixed; right: 32px; bottom: 32px; z-index: 999; }
+    .whatsapp-btn {
+      width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(37,211,102,0.4); border: 3px solid #fff;
+    }
+    .whatsapp-btn img { width: 36px; height: 36px; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+
+    .floating-social { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 998; display: flex; flex-direction: column; gap: 8px; background: var(--black); padding: 12px 8px; border-radius: 0 8px 8px 0; border: 1px solid rgba(212,175,55,0.2); border-left: none; box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; text-decoration: none; transition: all 0.3s; border-radius: 50%; }
+    .social-icon svg { width: 20px; height: 20px; }
+    .social-icon:hover { background: var(--gold); color: var(--black); transform: translateX(4px); }
+
+    /* Scroll to top */
+    .scroll-top {
+      position: fixed; bottom: 120px; right: 40px; width: 60px; height: 60px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark)); display: flex; align-items: center; justify-content: center;
+      color: var(--black); font-size: 1.8rem; cursor: pointer; opacity: 0; visibility: hidden;
+      transition: all 0.4s ease; z-index: 998; border: 2px solid var(--white);
+    }
+    .scroll-top.visible { opacity: 1; visibility: visible; }
+    .scroll-top:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(212,175,55,0.5); }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .categories-grid, .lodges-grid { grid-template-columns: repeat(2, 1fr); }
+      .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+      .partners-grid { grid-template-columns: repeat(2, 1fr); }
+      .widget-form { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 992px) {
+      .nav-menu {
+        position: fixed; top: 0; left: -100%; width: 100%; height: 100vh;
+        background: rgba(10,10,10,0.98); flex-direction: column; justify-content: center; padding: 0; gap: 3rem; transition: left 0.3s ease;
+      }
+      .nav-menu.active { left: 0; }
+      .nav-menu a { font-size: 1.5rem; }
+      .mobile-menu-toggle { display: block; }
+      .intro-grid { grid-template-columns: 1fr; }
+      .intro-images { order: -1; margin-bottom: 2rem; height: 400px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .floating-social { display: none; }
+    }
+    @media (max-width: 768px) {
+      .categories-grid, .lodges-grid, .amenities-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .widget-form { grid-template-columns: 1fr; }
+      .booking-widget { padding: 1.5rem; }
+      .nav-logo img { height: 40px; }
+      .nav-logo-text { font-size: 1.2rem; }
+    }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">BEST SAFARI ADVENTURES</div>
+    <div class="preloader-line"></div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo">
+      <span class="nav-logo-text">BEST SAFARI ADVENTURES</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="safari-packages.html">Safari Packages</a></li>
+      <li><a href="accomodations.html" class="active">Accommodations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+  </div>
+</nav>
+
+<!-- Floating Social Media (Left Side) -->
+<div class="floating-social">
+  <a href="https://www.youtube.com/@bestsafariadventureseastafrica" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+  <a href="https://www.instagram.com/bestsafariadventureseastafrica/" target="_blank" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+  <a href="https://x.com" target="_blank" class="social-icon" title="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8" cy="8" r="1"/>
+    <path d="M8 11V17"/>
+    <path d="M12 17V13.8C12 12.2 13 11 14.6 11C16.2 11 17 12.1 17 13.8V17"/>
+    <path d="M12 13V11"/>
+  </svg></a>
+  <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" target="_blank" class="social-icon" title="Tiktok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+    <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+  </svg></a>
+  <a href="https://snapchat.com" target="_blank" class="social-icon" title="Snapchat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3 C10 3 8.5 4.6 8.5 6.8 V8.2 C8.5 9.5 7.7 10.6 6.6 11 C7.3 11.8 8.1 12.2 9 12.3 C9.2 14.5 10.4 16 12 16 C13.6 16 14.8 14.5 15 12.3 C15.9 12.2 16.7 11.8 17.4 11 C16.3 10.6 15.5 9.5 15.5 8.2 V6.8 C15.5 4.6 14 3 12 3Z"/>
+    <path d="M8.5 16.5C9.8 17.2 10.9 17.6 12 17.6C13.1 17.6 14.2 17.2 15.5 16.5"/>
+  </svg></a>
+  <a href="https://threads.com" target="_blank" class="social-icon" title="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4C8.5 4 6 6.3 6 10C6 13.7 8.5 16 12 16C15 16 17 14.5 17 12C17 9.8 15.2 8.5 12.8 8.5C10.9 8.5 9.5 9.6 9.5 11.2C9.5 12.8 10.8 14 12.8 14C15.5 14 18 12.5 18 9.2C18 5.8 15.5 4 12 4Z"/>
+  </svg></a>
+  <a href="https://telegram.com" target="_blank" class="social-icon" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3L3 11L10 13L12 20L21 3Z"/>
+    <path d="M10 13L21 3"/>
+  </svg></a>
+</div>
+
+<!-- Page Hero with Video -->
+<section class="accom-hero">
+  <video class="accom-video-bg" autoplay muted loop playsinline>
+    <source src="./img/lodge-video-1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="accom-hero-overlay"></div>
+  <div class="accom-hero-content fade-in">
+    <h1>Luxury Safari Accommodations</h1>
+    <p class="serif-text">Experience world-class comfort in the heart of the wilderness. From premium tented camps to 5-star eco-lodges.</p>
+  </div>
+</section>
+
+<!-- Quick Booking Widget -->
+<div class="booking-widget-section fade-in">
+  <div class="booking-widget">
+    <h3>Check Lodge Availability</h3>
+    <form class="widget-form" id="accomBookingForm">
+      <div class="form-group">
+        <label>Destination / Lodge</label>
+        <select required>
+          <option value="">Select Location</option>
+          <option>Bwindi Impenetrable Forest</option>
+          <option>Murchison Falls National Park</option>
+          <option>Queen Elizabeth National Park</option>
+          <option>Kampala / Entebbe City</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Check-in Date</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group">
+        <label>Check-out Date</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group">
+        <label>Number of Guests</label>
+        <select required>
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4+ Guests</option>
+        </select>
+      </div>
+      <button type="submit" class="widget-submit">Check Availability</button>
+    </form>
+  </div>
+</div>
+
+<!-- Introduction Section -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-content fade-in">
+        <span class="section-tag">Hand-Picked Stays</span>
+        <h2>Your Home in the Wilderness</h2>
+        <p class="serif-text">
+          We believe that your accommodation should be as memorable as the wildlife encounters themselves. That's why we have carefully curated a portfolio of the finest lodges, tented camps, and boutique hotels across East Africa.
+        </p>
+        <p class="serif-text">
+          Whether you seek the rustic charm of a canvas tent under the stars, the eco-friendly elegance of a forest lodge, or the convenient comfort of a city hotel before your flight, we secure the best rates and guarantee seamless bookings. Every property is vetted for quality, sustainability, and authentic African hospitality.
+        </p>
+      </div>
+      <div class="intro-images fade-in">
+        <div class="intro-img-main">
+          <img src="./img/luxury-lodge-1.jpg" alt="Luxury Safari Lodge East Africa">
+        </div>
+        <div class="intro-img-secondary">
+          <img src="./img/tented-camp-1.jpg" alt="Premium Tented Camp Uganda">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Accommodation Categories -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Stay Options</span>
+      <h2 class="section-title">Accommodation Categories</h2>
+      <p class="section-subtitle serif-text">Choose the perfect lodging style to match your adventure and budget</p>
+    </div>
+
+    <div class="categories-grid">
+      <div class="category-card fade-in">
+        <div class="category-image">
+          <img src="./img/5-star-lodge.jpg" alt="5-Star Luxury Lodges">
+        </div>
+        <div class="category-content">
+          <h3>5-Star Luxury Lodges</h3>
+          <p class="serif-text">Ultimate comfort with en-suite bathrooms, gourmet dining, infinity pools, and panoramic wildlife views.</p>
+        </div>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-image">
+          <img src="./img/premium-tented-camp.jpg" alt="Premium Tented Camps">
+        </div>
+        <div class="category-content">
+          <h3>Premium Tented Camps</h3>
+          <p class="serif-text">Authentic bush experience with spacious canvas tents, comfortable beds, and private verandas.</p>
+        </div>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-image">
+          <img src="./img/mid-range-lodge.jpg" alt="Mid-Range Lodges">
+        </div>
+        <div class="category-content">
+          <h3>Mid-Range Lodges</h3>
+          <p class="serif-text">Excellent value for money, offering comfortable rooms, great food, and excellent locations near parks.</p>
+        </div>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-image">
+          <img src="./img/budget-campsite.jpg" alt="Budget Campsites">
+        </div>
+        <div class="category-content">
+          <h3>Budget Campsites</h3>
+          <p class="serif-text">Clean, safe, and well-maintained campsites for backpackers and budget-conscious travelers.</p>
+        </div>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-image">
+          <img src="./img/city-hotel.jpg" alt="City Hotels">
+        </div>
+        <div class="category-content">
+          <h3>City Hotels</h3>
+          <p class="serif-text">Comfortable and convenient hotels in Kampala and Entebbe for pre- or post-safari stays.</p>
+        </div>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-image">
+          <img src="./img/eco-lodge.jpg" alt="Eco-Friendly Lodges">
+        </div>
+        <div class="category-content">
+          <h3>Eco-Friendly Lodges</h3>
+          <p class="serif-text">Sustainable accommodations powered by solar energy, supporting local conservation and communities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Lodges -->
+<section class="lodges-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Featured Properties</span>
+      <h2 class="section-title">Hand-Picked Favorite Lodges</h2>
+      <p class="section-subtitle serif-text">A glimpse of the exceptional properties we recommend for your safari</p>
+    </div>
+
+    <div class="lodges-grid">
+      <div class="lodge-card fade-in">
+        <div class="lodge-image">
+          <span class="lodge-badge">Luxury</span>
+          <img src="./img/murchison-river-lodge.jpg" alt="Murchison River Lodge">
+        </div>
+        <div class="lodge-content">
+          <h3>Murchison River Lodge</h3>
+          <div class="lodge-location">📍 Murchison Falls National Park</div>
+          <p class="serif-text">Perched on the banks of the Nile, offering stunning views of the river and hippos, with easy access to the falls.</p>
+          <div class="lodge-features">
+            <span class="lodge-feature">Pool</span>
+            <span class="lodge-feature">River View</span>
+            <span class="lodge-feature">Wi-Fi</span>
+          </div>
+          <a href="contact.html" class="btn-luxury">Inquire Now</a>
+        </div>
+      </div>
+
+      <div class="lodge-card fade-in">
+        <div class="lodge-image">
+          <span class="lodge-badge">Premium</span>
+          <img src="./img/bwindi-lodge.jpg" alt="Bwindi Forest Lodge">
+        </div>
+        <div class="lodge-content">
+          <h3>Bwindi Forest Lodge</h3>
+          <div class="lodge-location">📍 Bwindi Impenetrable Forest</div>
+          <p class="serif-text">Nestled in the misty rainforest, offering cozy rooms, fireplace lounges, and proximity to gorilla trekking trails.</p>
+          <div class="lodge-features">
+            <span class="lodge-feature">Fireplace</span>
+            <span class="lodge-feature">Forest View</span>
+            <span class="lodge-feature">Spa</span>
+          </div>
+          <a href="contact.html" class="btn-luxury">Inquire Now</a>
+        </div>
+      </div>
+
+      <div class="lodge-card fade-in">
+        <div class="lodge-image">
+          <span class="lodge-badge">Eco-Luxury</span>
+          <img src="./img/serengeti-camp.jpg" alt="Serengeti Tented Camp">
+        </div>
+        <div class="lodge-content">
+          <h3>Serengeti Tented Camp</h3>
+          <div class="lodge-location">📍 Serengeti National Park, Tanzania</div>
+          <p class="serif-text">A classic mobile camp that follows the Great Migration, offering authentic bush luxury under the stars.</p>
+          <div class="lodge-features">
+            <span class="lodge-feature">Mobile Camp</span>
+            <span class="lodge-feature">En-suite</span>
+            <span class="lodge-feature">Solar Power</span>
+          </div>
+          <a href="contact.html" class="btn-luxury">Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Amenities Section -->
+<section class="amenities-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">What to Expect</span>
+      <h2 class="section-title">Standard Lodge Amenities</h2>
+      <p class="section-subtitle serif-text">Comfort and convenience, even in the remotest locations</p>
+    </div>
+
+    <div class="amenities-grid">
+      <div class="amenity-card fade-in"><div class="amenity-icon">🛏️</div><h4>En-Suite Bathrooms</h4><p class="serif-text">Private bathrooms with hot showers, even in the heart of the bush.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">🍽️</div><h4>Gourmet Dining</h4><p class="serif-text">Delicious meals featuring local and international cuisine, catering to dietary needs.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">📶</div><h4>Wi-Fi Access</h4><p class="serif-text">Stay connected with complimentary Wi-Fi in main lodge areas and rooms.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">🌿</div><h4>Eco-Friendly</h4><p class="serif-text">Solar power, rainwater harvesting, and sustainable waste management.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">🦁</div><h4>Wildlife Views</h4><p class="serif-text">Strategic locations offering breathtaking views of wildlife from your veranda.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">🛡️</div><h4>24/7 Security</h4><p class="serif-text">Round-the-clock security and escorted walks for your complete peace of mind.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">🧺</div><h4>Laundry Service</h4><p class="serif-text">Complimentary or affordable laundry services to keep you fresh on long tours.</p></div>
+      <div class="amenity-card fade-in"><div class="amenity-icon">🚐</div><h4>Transfer Services</h4><p class="serif-text">Seamless airport pickups and inter-lodge transfers in comfortable 4x4 vehicles.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle serif-text">Everything you need to know about booking your safari accommodation</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question"><h3>Can I choose my own lodge, or do you assign it?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">You have complete freedom! We provide a curated list of recommended lodges for each destination based on your budget and preferences. You can choose from our list, or if you have a specific lodge in mind, we will gladly check its availability and include it in your itinerary.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Are meals included in the accommodation price?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Most of our safari packages are offered on a "Full Board" basis, which includes breakfast, lunch, and dinner. Drinking water, soft drinks, and alcoholic beverages are typically excluded but can be added to your package upon request.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Is it safe to stay in tented camps in the wilderness?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Absolutely. Our recommended tented camps are highly secure. They are fenced or guarded 24/7 by trained security personnel. Staff will always escort you to and from your tent at night, ensuring your complete safety.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>What is your cancellation policy for lodges?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Cancellation policies vary by lodge and season. Generally, cancellations made 30+ days before arrival incur no penalty. We will always clarify the specific cancellation terms of your chosen lodge before you confirm your booking.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-content fade-in">
+    <h2>Ready to Book Your Perfect Stay?</h2>
+    <p class="serif-text">Let us handle the logistics while you focus on the adventure. Contact us today for the best rates on East Africa's finest safari accommodations.</p>
+    <a href="contact.html" class="btn-luxury" style="padding: 1.3rem 3.5rem; font-size: 0.95rem;">Request Accommodation Quote</a>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Accreditations</span>
+      <h2 class="section-title">Our Trusted Tourism Partners</h2>
+    </div>
+    <div class="partners-grid fade-in">
+      <div class="partner-item"><a href="https://utb.go.ug/" target="_blank">Uganda Tourism Board</a></div>
+      <div class="partner-item"><a href="https://www.ugandawildlife.org/" target="_blank">Uganda Wildlife Authority</a></div>
+      <div class="partner-item"><a href="https://www.safaribookings.com/" target="_blank">SafariBookings</a></div>
+      <div class="partner-item"><a href="https://www.tripadvisor.com/" target="_blank">TripAdvisor</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-word">
+            <span class="lw-1">BEST SAFARI</span>
+            <span class="lw-2">Adventures East-Africa</span>
+          </span>
+        </a>
+        <p class="foot-tagline">Trusted Local Experts <em style="font-style:italic;color:rgba(255,255,255,0.6);">Experience the wild with us.</em></p>
+        <address class="foot-addr">
+          Makindye Boston, Kampala, Uganda<br>
+          (opposite Boston International school)<br>
+          <a href="tel:+256757212707">+256 757 212707</a><br>
+          <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a>
+        </address>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@bestsafariadventureseastafrica" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+          <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+            <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="safari-packages.html">Safari Packages</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shoebill.html">Shoebill Home Safari</a></li>
+          <li><a href="city-tours.html">Kampala City Tours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="gorilla-trekking.html">Gorilla trekking</a></li>
+          <li><a href="bird-watching.html">Bird Watching</a></li>
+          <li><a href="accomodations.html">Accommodation</a></li>
+          <li><a href="car-hire-services.html">Car hire services</a></li>
+          <li><a href="community-engagements.html">Community Engagements</a></li>
+          <li><a href="bike-safaris.html">Bike Safaris</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h4>Contact</h4>
+        <p><strong>+256 757 212707</strong></p>
+        <p><strong>bestsafariadventureseastafrica@gmail.com</strong></p>
+        <p>Makindye Boston - Kampala Uganda<br>(opposite Boston International school)</p>
+
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Best Safari Adventures East-Africa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<div class="floating-whatsapp">
+  <a href="https://wa.me/256757212707" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+</div>
+
+<!-- Scroll to Top -->
+<div class="scroll-top" id="scrollTop">↑</div>
+
+<script>
+  // Preloader
+  window.addEventListener('load', () => {
+    setTimeout(() => { document.getElementById('preloader').classList.add('hidden'); }, 1500);
+  });
+
+  // Navbar Scroll Effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) { navbar.classList.add('scrolled'); } else { navbar.classList.remove('scrolled'); }
+  });
+
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const navMenu = document.getElementById('navMenu');
+  mobileMenuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileMenuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+  });
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      mobileMenuToggle.textContent = '☰';
+    });
+  });
+
+  // Accommodation Form Submission
+  document.getElementById('accomBookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const inputs = this.querySelectorAll('input, select');
+    const destination = inputs[0].value;
+    const checkin = inputs[1].value;
+    const checkout = inputs[2].value;
+    const guests = inputs[3].value;
+
+    const message = `*Accommodation Inquiry*%0A%0A` +
+      `*Destination:* ${destination}%0A` +
+      `*Check-in:* ${checkin}%0A` +
+      `*Check-out:* ${checkout}%0A` +
+      `*Guests:* ${guests}`;
+    window.open(`https://wa.me/256757212707?text=${message}`, '_blank');
+  });
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); });
+      if (!isActive) { faqItem.classList.add('active'); }
+    });
+  });
+
+  // Scroll to Top Button
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) { scrollTop.classList.add('visible'); } else { scrollTop.classList.remove('visible'); }
+  });
+  scrollTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Fade In Animation on Scroll
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  fadeElements.forEach(element => { fadeInObserver.observe(element); });
+
+  // Smooth Scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          navMenu.classList.remove('active');
+          mobileMenuToggle.textContent = '☰';
+        }
+      }
+    });
+  });
+
+  console.log('%c🦁 Best Safari Adventures East-Africa', 'color: #D4AF37; font-size: 24px; font-weight: bold;');
+  console.log('%cAccommodations Page Loaded', 'color: #98D8AA; font-size: 14px;');
+</script>
+</body>
+</html>

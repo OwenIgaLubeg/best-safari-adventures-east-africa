@@ -1,0 +1,1534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exclusive Luxury Safari Packages in East Africa. Explore our premium tourism itineraries for gorilla trekking, wildlife safaris, birding, and cultural tours.">
+  <title>Safari Packages | Best Safari Adventures East-Africa</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-safari-dark: #0E1B16;
+      --color-safari-darker: #08110E;
+      --color-safari-gold: #D4AF37;
+      --color-safari-gold-light: #F1D27A;
+      --color-safari-orange: #C85A17;
+      --color-safari-mint: #98D8AA;
+      --color-safari-mint-dim: rgba(152, 216, 170, 0.12);
+      --color-parchment: #FAF9F6;
+      --color-white: #FFFFFF;
+
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-mono: 'Cinzel', serif;
+
+      --container-max: 1280px;
+      --container-pad: 24px;
+      --radius-md: 8px;
+      --radius-pill: 999px;
+      --radius-sm: 4px;
+
+      --dur-fast: 0.2s;
+      --dur-base: 0.3s;
+      --dur-slow: 0.5s;
+      --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* ENHANCED BOX SHADOWS */
+      --shadow-md: 0 10px 30px -5px rgba(0,0,0,0.15), 0 8px 12px -6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.25), 0 15px 25px -10px rgba(0,0,0,0.15);
+      --shadow-warm: 0 15px 40px rgba(212, 175, 55, 0.2);
+      --shadow-mint: 0 20px 40px rgba(152, 216, 170, 0.25);
+
+      --border-on-dark: rgba(212, 175, 55, 0.18);
+      --border-hairline: rgba(0,0,0,0.08);
+      --fg-1: #1a1a1a;
+      --fg-2: #555555;
+      --fg-3: #888888;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--color-parchment); color: var(--fg-1); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad); }
+
+    /* ============ NAV ============ */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--color-safari-dark);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid var(--border-on-dark);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .nav-inner { display: flex; align-items: center; gap: 36px; height: 84px; }
+    .logo { display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 600; font-size: 20px; color: #fff; text-decoration: none; letter-spacing: -0.005em; }
+    .logo img { height: 50px; width: auto; display: block; flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+    .logo .logo-word { display: flex; flex-direction: column; line-height: 1; }
+    .logo .logo-word .lw-1 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--color-safari-gold-light); }
+    .logo .logo-word .lw-2 { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-safari-gold); text-transform: uppercase; margin-top: 4px; }
+
+    .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; margin-left: auto; }
+    .nav-links a { position: relative; color: rgba(255,255,255,0.78); padding: 6px 0; transition: color var(--dur-fast) var(--ease-standard); }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 0; background: var(--color-safari-gold); transition: width var(--dur-base) var(--ease-standard); }
+    .nav-links a:hover { color: var(--color-safari-gold-light); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a.active { color: var(--color-safari-gold-light); }
+
+    .nav-cta { margin-left: 24px; }
+    .nav-toggle { display: none; background: transparent; border: 0; color: #fff; padding: 8px; margin-left: auto; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 14px; padding: 13px 24px; border-radius: var(--radius-pill); border: 0; line-height: 1; text-decoration: none; transition: all var(--dur-base) var(--ease-standard); }
+    .btn-primary { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-primary:hover { background: var(--color-safari-gold-light); color: var(--color-safari-dark); box-shadow: var(--shadow-warm); }
+    .btn-primary.on-dark { box-shadow: var(--shadow-warm); }
+    .btn-secondary { background: transparent; border: 1.5px solid var(--color-safari-gold); color: var(--color-safari-gold); padding: 11.5px 22.5px; }
+    .btn-secondary:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-secondary.on-dark { border-color: #fff; color: #fff; }
+    .btn-secondary.on-dark:hover { background: #fff; color: var(--color-safari-dark); }
+    .btn-lg { padding: 16px 30px; font-size: 15px; }
+
+    /* Alias for provided content */
+    .btn-luxury { composes: btn btn-primary; }
+
+    /* ============ PAGE HERO ============ */
+    .page-hero {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('./img/gorilla-hero-banner-1.jpg') center/cover no-repeat, var(--color-safari-dark);
+      margin-top: 84px;
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(14,27,22,0.05) 0%, rgba(27,77,62,0.75) 50%, rgba(14,27,22,0.05) 100%);
+    }
+    .page-hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 800px; }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      color: var(--color-safari-gold-light);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .page-hero p {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: rgba(255,255,255,0.85);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* ============ SECTION SHARED ============ */
+    section { padding: clamp(72px, 10vw, 100px) 0; }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-safari-orange); display: inline-block; margin-bottom: 18px; }
+    .section-tag.on-dark { color: var(--color-safari-gold-light); }
+    h2.section-title { font-family: var(--font-display); font-size: clamp(34px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.01em; font-weight: 600; margin: 0 0 16px; }
+    .section-subtitle { font-size: 18px; color: var(--fg-2); line-height: 1.6; margin: 0 auto; max-width: 640px; font-family: var(--font-display); font-style: italic; }
+
+    /* ============ CATEGORIES SECTION ============ */
+    .categories-section { background: linear-gradient(180deg, var(--color-parchment) 0%, var(--color-safari-mint-dim) 100%); }
+    .categories-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .category-card {
+      background: #fff;
+      padding: 32px 24px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid var(--border-hairline);
+      box-shadow: var(--shadow-md);
+      transition: all var(--dur-slow) var(--ease-standard);
+    }
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg), var(--shadow-mint);
+      border-color: var(--color-safari-mint);
+    }
+    .category-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+    .category-card h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--color-safari-dark); margin-bottom: 0.8rem; }
+    .category-card p { font-family: var(--font-display); font-size: 1rem; color: var(--fg-2); line-height: 1.5; font-style: italic; }
+
+    /* ============ PACKAGES SECTION ============ */
+    .packages-section { background: var(--color-safari-dark); color: #fff; }
+    .packages-section .section-title { color: var(--color-safari-gold-light); }
+    .packages-section .section-subtitle { color: rgba(255,255,255,0.75); }
+    .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .package-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-on-dark);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--dur-slow) var(--ease-standard);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .package-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: var(--color-safari-gold);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg), 0 0 30px rgba(212, 175, 55, 0.1);
+    }
+    .package-image { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+    .package-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-standard); }
+    .package-card:hover .package-image img { transform: scale(1.05); }
+    .package-badges { position: absolute; top: 16px; left: 16px; display: flex; gap: 8px; z-index: 2; }
+    .badge {
+      background: var(--color-safari-gold);
+      color: var(--color-safari-dark);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .badge.duration { background: var(--color-safari-mint); color: var(--color-safari-dark); }
+    .package-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
+    .package-content h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-safari-gold-light); margin: 0 0 12px; line-height: 1.2; }
+    .package-content p { font-family: var(--font-display); font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin: 0 0 20px; font-style: italic; flex: 1; }
+    .package-highlights { list-style: none; padding: 0; margin: 0 0 24px; border-top: 1px solid var(--border-on-dark); border-bottom: 1px solid var(--border-on-dark); padding: 16px 0; }
+    .package-highlights li {
+      font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.85);
+      padding-left: 20px; position: relative; margin-bottom: 8px; line-height: 1.5;
+    }
+    .package-highlights li:last-child { margin-bottom: 0; }
+    .package-highlights li::before { content: "✓"; position: absolute; left: 0; color: var(--color-safari-gold); font-weight: bold; }
+    .package-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+    .package-price { font-family: var(--font-mono); font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
+    .package-price span { font-size: 22px; color: #fff; font-weight: 600; letter-spacing: -0.01em; display: block; margin-top: 4px; font-family: var(--font-display); }
+
+    /* ============ CUSTOM CTA ============ */
+    .custom-cta {
+      background: linear-gradient(135deg, var(--color-safari-dark) 0%, rgba(27,77,62,0.9) 100%);
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .custom-cta::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(152, 216, 170, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .custom-cta-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .custom-cta-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-safari-gold-light); margin-bottom: 1.5rem; }
+    .custom-cta-content p { font-family: var(--font-display); font-size: 1.3rem; color: rgba(255,255,255,0.8); margin-bottom: 3rem; font-style: italic; line-height: 1.6; }
+
+    /* ============ PARTNERS ============ */
+    .partners { background: var(--color-safari-darker); padding: 64px 0; border-top: 1px solid var(--border-on-dark); }
+    .partners .section-title { color: var(--color-safari-gold-light); }
+    .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: center; justify-items: center; }
+    .partner-item {
+      background: rgba(255,255,255,0.04);
+      padding: 24px 32px;
+      border: 1px solid var(--border-on-dark);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transition: all var(--dur-base);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .partner-item:hover { background: rgba(255,255,255,0.08); border-color: var(--color-safari-gold); box-shadow: var(--shadow-warm); transform: translateY(-3px); }
+    .partner-item a { color: rgba(255,255,255,0.8); font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .partner-item:hover a { color: var(--color-safari-gold-light); }
+
+    /* ============ FOOTER ============ */
+    footer.site-footer { background: var(--color-safari-darker); color: rgba(255,255,255,0.7); padding: 80px 0 28px; border-top: 1px solid var(--border-on-dark); }
+    .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+    .foot-brand .logo { margin-bottom: 18px; color: #fff; }
+    .foot-tagline { font-family: var(--font-display); font-style: italic; font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.4; margin: 0 0 22px; max-width: 280px; }
+    .foot-addr { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.55); font-style: normal; }
+    .foot-addr a { color: var(--color-safari-gold); }
+    .foot-col h4 { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-safari-gold); margin: 0 0 18px; }
+    .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .foot-col a { color: rgba(255,255,255,0.7); font-size: 14px; transition: color var(--dur-fast); }
+    .foot-col a:hover { color: var(--color-safari-gold-light); }
+    .foot-social { display: flex; gap: 12px; margin-top: 24px; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all var(--dur-base); }
+    .foot-social a:hover { border-color: var(--color-safari-gold); color: var(--color-safari-gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+
+    /* Floating Elements */
+    .floating-whatsapp { position: fixed; right: 32px; bottom: 32px; z-index: 999; }
+    .whatsapp-btn { width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(37,211,102,0.4); border: 3px solid #fff; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+
+    .floating-social { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 998; display: flex; flex-direction: column; gap: 8px; background: var(--color-safari-dark); padding: 12px 8px; border-radius: 0 8px 8px 0; border: 1px solid var(--border-on-dark); border-left: none; box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-safari-gold); font-size: 1.1rem; text-decoration: none; transition: all 0.3s; border-radius: 50%; }
+    .social-icon:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); transform: translateX(4px); }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s var(--ease-standard); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* =====================================================
+   PREMIUM SAFARI HAMBURGER MENU
+====================================================== */
+
+
+    /* -----------------------------------------------------
+       HAMBURGER BUTTON
+    ------------------------------------------------------ */
+
+    .safari-menu-toggle {
+
+      position: fixed;
+
+      top: 20px;
+      right: 20px;
+
+      width: 52px;
+      height: 52px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: #0b3d2e;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      gap: 5px;
+
+      cursor: pointer;
+
+      z-index: 100001;
+
+      box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .safari-menu-toggle:hover {
+
+      transform: scale(1.08);
+
+      background: #145c43;
+
+    }
+
+
+    .safari-menu-toggle span {
+
+      display: block;
+
+      width: 23px;
+      height: 2px;
+
+      background: #ffffff;
+
+      border-radius: 10px;
+
+      transition:
+        transform 0.35s ease,
+        opacity 0.25s ease,
+        width 0.35s ease;
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER → X ANIMATION
+    ------------------------------------------------------ */
+
+    .safari-menu-toggle.active span:nth-child(1) {
+
+      transform:
+        translateY(7px)
+        rotate(45deg);
+
+    }
+
+
+    .safari-menu-toggle.active span:nth-child(2) {
+
+      opacity: 0;
+
+      width: 0;
+
+    }
+
+
+    .safari-menu-toggle.active span:nth-child(3) {
+
+      transform:
+        translateY(-7px)
+        rotate(-45deg);
+
+    }
+
+
+    /* -----------------------------------------------------
+       DARK OVERLAY
+    ------------------------------------------------------ */
+
+    .safari-menu-overlay {
+
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,0.60);
+
+      backdrop-filter: blur(3px);
+
+      -webkit-backdrop-filter: blur(3px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      z-index: 99998;
+
+      transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    }
+
+
+    .safari-menu-overlay.active {
+
+      opacity: 1;
+
+      visibility: visible;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU
+    ------------------------------------------------------ */
+
+    .safari-mobile-menu {
+
+      position: fixed;
+
+      top: 0;
+
+      right: 0;
+
+      width: min(390px, 88%);
+
+      height: 100vh;
+
+      height: 100dvh;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #073526,
+          #0c4634 60%,
+          #082c20
+        );
+
+      z-index: 100000;
+
+      transform: translateX(105%);
+
+      transition:
+        transform 0.45s cubic-bezier(.77,0,.18,1);
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow-y: auto;
+
+      box-shadow:
+        -15px 0 45px rgba(0,0,0,0.25);
+
+    }
+
+
+    .safari-mobile-menu.active {
+
+      transform: translateX(0);
+
+    }
+
+
+    /* -----------------------------------------------------
+       MENU HEADER
+    ------------------------------------------------------ */
+
+    .safari-menu-header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 25px 25px 20px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.12);
+
+    }
+
+
+    .safari-menu-brand {
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .safari-menu-brand span {
+
+      color: #ffffff;
+
+      font-size: 22px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.5px;
+
+    }
+
+
+    .safari-menu-brand small {
+
+      color: #d4a853;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      margin-top: 3px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       CLOSE BUTTON
+    ------------------------------------------------------ */
+
+    .safari-menu-close {
+
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid
+      rgba(255,255,255,0.25);
+
+      background:
+        rgba(255,255,255,0.08);
+
+      color: #ffffff;
+
+      border-radius: 50%;
+
+      font-size: 30px;
+
+      line-height: 1;
+
+      cursor: pointer;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+
+    }
+
+
+    .safari-menu-close:hover {
+
+      transform: rotate(90deg);
+
+      background: #d4a853;
+
+      color: #082c20;
+
+    }
+
+
+    /* -----------------------------------------------------
+       NAVIGATION LINKS
+    ------------------------------------------------------ */
+
+    .safari-menu-links {
+
+      display: flex;
+
+      flex-direction: column;
+
+      padding: 15px 25px;
+
+      flex: 1;
+
+    }
+
+
+    .safari-menu-links a {
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 18px 5px;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-size: 18px;
+
+      font-weight: 500;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.10);
+
+      transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+
+    }
+
+
+    .safari-menu-links a:hover {
+
+      color: #d4a853;
+
+      padding-left: 12px;
+
+    }
+
+
+    .safari-menu-links a small {
+
+      color:
+        rgba(255,255,255,0.35);
+
+      font-size: 11px;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    .safari-menu-links .safari-menu-contact {
+
+      color: #d4a853;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MENU FOOTER
+    ------------------------------------------------------ */
+
+    .safari-menu-footer {
+
+      padding: 25px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.12);
+
+    }
+
+
+    .safari-menu-footer p {
+
+      color:
+        rgba(255,255,255,0.65);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .safari-menu-cta {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 100%;
+
+      padding: 14px 20px;
+
+      background: #d4a853;
+
+      color: #102e22;
+
+      text-decoration: none;
+
+      border-radius: 30px;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+    }
+
+
+    .safari-menu-cta:hover {
+
+      transform: translateY(-2px);
+
+      background: #e6bd6a;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE DEVICES
+    ------------------------------------------------------ */
+
+    @media (max-width: 991px) {
+
+      .safari-menu-toggle {
+
+        display: flex;
+
+      }
+
+    }
+
+
+    /* -----------------------------------------------------
+       SMALL PHONES
+    ------------------------------------------------------ */
+
+    @media (max-width: 480px) {
+
+      .safari-menu-toggle {
+
+        top: 14px;
+
+        right: 14px;
+
+        width: 48px;
+
+        height: 48px;
+
+      }
+
+
+      .safari-mobile-menu {
+
+        width: 92%;
+
+      }
+
+
+      .safari-menu-links a {
+
+        font-size: 17px;
+
+        padding: 16px 5px;
+
+      }
+
+    }
+
+
+    /* -----------------------------------------------------
+       PREVENT BACKGROUND SCROLLING
+    ------------------------------------------------------ */
+
+    body.safari-menu-open {
+
+      overflow: hidden;
+
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 1024px) {
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .packages-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 960px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .partners-grid { grid-template-columns: 1fr 1fr; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .floating-social { display: none; }
+    }
+    @media (max-width: 768px) {
+      .packages-grid { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .foot-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .categories-grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: 1fr; }
+    }
+
+    .mobile-menu { display: none; background: var(--color-safari-darker); padding: 18px var(--container-pad) 24px; border-top: 1px solid var(--border-on-dark); }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; color: rgba(255,255,255,0.85); padding: 12px 0; font-size: 15px; border-bottom: 1px solid var(--border-on-dark); }
+    .mobile-menu a.active { color: var(--color-safari-gold-light); }
+    .mobile-menu .btn { margin-top: 14px; width: 100%; }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+      <span class="logo-word">
+        <span class="lw-1">BEST SAFARI</span>
+        <span class="lw-2">Adventures East-Africa</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="safari-packages.html" class="active">Safari Packages</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav-cta">wildlife conservation</a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('mm').classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="safari-packages.html" class="active">Safari Packages</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  </div>
+</nav>
+
+<!-- =====================================================
+     PREMIUM SAFARI MOBILE HAMBURGER MENU
+====================================================== -->
+
+<!-- Hamburger Button -->
+<button
+  class="safari-menu-toggle"
+  id="safariMenuToggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="safariMobileMenu">
+
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
+<!-- Dark Overlay -->
+<div
+  class="safari-menu-overlay"
+  id="safariMenuOverlay">
+</div>
+
+
+<!-- Mobile Navigation -->
+<nav
+  class="safari-mobile-menu"
+  id="safariMobileMenu"
+  aria-hidden="true">
+
+  <!-- Menu Header -->
+  <div class="safari-menu-header">
+
+    <div class="safari-menu-brand">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+    </div>
+  </div>
+  <!-- Navigation Links -->
+  <div class="safari-menu-links">
+    <a href="index.html">
+      <span>Home</span>
+      <small>01</small>
+    </a>
+
+    <a href="about.html">
+      <span>About Us</span>
+      <small>02</small>
+    </a>
+
+    <a href="safari-packages.html">
+      <span>Safari Packages</span>
+      <small>03</small>
+    </a>
+
+    <a href="gorilla-trekking.html">
+      <span>Gorilla Trekking</span>
+      <small>04</small>
+    </a>
+
+    <a href="contact.html" class="safari-menu-contact">
+      <span>Contact Us</span>
+      <small>05</small>
+    </a>
+  </div>
+  <!-- Menu Footer -->
+  <div class="safari-menu-footer">
+
+    <p>Adventure . Learn . Love . Nature<br>
+      Experience Unforgettable East-Africa Safaris.</p>
+    <a href="contact.html"
+       class="safari-menu-cta">
+      Plan Your Safari
+    </a>
+  </div>
+</nav>
+
+<!-- Floating Social Media (Left Side) -->
+<div class="floating-social">
+  <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+  <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+  <a href="https://x.com" target="_blank" class="social-icon" title="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8" cy="8" r="1"/>
+    <path d="M8 11V17"/>
+    <path d="M12 17V13.8C12 12.2 13 11 14.6 11C16.2 11 17 12.1 17 13.8V17"/>
+    <path d="M12 13V11"/>
+  </svg></a>
+  <a href="https://tiktok.com" target="_blank" class="social-icon" title="Tiktok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+    <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+  </svg></a>
+  <a href="https://snapchat.com" target="_blank" class="social-icon" title="Snapchat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3
+             C10 3 8.5 4.6 8.5 6.8
+             V8.2
+             C8.5 9.5 7.7 10.6 6.6 11
+             C7.3 11.8 8.1 12.2 9 12.3
+             C9.2 14.5 10.4 16 12 16
+             C13.6 16 14.8 14.5 15 12.3
+             C15.9 12.2 16.7 11.8 17.4 11
+             C16.3 10.6 15.5 9.5 15.5 8.2
+             V6.8
+             C15.5 4.6 14 3 12 3Z"/>
+    <path d="M8.5 16.5C9.8 17.2 10.9 17.6 12 17.6C13.1 17.6 14.2 17.2 15.5 16.5"/>
+  </svg></a>
+  <a href="https://threads.com" target="_blank" class="social-icon" title="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4C8.5 4 6 6.3 6 10C6 13.7 8.5 16 12 16C15 16 17 14.5 17 12C17 9.8 15.2 8.5 12.8 8.5C10.9 8.5 9.5 9.6 9.5 11.2C9.5 12.8 10.8 14 12.8 14C15.5 14 18 12.5 18 9.2C18 5.8 15.5 4 12 4Z"/>
+  </svg></a>
+  <a href="https://telegram.com" target="_blank" class="social-icon" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3L3 11L10 13L12 20L21 3Z"/>
+    <path d="M10 13L21 3"/>
+  </svg></a>
+
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content fade-in">
+    <h1>Exclusive Safari Packages</h1>
+    <p class="serif-text">Curated luxury tourism itineraries designed to showcase the very best of East Africa's wildlife, landscapes, and culture.</p>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES SECTION ============ -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Explore By Interest</span>
+      <h2 class="section-title">Our Tourism Specialties</h2>
+      <p class="section-subtitle">Choose your perfect wildlife tourism adventure from our diverse range of expertly crafted experiences</p>
+    </div>
+
+    <div class="categories-grid">
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/gorilla-1.JPG" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Primate Tracking</h3>
+        <p class="serif-text">Gorilla & Chimpanzee encounters</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/ter-2.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Wildlife Safaris</h3>
+        <p class="serif-text">Big Five game drives</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/ter-shoebill-2.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Bird Watching</h3>
+        <p class="serif-text">Rare species & Shoebill tracking</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/hiking-in-muhabura.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Mountain Hiking</h3>
+        <p class="serif-text">Rwenzori, Elgon & Virunga</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/bunyonyi-lake.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Water Adventures</h3>
+        <p class="serif-text">Nile cruises & lake excursions</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/ter-masai-tribe.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Cultural Tours</h3>
+        <p class="serif-text">Authentic community tourism</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/camping-switzerland.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Honeymoon Safaris</h3>
+        <p class="serif-text">Romantic luxury getaways</p>
+      </div>
+      <div class="category-card fade-in">
+        <div class="category-icon"><img src="./img/photo-1.jpg" alt="Gorilla Trekking Safari Uganda"></div>
+        <h3>Photography Tours</h3>
+        <p class="serif-text">Expert-led wildlife photography</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PACKAGES SECTION ============ -->
+<section class="packages-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag on-dark">Signature Itineraries</span>
+      <h2 class="section-title">Featured Luxury Safari Packages</h2>
+      <p class="section-subtitle">Our most sought-after tourism experiences, meticulously planned for unforgettable memories</p>
+    </div>
+
+    <div class="packages-grid">
+      <!-- Package 1 -->
+      <div class="package-card fade-in">
+        <div class="package-image">
+          <div class="package-badges">
+            <span class="badge duration">3 Days</span>
+            <span class="badge">Best Seller</span>
+          </div>
+          <img src="./img/ter-mountain-gorilla-1.jpg" alt="Gorilla Trekking Safari Uganda">
+        </div>
+        <div class="package-content">
+          <h3>3-Day Gorilla Trekking Safari</h3>
+          <p class="serif-text">An intimate, high-impact wildlife tourism experience tracking endangered mountain gorillas in Bwindi Impenetrable Forest.</p>
+          <ul class="package-highlights">
+            <li>Gorilla trekking permit included</li>
+            <li>Luxury forest lodge accommodation</li>
+            <li>Expert primate guide</li>
+            <li>Airport transfers & 4x4 transport</li>
+          </ul>
+          <div class="package-footer">
+            <div class="package-price">From: <span>$1,250</span></div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="package-card fade-in">
+        <div class="package-image">
+          <div class="package-badges">
+            <span class="badge duration">5 Days</span>
+            <span class="badge">Classic</span>
+          </div>
+          <img src="./img/murchi-2.jpg" alt="Murchison Falls Wildlife Safari">
+        </div>
+        <div class="package-content">
+          <h3>5-Day Ultimate Wildlife Safari</h3>
+          <p class="serif-text">Experience the raw power of Murchison Falls and the abundance of wildlife in Uganda's largest national park.</p>
+          <ul class="package-highlights">
+            <li>Big Five game drives</li>
+            <li>Nile River boat cruise</li>
+            <li>Top of the Falls hike</li>
+            <li>Premium tented camp stays</li>
+          </ul>
+          <div class="package-footer">
+            <div class="package-price">From: <span>$1,850</span></div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="package-card fade-in">
+        <div class="package-image">
+          <div class="package-badges">
+            <span class="badge duration">7 Days</span>
+            <span class="badge">Premium</span>
+          </div>
+          <img src="./img/ter-Kibale-Forest-National-Park-primates.jpg" alt="Primates and Big Five Safari">
+        </div>
+        <div class="package-content">
+          <h3>7-Day Primates & Big Five</h3>
+          <p class="serif-text">The ultimate East African tourism combination: track chimpanzees and gorillas, then encounter the Big Five on the savannah.</p>
+          <ul class="package-highlights">
+            <li>Kibale & Queen Elizabeth Parks</li>
+            <li>Chimpanzee & Gorilla tracking</li>
+            <li>Tree-climbing lions & boat cruise</li>
+            <li>Luxury eco-lodges throughout</li>
+          </ul>
+          <div class="package-footer">
+            <div class="package-price">From: <span>$3,200</span></div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="package-card fade-in">
+        <div class="package-image">
+          <div class="package-badges">
+            <span class="badge duration">10 Days</span>
+            <span class="badge">Grand Tour</span>
+          </div>
+          <img src="./img/ter-great-migration-2.jfif" alt="East Africa Grand Migration Safari">
+        </div>
+        <div class="package-content">
+          <h3>10-Day East Africa Grand Tour</h3>
+          <p class="serif-text">A multi-country luxury tourism expedition covering the Serengeti, Ngorongoro Crater, and Masai Mara for the ultimate safari.</p>
+          <ul class="package-highlights">
+            <li>Uganda, Kenya & Tanzania</li>
+            <li>Great Migration viewing (seasonal)</li>
+            <li>Ngorongoro Crater descent</li>
+            <li>Private charter flights available</li>
+          </ul>
+          <div class="package-footer">
+            <div class="package-price">From: <span>$6,500</span></div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 5 -->
+      <div class="package-card fade-in">
+        <div class="package-image">
+          <div class="package-badges">
+            <span class="badge duration">4 Days</span>
+            <span class="badge">Birding</span>
+          </div>
+          <img src="./img/shoebill-3.jpg" alt="Shoebill and Birding Safari">
+        </div>
+        <div class="package-content">
+          <h3>4-Day Shoebill & Birding Expedition</h3>
+          <p class="serif-text">A specialized eco-tourism package for avid birders, targeting Uganda's rarest species including the prehistoric Shoebill Stork.</p>
+          <ul class="package-highlights">
+            <li>Mabamba Swamp canoe tracking</li>
+            <li>Bigodi Wetland Sanctuary walk</li>
+            <li>Over 300 bird species potential</li>
+            <li>Expert ornithologist guide</li>
+          </ul>
+          <div class="package-footer">
+            <div class="package-price">From: <span>$1,400</span></div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 6 -->
+      <div class="package-card fade-in">
+        <div class="package-image">
+          <div class="package-badges">
+            <span class="badge duration">6 Days</span>
+            <span class="badge">Adventure</span>
+          </div>
+          <img src="./img/ter-kilimanjaro-climb.jpg" alt="Mount Rwenzori Hiking Safari">
+        </div>
+        <div class="package-content">
+          <h3>6-Day Mount Rwenzori Hiking</h3>
+          <p class="serif-text">Conquer the "Mountains of the Moon" on this challenging, rewarding adventure tourism trek through alpine zones and glaciers.</p>
+          <ul class="package-highlights">
+            <li>Summit Margherita Peak (5,109m)</li>
+            <li>Professional mountain guides & porters</li>
+            <li>All camping & hiking gear provided</li>
+            <li>Pre & post-trek accommodation</li>
+          </ul>
+          <div class="package-footer">
+            <div class="package-price">From: <span>$2,100</span></div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOM ITINERARY CTA ============ -->
+<section class="custom-cta">
+  <div class="custom-cta-content fade-in">
+    <span class="section-tag on-dark">Bespoke Tourism</span>
+    <h2>Design Your Dream Safari</h2>
+    <p class="serif-text">Can't find the perfect package? Our expert tourism consultants specialize in crafting fully customized, tailor-made itineraries that align perfectly with your budget, schedule, and unique interests. Let us build your ultimate East African adventure from scratch.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg on-dark">Start Planning My Custom Safari</a>
+  </div>
+</section>
+
+<!-- ============ PARTNERS SECTION ============ -->
+<section class="partners">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag on-dark">Accreditations</span>
+      <h2 class="section-title">Our Trusted Tourism Partners</h2>
+    </div>
+
+    <div class="partners-grid fade-in">
+      <div class="partner-item"><a href="https://utb.go.ug/" target="_blank">Uganda Tourism Board</a></div>
+      <div class="partner-item"><a href="https://www.ugandawildlife.org/" target="_blank">Uganda Wildlife Authority</a></div>
+      <div class="partner-item"><a href="https://www.safaribookings.com/" target="_blank">SafariBookings</a></div>
+      <div class="partner-item"><a href="https://www.tripadvisor.com/Profile/BESTsafariAdventures?tab=photos" target="_blank">TripAdvisor</a></div>
+    </div>
+  </div>
+</section>
+
+<<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+          <span class="logo-word">
+            <span class="lw-1">BEST SAFARI</span>
+            <span class="lw-2">Adventures East-Africa</span>
+          </span>
+        </a>
+        <p class="foot-tagline">Trusted Local Experts <em style="font-style:italic;color:rgba(255,255,255,0.6);">Experience the wild with us.</em></p>
+        <address class="foot-addr">
+          Makindye Boston, Kampala, Uganda<br>
+          (opposite Boston International school)<br>
+          <a href="tel:+256757212707">+256 757 212707</a><br>
+          <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a>
+        </address>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@bestsafariadventureseastafrica" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+          <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+            <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="safari-packages.html">Safari Packages</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shoebill.html">Shoebill Home Safari</a></li>
+          <li><a href="city-tours.html">Kampala City Tours</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="gorilla-trekking.html">Gorilla trekking</a></li>
+          <li><a href="bird-watching.html">Bird Watching</a></li>
+          <li><a href="accomodations.html">Accommodation</a></li>
+          <li><a href="car-hire-services.html">Car hire services</a></li>
+          <li><a href="community-engagements.html">Community Engagements</a></li>
+          <li><a href="bike-safaris.html">Bike Safaris</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#">Uganda</a></li>
+          <li><a href="#">Kenya</a></li>
+          <li><a href="#">Tanzania</a></li>
+          <li><a href="#">Rwanda</a></li>
+          <li><a href="safari-packages.html">Multi-Country Tours</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Best Safari Adventures East-Africa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Floating WhatsApp (Right Bottom) -->
+<div class="floating-whatsapp">
+  <a href="https://wa.me/256757212707" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+         alt="WhatsApp"></a>
+
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.querySelector('.nav-toggle');
+  if(mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+      document.getElementById('mm').classList.toggle('open');
+    });
+  }
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mm').classList.remove('open');
+    });
+  });
+
+  // Smooth Scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // Fade In Animation on Scroll
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElements.forEach(element => {
+    fadeInObserver.observe(element);
+  });
+
+  console.log('%c🦁 Best Safari Adventures East-Africa', 'color: #D4AF37; font-size: 24px; font-weight: bold;');
+</script>
+
+<script>
+  /* =====================================================
+     PREMIUM SAFARI HAMBURGER MENU
+  ====================================================== */
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle =
+      document.getElementById("safariMenuToggle");
+
+    const mobileMenu =
+      document.getElementById("safariMobileMenu");
+
+    const menuOverlay =
+      document.getElementById("safariMenuOverlay");
+
+    const menuClose =
+      document.getElementById("safariMenuClose");
+
+    const menuLinks =
+      document.querySelectorAll(
+        ".safari-menu-links a, .safari-menu-cta"
+      );
+
+
+    /* -----------------------------------------------
+       OPEN MENU
+    ------------------------------------------------ */
+
+    function openSafariMenu() {
+
+      mobileMenu.classList.add("active");
+
+      menuOverlay.classList.add("active");
+
+      menuToggle.classList.add("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      mobileMenu.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+      document.body.classList.add(
+        "safari-menu-open"
+      );
+
+    }
+
+
+    /* -----------------------------------------------
+       CLOSE MENU
+    ------------------------------------------------ */
+
+    function closeSafariMenu() {
+
+      mobileMenu.classList.remove("active");
+
+      menuOverlay.classList.remove("active");
+
+      menuToggle.classList.remove("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      mobileMenu.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      document.body.classList.remove(
+        "safari-menu-open"
+      );
+
+    }
+
+
+    /* -----------------------------------------------
+       TOGGLE MENU
+    ------------------------------------------------ */
+
+    menuToggle.addEventListener(
+      "click",
+      function () {
+
+        if (
+          mobileMenu.classList.contains(
+            "active"
+          )
+        ) {
+
+          closeSafariMenu();
+
+        } else {
+
+          openSafariMenu();
+
+        }
+
+      }
+    );
+
+
+    /* -----------------------------------------------
+       CLOSE BUTTON
+    ------------------------------------------------ */
+
+    menuClose.addEventListener(
+      "click",
+      closeSafariMenu
+    );
+
+
+    /* -----------------------------------------------
+       CLICK OUTSIDE MENU
+    ------------------------------------------------ */
+
+    menuOverlay.addEventListener(
+      "click",
+      closeSafariMenu
+    );
+
+
+    /* -----------------------------------------------
+       CLOSE AFTER CLICKING LINK
+    ------------------------------------------------ */
+
+    menuLinks.forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          closeSafariMenu();
+
+        }
+      );
+
+    });
+
+
+    /* -----------------------------------------------
+       ESCAPE KEY
+    ------------------------------------------------ */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape" &&
+          mobileMenu.classList.contains(
+            "active"
+          )
+        ) {
+
+          closeSafariMenu();
+
+        }
+
+      }
+    );
+
+
+    /* -----------------------------------------------
+       RESET IF SCREEN BECOMES DESKTOP
+    ------------------------------------------------ */
+
+    window.addEventListener(
+      "resize",
+      function () {
+
+        if (window.innerWidth > 991) {
+
+          closeSafariMenu();
+
+        }
+
+      }
+    );
+
+  });
+</script>
+
+</body>
+</html>

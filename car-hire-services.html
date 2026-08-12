@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Car Hire Services in East Africa. Luxury 4x4 safari vehicles, airport transfers, and chauffeur-driven tourism transport in Uganda, Kenya, Tanzania & Rwanda.">
+  <title>Car Hire Services | Luxury Safari Vehicles | Best Safari Adventures East-Africa</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --black-light: #1a1a1a;
+      --gold: #D4AF37;
+      --gold-light: #F4E8C1;
+      --gold-dark: #B8941F;
+      --forest-green: #1B4D3E;
+      --forest-green-light: #2D5F4F;
+      --mint: #98D8AA;
+      --mint-light: #C8E6C9;
+      --white: #FFFFFF;
+      --cream: #FAF9F6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .serif-text { font-family: 'Cormorant Garamond', serif; }
+
+    /* Preloader */
+    .preloader {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(135deg, var(--black) 0%, var(--forest-green) 100%);
+      display: flex; justify-content: center; align-items: center; z-index: 99999; transition: opacity 0.8s ease;
+    }
+    .preloader.hidden { opacity: 0; pointer-events: none; }
+    .preloader-content { text-align: center; }
+    .preloader-logo {
+      font-family: 'Cinzel', serif; font-size: 3.5rem; color: var(--gold); margin-bottom: 1.5rem;
+      animation: shimmer 2s infinite; text-shadow: 0 0 30px rgba(212,175,55,0.5);
+    }
+    @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    .preloader-line {
+      width: 200px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto; animation: loading 1.5s infinite;
+    }
+    @keyframes loading { 0% { transform: scaleX(0); } 50% { transform: scaleX(1); } 100% { transform: scaleX(0); } }
+
+    /* Navigation */
+    .navbar {
+      position: fixed; top: 0; width: 100%;
+      background: linear-gradient(180deg, rgba(10,10,10,0.98) 0%, rgba(27,77,62,0.9) 100%);
+      backdrop-filter: blur(20px); z-index: 1000; padding: 1rem 0;
+      transition: all 0.4s ease; border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+    .navbar.scrolled { padding: 0.8rem 0; background: rgba(10,10,10,0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+    .nav-logo img { height: 50px; width: auto; transition: transform 0.3s ease; }
+    .nav-logo:hover img { transform: scale(1.05); }
+    .nav-logo-text {
+      font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold);
+      letter-spacing: 2px; transition: all 0.3s ease; text-shadow: 0 0 20px rgba(212,175,55,0.3);
+    }
+    .nav-logo:hover .nav-logo-text { text-shadow: 0 0 30px rgba(212,175,55,0.6); }
+    .nav-menu { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+    .nav-menu a {
+      color: var(--white); text-decoration: none; font-weight: 400; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; position: relative; padding: 0.5rem 0;
+    }
+    .nav-menu a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px;
+      background: var(--gold); transition: width 0.4s ease;
+    }
+    .nav-menu a:hover, .nav-menu a.active { color: var(--gold); }
+    .nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer; padding: 0.5rem; z-index: 1001; }
+
+    /* Page Hero Section with Video */
+    .car-hero {
+      position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 0;
+      background: linear-gradient(135deg, var(--black) 0%, var(--forest-green) 100%);
+    }
+    .car-video-bg {
+      position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto;
+      transform: translate(-50%, -50%); object-fit: cover; opacity: 0.35; mix-blend-mode: overlay; z-index: 1;
+    }
+    .car-hero-overlay {
+      position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(27,77,62,0.7) 50%, rgba(10,10,10,0.85) 100%); z-index: 2;
+    }
+    .car-hero-content {
+      position: relative; z-index: 3; text-align: center; padding: 0 2rem; max-width: 900px;
+    }
+    .car-hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--gold); margin-bottom: 1.5rem;
+      text-shadow: 0 5px 20px rgba(0,0,0,0.5); line-height: 1.2;
+    }
+    .car-hero-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--mint-light); font-style: italic; }
+
+    /* Quick Booking Widget */
+    .booking-widget-section {
+      background: var(--black);
+      padding: 0 2rem;
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+    }
+    .booking-widget {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(27,77,62,0.4);
+      border: 1px solid rgba(212,175,55,0.3);
+      padding: 2.5rem;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+    }
+    .booking-widget h3 {
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+    .widget-form {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      align-items: end;
+    }
+    .widget-form .form-group { display: flex; flex-direction: column; }
+    .widget-form label {
+      color: var(--mint);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .widget-form input, .widget-form select {
+      padding: 1rem;
+      background: rgba(10,10,10,0.8);
+      border: 1px solid rgba(212,175,55,0.2);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .widget-form input:focus, .widget-form select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(212,175,55,0.2);
+    }
+    .widget-submit {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--black);
+      padding: 1rem;
+      border: none;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+    }
+    .widget-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+    }
+
+    /* Section Styles */
+    section { padding: 6rem 2rem; position: relative; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-tag {
+      font-family: 'Cormorant Garamond', serif; color: var(--mint); font-size: 1.3rem;
+      font-weight: 400; text-transform: uppercase; letter-spacing: 6px; margin-bottom: 1.5rem; display: block; font-style: italic;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif; font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--gold); margin-bottom: 2rem; font-weight: 600; letter-spacing: 3px;
+    }
+    .section-subtitle {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mint-light);
+      max-width: 800px; margin: 0 auto; font-weight: 300; font-style: italic;
+    }
+
+    /* Introduction Section */
+    .intro-section { background: var(--black); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .intro-content h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 2rem; line-height: 1.3; }
+    .intro-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--mint-light); line-height: 1.9; }
+    .intro-images { position: relative; height: 500px; }
+    .intro-img-main {
+      position: absolute; top: 0; left: 0; width: 75%; height: 75%; overflow: hidden;
+      border: 3px solid var(--gold); box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .intro-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .intro-img-secondary {
+      position: absolute; bottom: 0; right: 0; width: 60%; height: 50%; overflow: hidden;
+      border: 3px solid var(--mint); box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+    .intro-img-secondary img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Fleet Section */
+    .fleet-section { background: linear-gradient(135deg, var(--forest-green) 0%, var(--black) 100%); }
+    .fleet-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .fleet-card {
+      background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.2);
+      overflow: hidden; transition: all 0.5s ease;
+    }
+    .fleet-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 25px 60px rgba(212,175,55,0.15); }
+    .fleet-image { height: 240px; overflow: hidden; position: relative; }
+    .fleet-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+    .fleet-card:hover .fleet-image img { transform: scale(1.1); }
+    .fleet-badge {
+      position: absolute; top: 15px; right: 15px; background: var(--gold); color: var(--black);
+      padding: 0.4rem 1rem; font-family: 'Cinzel', serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
+    }
+    .fleet-content { padding: 2rem; }
+    .fleet-content h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 1rem; }
+    .fleet-content p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .fleet-specs {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; padding: 1.5rem 0;
+      border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2); margin-bottom: 1.5rem;
+    }
+    .fleet-spec { display: flex; align-items: center; gap: 0.5rem; color: var(--mint-light); font-size: 0.9rem; }
+    .fleet-spec-icon { color: var(--gold); font-size: 1.1rem; }
+    .fleet-price { display: flex; justify-content: space-between; align-items: center; }
+    .fleet-price-amount { font-family: 'Cinzel', serif; color: var(--mint); font-size: 1.4rem; font-weight: 700; }
+    .fleet-price-amount span { font-size: 0.85rem; color: var(--mint-light); font-family: 'Montserrat', sans-serif; font-weight: 400; }
+    .btn-luxury {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: var(--black);
+      padding: 0.8rem 1.5rem; border: 2px solid var(--gold); border-radius: 0;
+      font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+      text-decoration: none; display: inline-block; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      text-transform: uppercase; letter-spacing: 2px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(212,175,55,0.4);
+    }
+    .btn-luxury::before {
+      content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: left 0.7s ease;
+    }
+    .btn-luxury:hover::before { left: 100%; }
+    .btn-luxury:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(212,175,55,0.6); background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%); }
+
+    /* Routes Section */
+    .routes-section { background: var(--black-light); }
+    .routes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .route-card {
+      background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.1);
+      padding: 2rem; text-align: center; transition: all 0.4s ease;
+    }
+    .route-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+    .route-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .route-card h4 { color: var(--gold); font-size: 1.2rem; margin-bottom: 0.8rem; }
+    .route-card p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1rem; margin-bottom: 1rem; }
+    .route-meta { color: var(--mint); font-size: 0.9rem; font-weight: 600; }
+
+    /* Services Section */
+    .services-section { background: var(--black); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .service-card {
+      background: rgba(27,77,62,0.2); padding: 2.5rem; border-left: 3px solid var(--gold);
+      transition: all 0.4s ease; text-align: center;
+    }
+    .service-card:hover { background: rgba(27,77,62,0.3); transform: translateY(-8px); }
+    .service-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+    .service-card h3 { color: var(--gold); font-size: 1.3rem; margin-bottom: 1rem; }
+    .service-card p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.7; }
+
+    /* Features Section */
+    .features-section { background: linear-gradient(135deg, var(--forest-green) 0%, var(--black) 100%); }
+    .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .feature-card {
+      background: rgba(10,10,10,0.5); padding: 2rem 1.5rem; text-align: center;
+      border: 1px solid rgba(212,175,55,0.1); transition: all 0.4s ease;
+    }
+    .feature-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .feature-card h4 { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.8rem; }
+    .feature-card p { color: var(--mint-light); font-family: 'Cormorant Garamond', serif; font-size: 1rem; line-height: 1.6; }
+
+    /* Pricing Section */
+    .pricing-section { background: var(--black-light); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .pricing-card {
+      background: rgba(10,10,10,0.6); border: 2px solid rgba(212,175,55,0.2);
+      padding: 3rem 2rem; text-align: center; transition: all 0.4s ease; position: relative;
+    }
+    .pricing-card.featured { border-color: var(--gold); transform: scale(1.05); }
+    .pricing-card.featured::before {
+      content: 'Most Popular'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--black); padding: 0.5rem 2rem;
+      font-family: 'Cinzel', serif; font-weight: 600; font-size: 0.9rem;
+    }
+    .pricing-card:hover { border-color: var(--gold); box-shadow: 0 20px 50px rgba(212,175,55,0.3); }
+    .pricing-card h3 { color: var(--gold); font-size: 1.8rem; margin-bottom: 1rem; }
+    .pricing-card .price { font-size: 3rem; color: var(--mint); font-weight: 700; margin-bottom: 0.5rem; font-family: 'Cinzel', serif; }
+    .pricing-card .price span { font-size: 1rem; color: var(--mint-light); font-family: 'Montserrat', sans-serif; }
+    .pricing-card ul { list-style: none; margin: 2rem 0; text-align: left; }
+    .pricing-card ul li { color: var(--mint-light); margin-bottom: 1rem; padding-left: 1.5rem; position: relative; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; }
+    .pricing-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+
+    /* FAQ Section */
+    .faq-section { background: var(--black); }
+    .faq-container { max-width: 900px; margin: 0 auto; }
+    .faq-item { background: rgba(27,77,62,0.2); border: 1px solid rgba(212,175,55,0.2); margin-bottom: 1.5rem; overflow: hidden; }
+    .faq-question { padding: 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease; }
+    .faq-question:hover { background: rgba(212,175,55,0.05); }
+    .faq-question h3 { color: var(--gold); font-size: 1.2rem; font-weight: 600; }
+    .faq-icon { font-size: 1.8rem; color: var(--mint); transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+    .faq-answer-content { padding: 0 2rem 2rem; font-family: 'Cormorant Garamond', serif; color: var(--mint-light); font-size: 1.1rem; line-height: 1.8; }
+    .faq-item.active .faq-answer { max-height: 400px; }
+
+    /* CTA Section */
+    .cta-section { background: linear-gradient(135deg, var(--forest-green) 0%, var(--black) 100%); padding: 6rem 2rem; text-align: center; }
+    .cta-content { max-width: 800px; margin: 0 auto; }
+    .cta-content h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 1.5rem; }
+    .cta-content p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--mint-light); margin-bottom: 3rem; }
+
+    /* Partners Section */
+    .partners { background: var(--black-light); padding: 4rem 2rem; }
+    .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; align-items: center; justify-items: center; }
+    .partner-item {
+      background: rgba(212,175,55,0.05); padding: 2rem 1.5rem; border: 1px solid rgba(212,175,55,0.2);
+      text-align: center; min-height: 100px; display: flex; align-items: center; justify-content: center; width: 100%; transition: all 0.4s ease;
+    }
+    .partner-item:hover { background: rgba(212,175,55,0.1); border-color: var(--gold); }
+    .partner-item a { color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+
+    /* Footer */
+    footer.site-footer { background: var(--black); border-top: 1px solid rgba(212,175,55,0.2); padding: 5rem 2rem 2rem; }
+    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; }
+    .foot-brand .logo { margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+    .foot-brand .logo img { height: 50px; width: auto; }
+    .foot-brand .logo-word { display: flex; flex-direction: column; line-height: 1; }
+    .foot-brand .logo-word .lw-1 { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--gold); }
+    .foot-brand .logo-word .lw-2 { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-top: 4px; }
+    .foot-tagline { color: var(--mint-light); line-height: 1.8; margin-bottom: 2rem; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+    .foot-addr { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.55); font-style: normal; margin-bottom: 1.5rem; }
+    .foot-addr a { color: var(--gold); text-decoration: none; }
+    .footer-column h4 { color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .footer-column ul { list-style: none; }
+    .footer-column ul li { margin-bottom: 0.8rem; }
+    .footer-column ul li a { color: var(--mint-light); text-decoration: none; transition: all 0.3s ease; font-family: 'Cormorant Garamond', serif; }
+    .footer-column ul li a:hover { color: var(--gold); padding-left: 5px; }
+    .footer-contact p { color: var(--mint-light); margin-bottom: 0.8rem; font-family: 'Cormorant Garamond', serif; }
+    .footer-contact strong { color: var(--gold); }
+    .newsletter-form { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
+    .newsletter-form input { flex: 1; padding: 0.8rem; border: 1px solid rgba(212,175,55,0.3); background: rgba(255,255,255,0.05); color: var(--white); }
+    .newsletter-form button { padding: 0.8rem 1.5rem; background: var(--gold); color: var(--black); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+    .newsletter-form button:hover { background: var(--gold-light); }
+    .footer-bottom { border-top: 1px solid rgba(212,175,55,0.2); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+
+    /* Floating Elements */
+    .floating-whatsapp { position: fixed; right: 32px; bottom: 32px; z-index: 999; }
+    .whatsapp-btn {
+      width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(37,211,102,0.4); border: 3px solid #fff;
+    }
+    .whatsapp-btn img { width: 36px; height: 36px; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+
+    .floating-social { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 998; display: flex; flex-direction: column; gap: 8px; background: var(--black); padding: 12px 8px; border-radius: 0 8px 8px 0; border: 1px solid rgba(212,175,55,0.2); border-left: none; box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; text-decoration: none; transition: all 0.3s; border-radius: 50%; }
+    .social-icon svg { width: 20px; height: 20px; }
+    .social-icon:hover { background: var(--gold); color: var(--black); transform: translateX(4px); }
+
+    /* Scroll to top */
+    .scroll-top {
+      position: fixed; bottom: 120px; right: 40px; width: 60px; height: 60px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark)); display: flex; align-items: center; justify-content: center;
+      color: var(--black); font-size: 1.8rem; cursor: pointer; opacity: 0; visibility: hidden;
+      transition: all 0.4s ease; z-index: 998; border: 2px solid var(--white);
+    }
+    .scroll-top.visible { opacity: 1; visibility: visible; }
+    .scroll-top:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(212,175,55,0.5); }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .fleet-grid, .services-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid, .routes-grid { grid-template-columns: repeat(2, 1fr); }
+      .partners-grid { grid-template-columns: repeat(2, 1fr); }
+      .widget-form { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 992px) {
+      .nav-menu {
+        position: fixed; top: 0; left: -100%; width: 100%; height: 100vh;
+        background: rgba(10,10,10,0.98); flex-direction: column; justify-content: center; padding: 0; gap: 3rem; transition: left 0.3s ease;
+      }
+      .nav-menu.active { left: 0; }
+      .nav-menu a { font-size: 1.5rem; }
+      .mobile-menu-toggle { display: block; }
+      .intro-grid { grid-template-columns: 1fr; }
+      .intro-images { order: -1; margin-bottom: 2rem; height: 400px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-card.featured { transform: scale(1); }
+      .floating-social { display: none; }
+    }
+    @media (max-width: 768px) {
+      .fleet-grid, .services-grid, .pricing-grid, .features-grid, .routes-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .widget-form { grid-template-columns: 1fr; }
+      .booking-widget { padding: 1.5rem; }
+      .nav-logo img { height: 40px; }
+      .nav-logo-text { font-size: 1.2rem; }
+    }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">BEST SAFARI ADVENTURES</div>
+    <div class="preloader-line"></div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo">
+      <span class="nav-logo-text">BEST SAFARI ADVENTURES</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="safari-packages.html">Safari Packages</a></li>
+      <li><a href="car-hire-services.html" class="active">Car Hire</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+  </div>
+</nav>
+
+<!-- Floating Social Media (Left Side) -->
+<div class="floating-social">
+  <a href="https://www.youtube.com/@bestsafariadventureseastafrica" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+  <a href="https://www.instagram.com/bestsafariadventureseastafrica/" target="_blank" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+  <a href="https://x.com" target="_blank" class="social-icon" title="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8" cy="8" r="1"/>
+    <path d="M8 11V17"/>
+    <path d="M12 17V13.8C12 12.2 13 11 14.6 11C16.2 11 17 12.1 17 13.8V17"/>
+    <path d="M12 13V11"/>
+  </svg></a>
+  <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" target="_blank" class="social-icon" title="Tiktok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+    <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+  </svg></a>
+  <a href="https://snapchat.com" target="_blank" class="social-icon" title="Snapchat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3 C10 3 8.5 4.6 8.5 6.8 V8.2 C8.5 9.5 7.7 10.6 6.6 11 C7.3 11.8 8.1 12.2 9 12.3 C9.2 14.5 10.4 16 12 16 C13.6 16 14.8 14.5 15 12.3 C15.9 12.2 16.7 11.8 17.4 11 C16.3 10.6 15.5 9.5 15.5 8.2 V6.8 C15.5 4.6 14 3 12 3Z"/>
+    <path d="M8.5 16.5C9.8 17.2 10.9 17.6 12 17.6C13.1 17.6 14.2 17.2 15.5 16.5"/>
+  </svg></a>
+  <a href="https://threads.com" target="_blank" class="social-icon" title="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4C8.5 4 6 6.3 6 10C6 13.7 8.5 16 12 16C15 16 17 14.5 17 12C17 9.8 15.2 8.5 12.8 8.5C10.9 8.5 9.5 9.6 9.5 11.2C9.5 12.8 10.8 14 12.8 14C15.5 14 18 12.5 18 9.2C18 5.8 15.5 4 12 4Z"/>
+  </svg></a>
+  <a href="https://telegram.com" target="_blank" class="social-icon" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3L3 11L10 13L12 20L21 3Z"/>
+    <path d="M10 13L21 3"/>
+  </svg></a>
+</div>
+
+<!-- Page Hero with Video -->
+<section class="car-hero">
+  <video class="car-video-bg" autoplay muted loop playsinline>
+    <source src="./img/car-video-1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="car-hero-overlay"></div>
+  <div class="car-hero-content fade-in">
+    <h1>Premium Car Hire Services</h1>
+    <p class="serif-text">Luxury 4x4 safari vehicles, airport transfers, and chauffeur-driven tourism transport across East Africa.</p>
+  </div>
+</section>
+
+<!-- Quick Booking Widget -->
+<div class="booking-widget-section fade-in">
+  <div class="booking-widget">
+    <h3>Quick Car Hire Reservation</h3>
+    <form class="widget-form" id="quickCarForm">
+      <div class="form-group">
+        <label>Pick-up Location</label>
+        <select required>
+          <option value="">Select Location</option>
+          <option>Entebbe Airport</option>
+          <option>Kampala City</option>
+          <option>Jinja Town</option>
+          <option>Murchison Falls</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Pick-up Date</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group">
+        <label>Return Date</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group">
+        <label>Vehicle Type</label>
+        <select required>
+          <option value="">Select Vehicle</option>
+          <option>4x4 Safari Land Cruiser</option>
+          <option>Toyota Prado</option>
+          <option>Custom Safari Van</option>
+          <option>Luxury Minibus</option>
+        </select>
+      </div>
+      <button type="submit" class="widget-submit">Check Availability</button>
+    </form>
+  </div>
+</div>
+
+<!-- Introduction Section -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-content fade-in">
+        <span class="section-tag">Luxury Transport Tourism</span>
+        <h2>Your Journey, Our Priority</h2>
+        <p class="serif-text">
+          Reliable, comfortable transportation is the backbone of any exceptional East African tourism experience. Whether you're embarking on a multi-day safari, need airport transfers, or prefer the freedom of self-drive exploration, our premium car hire services ensure you travel in style and safety.
+        </p>
+        <p class="serif-text">
+          Our fleet consists of meticulously maintained 4x4 vehicles specifically equipped for East African terrain. From the rugged trails of Murchison Falls to the scenic routes of the Rwenzori Mountains, our vehicles are designed to handle any adventure while keeping you comfortable.
+        </p>
+        <p class="serif-text">
+          With flexible rental options, competitive rates, and professional driver-guides available, we provide comprehensive transport solutions tailored to your tourism needs. Every vehicle comes with comprehensive insurance, GPS tracking, and 24/7 roadside assistance for your peace of mind.
+        </p>
+      </div>
+      <div class="intro-images fade-in">
+        <div class="intro-img-main">
+          <img src="./img/ter-land-cruiser-1.jpg" alt="Luxury Safari Vehicle East Africa">
+        </div>
+        <div class="intro-img-secondary">
+          <img src="./img/ter-kenya-safaris-1.jpg" alt="4x4 Safari Car Hire Uganda">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fleet Section -->
+<section class="fleet-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Our Fleet</span>
+      <h2 class="section-title">Premium Safari Vehicles</h2>
+      <p class="section-subtitle serif-text">Choose from our carefully curated fleet of 4x4 vehicles, each equipped for the ultimate East African tourism adventure</p>
+    </div>
+
+    <div class="fleet-grid">
+      <div class="fleet-card fade-in">
+        <div class="fleet-image">
+          <span class="fleet-badge">Best Seller</span>
+          <img src="./img/ter-safari-land-cruiser-5-seater.jpg" alt="4x4 Safari Land Cruiser">
+        </div>
+        <div class="fleet-content">
+          <h3>4x4 Safari Land Cruiser</h3>
+          <p class="serif-text">The ultimate safari vehicle with pop-up roof for exceptional wildlife viewing. Perfect for game drives and photography tourism.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><span class="fleet-spec-icon">👥</span><span>6-7 Passengers</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🎯</span><span>Pop-up Roof</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🧳</span><span>Luggage Space</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">❄️</span><span>Air Conditioning</span></div>
+          </div>
+          <div class="fleet-price">
+            <div class="fleet-price-amount">$70 <span>/ day</span></div>
+            <a href="contact.html" class="btn-luxury">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card fade-in">
+        <div class="fleet-image">
+          <span class="fleet-badge">Luxury</span>
+          <img src="./img/ter-rooftop-tent-land-cruiser.jpg" alt="Toyota Land Cruiser V8">
+        </div>
+        <div class="fleet-content">
+          <h3>Toyota Land Cruiser V8</h3>
+          <p class="serif-text">Premium luxury SUV with powerful V8 engine. Ideal for long-distance tourism travel and VIP transport across East Africa.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><span class="fleet-spec-icon">👥</span><span>7 Passengers</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">⚡</span><span>V8 Engine</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">️</span><span>Leather Interior</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🎵</span><span>Premium Sound</span></div>
+          </div>
+          <div class="fleet-price">
+            <div class="fleet-price-amount">$70 <span>/ day</span></div>
+            <a href="contact.html" class="btn-luxury">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card fade-in">
+        <div class="fleet-image">
+          <span class="fleet-badge">Popular</span>
+          <img src="./img/cars-2.jpg" alt="Land Cruiser Prado">
+        </div>
+        <div class="fleet-content">
+          <h3>Toyota Land Cruiser Prado</h3>
+          <p class="serif-text">Versatile and reliable 4x4 perfect for both city tourism and off-road adventures. Excellent fuel efficiency and comfort.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><span class="fleet-spec-icon">👥</span><span>5-6 Passengers</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">⛽</span><span>Fuel Efficient</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">️</span><span>4WD Capability</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon"></span><span>GPS Navigation</span></div>
+          </div>
+          <div class="fleet-price">
+            <div class="fleet-price-amount">$70 <span>/ day</span></div>
+            <a href="contact.html" class="btn-luxury">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card fade-in">
+        <div class="fleet-image">
+          <span class="fleet-badge">Group</span>
+          <img src="./img/ter-custom-supper-scaled.jpg" alt="Custom Safari Van">
+        </div>
+        <div class="fleet-content">
+          <h3>Custom Safari Van (4x4)</h3>
+          <p class="serif-text">Spacious custom-built safari van with guaranteed window seats for all passengers. Ideal for group tourism and family safaris.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><span class="fleet-spec-icon">👥</span><span>7-9 Passengers</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🪟</span><span>Pop-up Windows</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🔌</span><span>Charging Ports</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon"></span><span>Photo-Friendly</span></div>
+          </div>
+          <div class="fleet-price">
+            <div class="fleet-price-amount">$50 <span>/ day</span></div>
+            <a href="contact.html" class="btn-luxury">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card fade-in">
+        <div class="fleet-image">
+          <span class="fleet-badge">Economy</span>
+          <img src="./img/car-sevices-1.jpg" alt="RAV4 SUV">
+        </div>
+        <div class="fleet-content">
+          <h3>Toyota ROOF-TENT SUV</h3>
+          <p class="serif-text">Compact and fuel-efficient SUV perfect for city tours, airport transfers, and light tourism excursions. Great value for money.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><span class="fleet-spec-icon">👥</span><span>5-7 Passengers</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">⛽</span><span>Very Efficient</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🏙️</span><span>Wild-Friendly</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">💰</span><span>Budget Option</span></div>
+          </div>
+          <div class="fleet-price">
+            <div class="fleet-price-amount">$130 <span>/ day</span></div>
+            <a href="contact.html" class="btn-luxury">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card fade-in">
+        <div class="fleet-image">
+          <span class="fleet-badge">Premium</span>
+          <img src="./img/ter-hiace-10-van.jpg" alt="Luxury Minibus">
+        </div>
+        <div class="fleet-content">
+          <h3>4WD Safari Minibus</h3>
+          <p class="serif-text">Large capacity minibus for group tourism, corporate events, and family reunions. Comfortable seating with ample storage.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><span class="fleet-spec-icon">👥</span><span>12-15 Passengers</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🧳</span><span>Large Storage</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🎤</span><span>PA System</span></div>
+            <div class="fleet-spec"><span class="fleet-spec-icon">🛡️</span><span>Safety Features</span></div>
+          </div>
+          <div class="fleet-price">
+            <div class="fleet-price-amount">$100 <span>/ day</span></div>
+            <a href="contact.html" class="btn-luxury">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Routes Section -->
+<section class="routes-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Inspiration</span>
+      <h2 class="section-title">Popular Tourism Routes</h2>
+      <p class="section-subtitle serif-text">Discover the most requested driving itineraries for your East African adventure</p>
+    </div>
+
+    <div class="routes-grid">
+      <div class="route-card fade-in">
+        <div class="route-icon">✈️</div>
+        <h4>Entebbe to Kampala</h4>
+        <p class="serif-text">Seamless airport transfer to the city center or your hotel.</p>
+        <div class="route-meta">45 Mins • $40</div>
+      </div>
+      <div class="route-card fade-in">
+        <div class="route-icon">🌊</div>
+        <h4>Kampala to Jinja</h4>
+        <p class="serif-text">Explore the source of the Nile and adventure sports hub.</p>
+        <div class="route-meta">2 Hours • $120</div>
+      </div>
+      <div class="route-card fade-in">
+        <div class="route-icon">🦁</div>
+        <h4>Kampala to Murchison</h4>
+        <p class="serif-text">Journey to Uganda's largest national park for Big Five tourism.</p>
+        <div class="route-meta">5 Hours • $250</div>
+      </div>
+      <div class="route-card fade-in">
+        <div class="route-icon">🦍</div>
+        <h4>Kampala to Bwindi</h4>
+        <p class="serif-text">Scenic drive to the impenetrable forest for gorilla trekking.</p>
+        <div class="route-meta">9 Hours • $400</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Our Services</span>
+      <h2 class="section-title">Comprehensive Car Hire Solutions</h2>
+      <p class="section-subtitle serif-text">Flexible transport options designed to meet every tourism need</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🚗</div>
+        <h3>Self-Drive Car Hire</h3>
+        <p class="serif-text">Enjoy the freedom to explore East Africa at your own pace. All vehicles come with comprehensive insurance and GPS navigation.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">👨‍✈️</div>
+        <h3>Chauffeur-Driven Safaris</h3>
+        <p class="serif-text">Sit back and relax while our professional driver-guides navigate the roads. Expert knowledge of routes and tourism sites included.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">✈️</div>
+        <h3>Airport Transfers</h3>
+        <p class="serif-text">Seamless pickup and drop-off at Entebbe International Airport and all regional airports. Professional meet-and-greet service.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">📅</div>
+        <h3>Long-Term Rentals</h3>
+        <p class="serif-text">Special rates for weekly and monthly rentals. Perfect for extended tourism stays, business assignments, or research projects.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🎉</div>
+        <h3>Special Event Transport</h3>
+        <p class="serif-text">Luxury vehicles for weddings, conferences, corporate events, and VIP tourism experiences. Customized to your requirements.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🗺️</div>
+        <h3>Custom Safari Tours</h3>
+        <p class="serif-text">Vehicle plus expert guide for complete safari packages. We handle all logistics while you enjoy the tourism experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">The Best Safari Advantage</h2>
+      <p class="section-subtitle serif-text">What sets our car hire tourism services apart from the competition</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in"><div class="feature-icon">🔧</div><h4>Well-Maintained Fleet</h4><p class="serif-text">All vehicles undergo rigorous maintenance checks before every rental.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">‍🏫</div><h4>Experienced Driver-Guides</h4><p class="serif-text">Professional drivers with extensive knowledge of East African tourism routes.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🛡️</div><h4>Comprehensive Insurance</h4><p class="serif-text">Full coverage insurance included with every rental for complete peace of mind.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">📍</div><h4>GPS Tracking</h4><p class="serif-text">Advanced GPS navigation and vehicle tracking for safety and convenience.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🆘</div><h4>24/7 Roadside Assistance</h4><p class="serif-text">Round-the-clock support wherever you are in East Africa.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">💰</div><h4>Competitive Rates</h4><p class="serif-text">Transparent pricing with no hidden fees. Best value for tourism transport.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">⛽</div><h4>Fuel Policy Options</h4><p class="serif-text">Flexible fuel policies to suit your tourism itinerary and budget.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">📱</div><h4>Easy Booking</h4><p class="serif-text">Simple online reservation system with instant confirmation via WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Rental Packages</span>
+      <h2 class="section-title">Flexible Car Hire Packages</h2>
+      <p class="section-subtitle serif-text">Choose the rental option that best fits your tourism needs and budget</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card fade-in">
+        <h3>Self-Drive</h3>
+        <div class="price">$50 <span>per day</span></div>
+        <ul>
+          <li>Choose from our fleet</li>
+          <li>Comprehensive insurance</li>
+          <li>GPS navigation included</li>
+          <li>Unlimited mileage*</li>
+          <li>24/7 roadside assistance</li>
+          <li>Perfect for: Independent explorers</li>
+        </ul>
+        <a href="contact.html" class="btn-luxury" style="padding: 1rem 2.5rem; font-size: 0.9rem;">Book Now</a>
+      </div>
+
+      <div class="pricing-card featured fade-in">
+        <h3>With Driver-Guide</h3>
+        <div class="price">$80 <span>per day</span></div>
+        <ul>
+          <li>Professional driver-guide</li>
+          <li>Local tourism expertise</li>
+          <li>All fuel costs included</li>
+          <li>Flexible itinerary</li>
+          <li>Full insurance coverage</li>
+          <li>Perfect for: Stress-free tourism</li>
+        </ul>
+        <a href="contact.html" class="btn-luxury" style="padding: 1rem 2.5rem; font-size: 0.9rem;">Book Now</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <h3>Weekly Package</h3>
+        <div class="price">$250 <span>per week</span></div>
+        <ul>
+          <li>7 consecutive days</li>
+          <li>Save 25% vs daily rate</li>
+          <li>Free airport transfer</li>
+          <li>Complimentary GPS</li>
+          <li>Priority support</li>
+          <li>Perfect for: Extended tourism</li>
+        </ul>
+        <a href="contact.html" class="btn-luxury" style="padding: 1rem 2.5rem; font-size: 0.9rem;">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle serif-text">Everything you need to know about our car hire tourism services</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question"><h3>What documents do I need for self-drive car hire?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">For self-drive car hire, you'll need a valid driver's license (international driving permit recommended), passport, and a credit card for the security deposit. The minimum age is 23 years with at least 2 years of driving experience.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Is insurance included in the rental price?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Yes, all our rentals include comprehensive insurance covering third-party liability, vehicle damage, and theft. However, a security deposit is required, which is fully refundable upon return of the vehicle in good condition.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Can I drive the vehicle anywhere in East Africa?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Our vehicles can be driven throughout Uganda, Kenya, Tanzania, and Rwanda. Cross-border travel is permitted with prior arrangement. Some restrictions apply to certain remote areas for safety reasons—our team will advise you on route planning.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>What is the fuel policy?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">For self-drive rentals, vehicles are provided with a full tank and should be returned full. For chauffeur-driven services, fuel is included in the daily rate. We can also provide fuel cost estimates for your planned tourism itinerary.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>What happens if the vehicle breaks down?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">We provide 24/7 roadside assistance across East Africa. In case of breakdown, contact our emergency line immediately. We'll dispatch a replacement vehicle or arrange repairs as quickly as possible, minimizing disruption to your tourism plans.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Can I modify my booking or extend the rental period?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Yes, bookings can be modified or extended subject to vehicle availability. We recommend contacting us at least 24 hours in advance for changes. Extension rates will apply based on current pricing at the time of extension.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-content fade-in">
+    <h2>Ready to Hit the Road?</h2>
+    <p class="serif-text">Book your premium vehicle today and experience East Africa's tourism destinations in comfort and style. Our team is ready to help you plan the perfect transport solution for your adventure.</p>
+    <a href="contact.html" class="btn-luxury" style="padding: 1.3rem 3.5rem; font-size: 0.95rem;">Request a Car Hire Quote</a>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Accreditations</span>
+      <h2 class="section-title">Our Trusted Tourism Partners</h2>
+    </div>
+    <div class="partners-grid fade-in">
+      <div class="partner-item"><a href="https://utb.go.ug/" target="_blank">Uganda Tourism Board</a></div>
+      <div class="partner-item"><a href="https://www.ugandawildlife.org/" target="_blank">Uganda Wildlife Authority</a></div>
+      <div class="partner-item"><a href="https://www.safaribookings.com/" target="_blank">SafariBookings</a></div>
+      <div class="partner-item"><a href="https://www.tripadvisor.com/" target="_blank">TripAdvisor</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-word">
+            <span class="lw-1">BEST SAFARI</span>
+            <span class="lw-2">Adventures East-Africa</span>
+          </span>
+        </a>
+        <p class="foot-tagline">Trusted Local Experts <em style="font-style:italic;color:rgba(255,255,255,0.6);">Experience the wild with us.</em></p>
+        <address class="foot-addr">
+          Makindye Boston, Kampala, Uganda<br>
+          (opposite Boston International school)<br>
+          <a href="tel:+256757212707">+256 757 212707</a><br>
+          <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a>
+        </address>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@bestsafariadventureseastafrica" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+          <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+            <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="safari-packages.html">Safari Packages</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shoebill.html">Shoebill Home Safari</a></li>
+          <li><a href="city-tours.html">Kampala City Tours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="gorilla-trekking.html">Gorilla trekking</a></li>
+          <li><a href="bird-watching.html">Bird Watching</a></li>
+          <li><a href="accomodations.html">Accommodation</a></li>
+          <li><a href="car-hire-services.html">Car hire services</a></li>
+          <li><a href="community-engagements.html">Community Engagements</a></li>
+          <li><a href="bike-safaris.html">Bike Safaris</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h4>Contact</h4>
+        <p><strong>+256 757 212707</strong></p>
+        <p><strong>bestsafariadventureseastafrica@gmail.com</strong></p>
+        <p>Makindye Boston - Kampala Uganda<br>(opposite Boston International school)</p>
+
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Best Safari Adventures East-Africa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<div class="floating-whatsapp">
+  <a href="https://wa.me/256757212707" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+</div>
+
+<!-- Scroll to Top -->
+<div class="scroll-top" id="scrollTop">↑</div>
+
+<script>
+  // Preloader
+  window.addEventListener('load', () => {
+    setTimeout(() => { document.getElementById('preloader').classList.add('hidden'); }, 1500);
+  });
+
+  // Navbar Scroll Effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) { navbar.classList.add('scrolled'); } else { navbar.classList.remove('scrolled'); }
+  });
+
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const navMenu = document.getElementById('navMenu');
+  mobileMenuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileMenuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+  });
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      mobileMenuToggle.textContent = '☰';
+    });
+  });
+
+  // Quick Car Form Submission
+  document.getElementById('quickCarForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const inputs = this.querySelectorAll('input, select');
+    const location = inputs[0].value;
+    const pickup = inputs[1].value;
+    const dropoff = inputs[2].value;
+    const vehicle = inputs[3].value;
+
+    const message = `*Quick Car Hire Inquiry*%0A%0A` +
+      `*Pick-up:* ${location}%0A` +
+      `*Dates:* ${pickup} to ${dropoff}%0A` +
+      `*Vehicle:* ${vehicle}`;
+    window.open(`https://wa.me/256757212707?text=${message}`, '_blank');
+  });
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); });
+      if (!isActive) { faqItem.classList.add('active'); }
+    });
+  });
+
+  // Scroll to Top Button
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) { scrollTop.classList.add('visible'); } else { scrollTop.classList.remove('visible'); }
+  });
+  scrollTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Fade In Animation on Scroll
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  fadeElements.forEach(element => { fadeInObserver.observe(element); });
+
+  // Smooth Scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          navMenu.classList.remove('active');
+          mobileMenuToggle.textContent = '☰';
+        }
+      }
+    });
+  });
+
+  console.log('%c🦁 Best Safari Adventures East-Africa', 'color: #D4AF37; font-size: 24px; font-weight: bold;');
+  console.log('%cCar Hire Services Page Loaded', 'color: #98D8AA; font-size: 14px;');
+</script>
+</body>
+</html>

@@ -1,0 +1,1755 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Best Safari Adventures East-Africa - Ultra-luxury safari experiences in Uganda, Kenya, Tanzania & Rwanda">
+  <title>Best Safari Adventures East-Africa | VVIP Luxury Safari Experiences</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-safari-dark: #0E1B16;
+      --color-safari-darker: #08110E;
+      --color-safari-gold: #D4AF37;
+      --color-safari-gold-light: #F1D27A;
+      --color-safari-orange: #C85A17;
+      --color-safari-mint: #98D8AA;
+      --color-safari-mint-dim: rgba(152, 216, 170, 0.12);
+      --color-parchment: #FAF9F6;
+      --color-white: #FFFFFF;
+
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-mono: 'Cinzel', serif;
+
+      --container-max: 1280px;
+      --container-pad: 24px;
+      --radius-md: 8px;
+      --radius-pill: 999px;
+      --radius-sm: 4px;
+
+      --dur-fast: 0.2s;
+      --dur-base: 0.3s;
+      --dur-slow: 0.5s;
+      --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* ENHANCED BOX SHADOWS */
+      --shadow-md: 0 10px 30px -5px rgba(0,0,0,0.15), 0 8px 12px -6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.25), 0 15px 25px -10px rgba(0,0,0,0.15);
+      --shadow-warm: 0 15px 40px rgba(212, 175, 55, 0.2);
+      --shadow-mint: 0 20px 40px rgba(152, 216, 170, 0.25);
+
+      --border-on-dark: rgba(212, 175, 55, 0.18);
+      --border-hairline: rgba(0,0,0,0.08);
+      --fg-1: #1a1a1a;
+      --fg-2: #555555;
+      --fg-3: #888888;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--color-parchment); color: var(--fg-1); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad); }
+
+    /* ============ NAV ============ */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--color-safari-dark);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid var(--border-on-dark);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .nav-inner { display: flex; align-items: center; gap: 36px; height: 84px; }
+    .logo { display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 600; font-size: 20px; color: #fff; text-decoration: none; letter-spacing: -0.005em; }
+    .logo img { height: 50px; width: auto; display: block; flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+    .logo .logo-word { display: flex; flex-direction: column; line-height: 1; }
+    .logo .logo-word .lw-1 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--color-safari-gold-light); }
+    .logo .logo-word .lw-2 { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-safari-gold); text-transform: uppercase; margin-top: 4px; }
+
+    .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; margin-left: auto; }
+    .nav-links a { position: relative; color: rgba(255,255,255,0.78); padding: 6px 0; transition: color var(--dur-fast) var(--ease-standard); }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 0; background: var(--color-safari-gold); transition: width var(--dur-base) var(--ease-standard); }
+    .nav-links a:hover { color: var(--color-safari-gold-light); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a.active { color: var(--color-safari-gold-light); }
+
+    .nav-cta { margin-left: 24px; }
+    .nav-toggle { display: none; background: transparent; border: 0; color: #fff; padding: 8px; margin-left: auto; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 14px; padding: 13px 24px; border-radius: var(--radius-pill); border: 0; line-height: 1; text-decoration: none; transition: all var(--dur-base) var(--ease-standard); }
+    .btn-primary { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-primary:hover { background: var(--color-safari-gold-light); color: var(--color-safari-dark); box-shadow: var(--shadow-warm); }
+    .btn-primary.on-dark { box-shadow: var(--shadow-warm); }
+    .btn-secondary { background: transparent; border: 1.5px solid var(--color-safari-gold); color: var(--color-safari-gold); padding: 11.5px 22.5px; }
+    .btn-secondary:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); }
+    .btn-secondary.on-dark { border-color: #fff; color: #fff; }
+    .btn-secondary.on-dark:hover { background: #fff; color: var(--color-safari-dark); }
+    .btn-lg { padding: 16px 30px; font-size: 15px; }
+
+    /* ============ HERO ============ */
+    .hero { position: relative; background: var(--color-safari-dark); color: #fff; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(212,175,55,0.10), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(152, 216, 170, 0.20), transparent 60%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; padding: 120px 0 128px; }
+    .hero-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-safari-gold-light); margin-bottom: 28px; display: flex; align-items: center; gap: 14px; }
+    .hero-eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--color-safari-gold); display: inline-block; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(48px, 5.6vw, 84px); line-height: 1.02; letter-spacing: -0.015em; font-weight: 600; margin: 0 0 28px; text-wrap: balance; }
+    .hero h1 em { font-style: italic; color: var(--color-safari-gold-light); font-weight: 500; }
+    .hero p.lead { font-size: 19px; line-height: 1.6; color: rgba(255,255,255,0.78); max-width: 520px; margin: 0 0 40px; font-family: var(--font-body); }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .hero-art {
+      position: relative;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--color-safari-dark);
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      border: 1px solid var(--border-on-dark);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+    .hero-art-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(14,27,22,0.15) 0%, transparent 35%, rgba(0,0,0,0.75) 100%);
+      z-index: 1;
+    }
+    .hero-art-label {
+      position: relative;
+      z-index: 2;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ============ TRUST STRIP ============ */
+    .trust { background: var(--color-safari-darker); color: rgba(255,255,255,0.85); padding: 24px 0; border-top: 1px solid var(--border-on-dark); border-bottom: 1px solid var(--border-on-dark); }
+    .trust-inner { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
+    .trust-num { font-family: var(--font-mono); color: var(--color-safari-gold-light); font-weight: 600; font-size: 14px; }
+    .trust-sep { color: rgba(255,255,255,0.2); }
+
+    /* ============ SECTION SHARED ============ */
+    section { padding: clamp(72px, 10vw, 128px) 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 56px; flex-wrap: wrap; }
+    .section-head .left { max-width: 640px; }
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-safari-orange); display: inline-block; margin-bottom: 18px; }
+    .eyebrow.on-dark { color: var(--color-safari-gold-light); }
+    h2.section-title { font-family: var(--font-display); font-size: clamp(34px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.01em; font-weight: 600; margin: 0 0 16px; text-wrap: balance; }
+    .section-sub { font-size: 18px; color: var(--fg-2); line-height: 1.6; margin: 0; max-width: 580px; }
+    .on-dark .section-sub { color: rgba(255,255,255,0.72); }
+    .section-link { font-size: 14px; color: var(--color-safari-gold); font-weight: 500; border-bottom: 1px solid var(--color-safari-gold); padding-bottom: 2px; align-self: flex-end; transition: color var(--dur-fast); }
+    .section-link:hover { color: var(--color-safari-gold-light); border-color: var(--color-safari-gold-light); }
+
+    /* ============ QUICK BOOKING ============ */
+    .quick-booking { background: var(--color-safari-dark); padding: 64px 0; border-bottom: 1px solid var(--border-on-dark); }
+    .booking-form-compact {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-on-dark);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .booking-form-compact label { display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .booking-form-compact input, .booking-form-compact select { background: rgba(0,0,0,0.25); border: 1px solid var(--border-on-dark); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body); font-size: 14px; padding: 12px 14px; outline: none; transition: border-color var(--dur-fast), background var(--dur-fast); }
+    .booking-form-compact input:focus, .booking-form-compact select:focus { border-color: var(--color-safari-gold); background: rgba(0,0,0,0.4); }
+    .booking-form-compact button { background: var(--color-safari-gold); color: var(--color-safari-dark); border: 0; font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 12px 24px; border-radius: var(--radius-pill); cursor: pointer; transition: all var(--dur-base); height: 46px; white-space: nowrap; }
+    .booking-form-compact button:hover { background: var(--color-safari-gold-light); box-shadow: var(--shadow-warm); }
+    .booking-info-compact { text-align: center; margin-top: 24px; font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.5); font-style: italic; }
+
+    /* ============ CARDS (Destinations / Tours) ============ */
+    .dest { background: linear-gradient(180deg, rgba(152, 216, 170, 0.08) 0%, var(--color-parchment) 100%); }
+    .dest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .dest-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--dur-slow) var(--ease-standard);
+      display: flex;
+      flex-direction: column;
+    }
+    .dest-card:hover {
+      box-shadow: var(--shadow-lg), var(--shadow-mint);
+      transform: translateY(-6px);
+    }
+    .dest-img-wrap { aspect-ratio: 5/4; overflow: hidden; }
+    .dest-img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-standard); }
+    .dest-card:hover .dest-img { transform: scale(1.05); }
+    .dest-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+    .dest-name { font-family: var(--font-display); font-size: 24px; font-weight: 600; line-height: 1.15; color: var(--fg-1); margin: 0 0 6px; }
+    .dest-meta { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); margin-bottom: 12px; letter-spacing: 0.02em; text-transform: uppercase; }
+    .dest-desc { font-size: 14.5px; color: var(--fg-2); line-height: 1.55; margin: 0 0 18px; flex: 1; }
+    .dest-link { font-size: 13px; color: var(--color-safari-orange); font-weight: 500; display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; border-bottom: 1px solid var(--color-safari-orange); padding-bottom: 2px; }
+    .dest-link::after { content: "→"; transition: transform var(--dur-base) var(--ease-standard); }
+    .dest-link:hover::after { transform: translateX(3px); }
+
+    .tours { background: var(--color-safari-dark); color: #fff; }
+    .tours-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .tour-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-on-dark);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--dur-slow) var(--ease-standard);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .tour-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(212,255,255,0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4), 0 0 30px rgba(152, 216, 170, 0.1);
+    }
+    .tour-img-wrap { aspect-ratio: 16/10; overflow: hidden; position: relative; }
+    .tour-img { width: 100%; height: 100%; object-fit: cover; }
+    .tour-badge { position: absolute; top: 14px; right: 14px; background: var(--color-safari-gold); color: var(--color-safari-dark); font-family: var(--font-mono); font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 4px; letter-spacing: 0.02em; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .tour-body { padding: 26px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .tour-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: #fff; margin: 0; line-height: 1.2; }
+    .tour-desc { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0; flex: 1; }
+    .tour-foot { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--border-on-dark); }
+    .tour-price { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
+    .tour-price strong { font-size: 22px; color: #fff; font-weight: 600; letter-spacing: -0.01em; display: block; margin-top: 4px; font-family: var(--font-display); }
+
+    /* ============ WHY ============ */
+    .why { background: linear-gradient(180deg, var(--color-parchment) 0%, rgba(152, 216, 170, 0.15) 100%); }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .why-cell {
+      background: #fff;
+      padding: 32px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      transition: all var(--dur-base);
+    }
+    .why-cell:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg), var(--shadow-mint);
+    }
+    .why-cell .icon { width: 44px; height: 44px; color: var(--color-safari-orange); margin-bottom: 18px; }
+    .why-cell h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--fg-1); line-height: 1.25; margin: 0 0 10px; }
+    .why-cell p { font-size: 14.5px; color: var(--fg-2); line-height: 1.6; margin: 0; }
+
+    /* ============ TESTIMONIAL ============ */
+    .testi { background: #fff; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); }
+    .testi-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: center; }
+    .testi-portrait {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: url('./img/gorilla-trekking-pic-1.jpg') center/cover no-repeat, var(--color-safari-dark);
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+      color: rgba(255,255,255,0.7);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      border: 1px solid var(--border-hairline);
+      box-shadow: var(--shadow-lg);
+    }
+    .testi blockquote { margin: 0; font-family: var(--font-display); font-style: italic; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.32; font-weight: 400; color: var(--fg-1); letter-spacing: -0.005em; text-wrap: balance; }
+    .testi blockquote::before { content: "\201C"; font-style: normal; color: var(--color-safari-orange); font-size: 1.2em; line-height: 1; display: block; margin-bottom: 8px; }
+    .testi-attribution { margin-top: 32px; padding-left: 18px; border-left: 2px solid var(--color-safari-orange); }
+    .testi-name { font-family: var(--font-body); font-weight: 600; font-size: 15px; color: var(--fg-1); margin: 0; }
+    .testi-meta { font-size: 13px; color: var(--fg-2); margin: 4px 0 0; }
+    .testi-journey { font-family: var(--font-mono); font-size: 12px; color: var(--color-safari-orange); margin-top: 6px; letter-spacing: 0.02em; }
+
+    /* ============ FAQ ============ */
+    .faq { background: linear-gradient(180deg, var(--color-parchment) 0%, rgba(152, 216, 170, 0.10) 100%); }
+    .faq-container { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: all var(--dur-base);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .faq-item:hover { box-shadow: var(--shadow-md); }
+    .faq-question { padding: 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background var(--dur-fast); }
+    .faq-question:hover { background: rgba(152, 216, 170, 0.08); }
+    .faq-question h3 { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--fg-1); margin: 0; }
+    .faq-icon { font-size: 24px; color: var(--color-safari-gold); transition: transform var(--dur-base); font-weight: 300; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-standard); }
+    .faq-answer-content { padding: 0 24px 24px; font-size: 15px; color: var(--fg-2); line-height: 1.7; }
+    .faq-item.active .faq-answer { max-height: 300px; }
+
+    /* ============ CONTACT ============ */
+    .contact { background: var(--color-safari-dark); color: #fff; padding: 104px 0; }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
+    .contact-left .eyebrow { margin-bottom: 14px; }
+    .contact-left h2 { font-family: var(--font-display); font-size: clamp(32px, 3.6vw, 48px); line-height: 1.12; font-weight: 600; margin: 0 0 18px; letter-spacing: -0.01em; text-wrap: balance; }
+    .contact-left p { color: rgba(255,255,255,0.72); font-size: 16px; line-height: 1.65; margin: 0 0 36px; max-width: 42ch; }
+    .contact-phone-card { display: block; background: rgba(212,203,55,0.06); border: 1px solid rgba(212,175,55,0.22); border-radius: var(--radius-md); padding: 24px 26px; text-decoration: none; color: #fff; transition: all var(--dur-base); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .contact-phone-card:hover { background: rgba(212,175,55,0.12); border-color: var(--color-safari-gold); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15); transform: translateY(-2px); }
+    .contact-phone-card .lbl { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-safari-gold-light); }
+    .contact-phone-card .num { font-family: var(--font-display); font-weight: 600; font-size: 28px; letter-spacing: -0.005em; color: #fff; margin-top: 8px; display: flex; align-items: center; gap: 14px; }
+    .contact-phone-card .num svg { width: 24px; height: 24px; color: var(--color-safari-gold); flex: none; }
+    .contact-phone-card .hint { margin-top: 8px; font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.55); }
+    .contact-extra { margin-top: 24px; font-family: var(--font-body); font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.6); }
+    .contact-extra a { color: var(--color-safari-gold); text-decoration: none; border-bottom: 1px solid rgba(212,175,55,0.4); }
+    .contact-extra a:hover { border-color: var(--color-safari-gold); }
+
+    .contact-form {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-on-dark);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 16px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+    .contact-form .field-full { grid-column: span 2; }
+    .contact-form label { display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .contact-form label .req { color: var(--color-safari-gold); }
+    .contact-form input, .contact-form textarea { background: rgba(0,0,0,0.18); border: 1px solid var(--border-on-dark); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body); font-size: 15px; padding: 13px 14px; outline: none; transition: border-color var(--dur-fast), background var(--dur-fast); }
+    .contact-form input:focus, .contact-form textarea:focus { border-color: var(--color-safari-gold); background: rgba(0,0,0,0.28); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.32); }
+    .contact-form textarea { min-height: 130px; resize: vertical; }
+    .contact-foot { grid-column: span 2; display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+    .contact-foot .privacy { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .contact-form button { background: var(--color-safari-gold); color: var(--color-safari-dark); border: 0; font-family: var(--font-body); font-weight: 600; font-size: 15px; padding: 14px 32px; border-radius: var(--radius-pill); cursor: pointer; transition: all var(--dur-base); display: inline-flex; align-items: center; gap: 10px; }
+    .contact-form button:hover { background: var(--color-safari-gold-light); box-shadow: var(--shadow-warm); transform: translateY(-2px); }
+
+    /* ============ PARTNERS ============ */
+    .partners { background: var(--color-parchment); padding: 64px 0; border-top: 1px solid var(--border-hairline); }
+    .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: center; justify-items: center; }
+    .partner-item {
+      background: #fff;
+      padding: 24px 32px;
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transition: all var(--dur-base);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .partner-item:hover { border-color: var(--color-safari-gold); box-shadow: var(--shadow-md), var(--shadow-mint); transform: translateY(-3px); }
+    .partner-item a { color: var(--fg-2); font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .partner-item:hover a { color: var(--color-safari-gold); }
+
+    /* ============ FOOTER ============ */
+    footer.site-footer { background: var(--color-safari-darker); color: rgba(255,255,255,0.7); padding: 80px 0 28px; border-top: 1px solid var(--border-on-dark); }
+    .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+    .foot-brand .logo { margin-bottom: 18px; color: #fff; }
+    .foot-tagline { font-family: var(--font-display); font-style: italic; font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.4; margin: 0 0 22px; max-width: 280px; }
+    .foot-addr { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.55); font-style: normal; }
+    .foot-addr a { color: var(--color-safari-gold); }
+    .foot-col h4 { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-safari-gold); margin: 0 0 18px; }
+    .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .foot-col a { color: rgba(255,255,255,0.7); font-size: 14px; transition: color var(--dur-fast); }
+    .foot-col a:hover { color: var(--color-safari-gold-light); }
+    .foot-social { display: flex; gap: 12px; margin-top: 24px; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all var(--dur-base); }
+    .foot-social a:hover { border-color: var(--color-safari-gold); color: var(--color-safari-gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+    .foot-bottom { padding-top: 24px; border-top: 1px solid var(--border-on-dark); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.4); font-family: var(--font-mono); letter-spacing: 0.02em; }
+
+    /* Floating Elements */
+    .floating-whatsapp { position: fixed; right: 32px; bottom: 32px; z-index: 999; }
+    .whatsapp-btn { width: 64px; height: 64px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(37,211,102,0.4); border: 3px solid #fff; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+
+    .floating-social { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 998; display: flex; flex-direction: column; gap: 8px; background: var(--color-safari-dark); padding: 12px 8px; border-radius: 0 8px 8px 0; border: 1px solid var(--border-on-dark); border-left: none; box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-safari-gold); font-size: 1.1rem; text-decoration: none; transition: all 0.3s; border-radius: 50%; }
+    .social-icon:hover { background: var(--color-safari-gold); color: var(--color-safari-dark); transform: translateX(4px); }
+
+    /* =====================================================
+   PREMIUM SAFARI HAMBURGER MENU
+====================================================== */
+
+
+    /* -----------------------------------------------------
+       HAMBURGER BUTTON
+    ------------------------------------------------------ */
+
+    .safari-menu-toggle {
+
+      position: fixed;
+
+      top: 20px;
+      right: 20px;
+
+      width: 52px;
+      height: 52px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: #0b3d2e;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      gap: 5px;
+
+      cursor: pointer;
+
+      z-index: 100001;
+
+      box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .safari-menu-toggle:hover {
+
+      transform: scale(1.08);
+
+      background: #145c43;
+
+    }
+
+
+    .safari-menu-toggle span {
+
+      display: block;
+
+      width: 23px;
+      height: 2px;
+
+      background: #ffffff;
+
+      border-radius: 10px;
+
+      transition:
+        transform 0.35s ease,
+        opacity 0.25s ease,
+        width 0.35s ease;
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER → X ANIMATION
+    ------------------------------------------------------ */
+
+    .safari-menu-toggle.active span:nth-child(1) {
+
+      transform:
+        translateY(7px)
+        rotate(45deg);
+
+    }
+
+
+    .safari-menu-toggle.active span:nth-child(2) {
+
+      opacity: 0;
+
+      width: 0;
+
+    }
+
+
+    .safari-menu-toggle.active span:nth-child(3) {
+
+      transform:
+        translateY(-7px)
+        rotate(-45deg);
+
+    }
+
+
+    /* -----------------------------------------------------
+       DARK OVERLAY
+    ------------------------------------------------------ */
+
+    .safari-menu-overlay {
+
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,0.60);
+
+      backdrop-filter: blur(3px);
+
+      -webkit-backdrop-filter: blur(3px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      z-index: 99998;
+
+      transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    }
+
+
+    .safari-menu-overlay.active {
+
+      opacity: 1;
+
+      visibility: visible;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU
+    ------------------------------------------------------ */
+
+    .safari-mobile-menu {
+
+      position: fixed;
+
+      top: 0;
+
+      right: 0;
+
+      width: min(390px, 88%);
+
+      height: 100vh;
+
+      height: 100dvh;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #073526,
+          #0c4634 60%,
+          #082c20
+        );
+
+      z-index: 100000;
+
+      transform: translateX(105%);
+
+      transition:
+        transform 0.45s cubic-bezier(.77,0,.18,1);
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow-y: auto;
+
+      box-shadow:
+        -15px 0 45px rgba(0,0,0,0.25);
+
+    }
+
+
+    .safari-mobile-menu.active {
+
+      transform: translateX(0);
+
+    }
+
+
+    /* -----------------------------------------------------
+       MENU HEADER
+    ------------------------------------------------------ */
+
+    .safari-menu-header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 25px 25px 20px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.12);
+
+    }
+
+
+    .safari-menu-brand {
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .safari-menu-brand span {
+
+      color: #ffffff;
+
+      font-size: 22px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.5px;
+
+    }
+
+
+    .safari-menu-brand small {
+
+      color: #d4a853;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      margin-top: 3px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       CLOSE BUTTON
+    ------------------------------------------------------ */
+
+    .safari-menu-close {
+
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid
+      rgba(255,255,255,0.25);
+
+      background:
+        rgba(255,255,255,0.08);
+
+      color: #ffffff;
+
+      border-radius: 50%;
+
+      font-size: 30px;
+
+      line-height: 1;
+
+      cursor: pointer;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+
+    }
+
+
+    .safari-menu-close:hover {
+
+      transform: rotate(90deg);
+
+      background: #d4a853;
+
+      color: #082c20;
+
+    }
+
+
+    /* -----------------------------------------------------
+       NAVIGATION LINKS
+    ------------------------------------------------------ */
+
+    .safari-menu-links {
+
+      display: flex;
+
+      flex-direction: column;
+
+      padding: 15px 25px;
+
+      flex: 1;
+
+    }
+
+
+    .safari-menu-links a {
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 18px 5px;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-size: 18px;
+
+      font-weight: 500;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.10);
+
+      transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+
+    }
+
+
+    .safari-menu-links a:hover {
+
+      color: #d4a853;
+
+      padding-left: 12px;
+
+    }
+
+
+    .safari-menu-links a small {
+
+      color:
+        rgba(255,255,255,0.35);
+
+      font-size: 11px;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    .safari-menu-links .safari-menu-contact {
+
+      color: #d4a853;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MENU FOOTER
+    ------------------------------------------------------ */
+
+    .safari-menu-footer {
+
+      padding: 25px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.12);
+
+    }
+
+
+    .safari-menu-footer p {
+
+      color:
+        rgba(255,255,255,0.65);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .safari-menu-cta {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 100%;
+
+      padding: 14px 20px;
+
+      background: #d4a853;
+
+      color: #102e22;
+
+      text-decoration: none;
+
+      border-radius: 30px;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+    }
+
+
+    .safari-menu-cta:hover {
+
+      transform: translateY(-2px);
+
+      background: #e6bd6a;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE DEVICES
+    ------------------------------------------------------ */
+
+    @media (max-width: 991px) {
+
+      .safari-menu-toggle {
+
+        display: flex;
+
+      }
+
+    }
+
+
+    /* -----------------------------------------------------
+       SMALL PHONES
+    ------------------------------------------------------ */
+
+    @media (max-width: 480px) {
+
+      .safari-menu-toggle {
+
+        top: 14px;
+
+        right: 14px;
+
+        width: 48px;
+
+        height: 48px;
+
+      }
+
+
+      .safari-mobile-menu {
+
+        width: 92%;
+
+      }
+
+
+      .safari-menu-links a {
+
+        font-size: 17px;
+
+        padding: 16px 5px;
+
+      }
+
+    }
+
+
+    /* -----------------------------------------------------
+       PREVENT BACKGROUND SCROLLING
+    ------------------------------------------------------ */
+
+    body.safari-menu-open {
+
+      overflow: hidden;
+
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 960px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; padding: 80px 0 96px; }
+      .hero-art { aspect-ratio: 4/3; }
+      .dest-grid, .tours-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .testi-inner { grid-template-columns: 1fr; gap: 40px; }
+      .testi-portrait { max-width: 320px; aspect-ratio: 1/1; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .trust-inner { justify-content: flex-start; }
+      .trust-sep { display: none; }
+      .booking-form-compact { grid-template-columns: 1fr 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .floating-social { display: none; }
+    }
+    @media (max-width: 560px) {
+      .dest-grid, .tours-grid, .why-grid { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .contact-form { grid-template-columns: 1fr; padding: 24px; }
+      .contact-form .field-full { grid-column: span 1; }
+      .contact-foot { grid-column: span 1; flex-direction: column; align-items: stretch; }
+      .contact-form button { width: 100%; justify-content: center; }
+      .foot-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .booking-form-compact { grid-template-columns: 1fr; }
+    }
+
+    .mobile-menu { display: none; background: var(--color-safari-darker); padding: 18px var(--container-pad) 24px; border-top: 1px solid var(--border-on-dark); }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; color: rgba(255,255,255,0.85); padding: 12px 0; font-size: 15px; border-bottom: 1px solid var(--border-on-dark); }
+    .mobile-menu a.active { color: var(--color-safari-gold-light); }
+    .mobile-menu .btn { margin-top: 14px; width: 100%; }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+      <span class="logo-word">
+        <span class="lw-1">BEST SAFARI</span>
+        <span class="lw-2">Adventures East-Africa</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="safari-packages.html">Safari Packages</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav-cta">wildlife conservation</a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('mm').classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="safari-packages.html">Safari Packages</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  </div>
+</nav>
+
+<!-- =====================================================
+     PREMIUM SAFARI MOBILE HAMBURGER MENU
+====================================================== -->
+
+<!-- Hamburger Button -->
+<button
+  class="safari-menu-toggle"
+  id="safariMenuToggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="safariMobileMenu">
+
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
+<!-- Dark Overlay -->
+<div
+  class="safari-menu-overlay"
+  id="safariMenuOverlay">
+</div>
+
+
+<!-- Mobile Navigation -->
+<nav
+  class="safari-mobile-menu"
+  id="safariMobileMenu"
+  aria-hidden="true">
+
+  <!-- Menu Header -->
+  <div class="safari-menu-header">
+
+    <div class="safari-menu-brand">
+      <img src="./img/company-logo.png" alt="Best Safari Adventures Logo" />
+    </div>
+  </div>
+  <!-- Navigation Links -->
+  <div class="safari-menu-links">
+    <a href="index.html">
+      <span>Home</span>
+      <small>01</small>
+    </a>
+
+    <a href="about.html">
+      <span>About Us</span>
+      <small>02</small>
+    </a>
+
+    <a href="safari-packages.html">
+      <span>Safari Packages</span>
+      <small>03</small>
+    </a>
+
+    <a href="gorilla-trekking.html">
+      <span>Gorilla Trekking</span>
+      <small>04</small>
+    </a>
+
+    <a href="contact.html" class="safari-menu-contact">
+      <span>Contact Us</span>
+      <small>05</small>
+    </a>
+  </div>
+  <!-- Menu Footer -->
+  <div class="safari-menu-footer">
+
+    <p>Adventure . Learn . Love . Nature<br>
+      Experience Unforgettable East-Africa Safaris.</p>
+    <a href="contact.html"
+       class="safari-menu-cta">
+      Plan Your Safari
+    </a>
+  </div>
+</nav>
+
+<!-- Floating Social Media (Left Side) -->
+<div class="floating-social">
+  <a href="https://www.youtube.com/@bestsafariadventureseastafrica" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+  <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+  <a href="https://x.com" target="_blank" class="social-icon" title="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+  <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8" cy="8" r="1"/>
+    <path d="M8 11V17"/>
+    <path d="M12 17V13.8C12 12.2 13 11 14.6 11C16.2 11 17 12.1 17 13.8V17"/>
+    <path d="M12 13V11"/>
+  </svg></a>
+  <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" target="_blank" class="social-icon" title="Tiktok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+    <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+  </svg></a>
+  <a href="https://snapchat.com" target="_blank" class="social-icon" title="Snapchat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3
+             C10 3 8.5 4.6 8.5 6.8
+             V8.2
+             C8.5 9.5 7.7 10.6 6.6 11
+             C7.3 11.8 8.1 12.2 9 12.3
+             C9.2 14.5 10.4 16 12 16
+             C13.6 16 14.8 14.5 15 12.3
+             C15.9 12.2 16.7 11.8 17.4 11
+             C16.3 10.6 15.5 9.5 15.5 8.2
+             V6.8
+             C15.5 4.6 14 3 12 3Z"/>
+    <path d="M8.5 16.5C9.8 17.2 10.9 17.6 12 17.6C13.1 17.6 14.2 17.2 15.5 16.5"/>
+  </svg></a>
+  <a href="https://threads.com" target="_blank" class="social-icon" title="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4C8.5 4 6 6.3 6 10C6 13.7 8.5 16 12 16C15 16 17 14.5 17 12C17 9.8 15.2 8.5 12.8 8.5C10.9 8.5 9.5 9.6 9.5 11.2C9.5 12.8 10.8 14 12.8 14C15.5 14 18 12.5 18 9.2C18 5.8 15.5 4 12 4Z"/>
+  </svg></a>
+  <a href="https://telegram.com" target="_blank" class="social-icon" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3L3 11L10 13L12 20L21 3Z"/>
+    <path d="M10 13L21 3"/>
+  </svg></a>
+
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-eyebrow">Best Safari Adventures East-Africa</div>
+      <h1>Authentic, Luxury <em>Safari</em> Experiences.</h1>
+      <p class="lead">From gorilla trekking and bird watching to wildlife adventures across Uganda, Kenya, Tanzania & Rwanda. Explore with trusted local experts.</p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary btn-lg on-dark">Begin your journey</a>
+        <a href="safari-packages.html" class="btn btn-secondary btn-lg on-dark">View some itineraries</a>
+      </div>
+    </div>
+    <div class="hero-art" role="img" aria-label="Luxury Safari Video">
+      <video autoplay muted loop playsinline class="hero-art-video">
+        <source src="./img/hero-video-13.mp4" type="video/mp4">
+      </video>
+      <span class="hero-art-label">Best Safari Adventures East-Africa</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust" style="padding:0;">
+  <div class="container trust-inner" style="padding-top:24px;padding-bottom:24px;">
+    <div class="trust-item"><span class="trust-num">15+</span><span>Years of Excellence</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span class="trust-num">UTA</span><span>Member</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span class="trust-num">UWA</span><span>Regulated</span></div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item"><span>24/7 - Dedicated Support</span></div>
+  </div>
+</section>
+
+<!-- ============ QUICK BOOKING ============ -->
+<section class="quick-booking" id="booking">
+  <div class="container">
+    <form id="quickBookingForm" class="booking-form-compact">
+      <label>Destination <select required><option value="">Select...</option><option value="uganda">Uganda</option><option value="kenya">Kenya</option><option value="tanzania">Tanzania</option><option value="rwanda">Rwanda</option></select></label>
+      <label>Travel Date <input type="date" required></label>
+      <label>Travelers <input type="number" min="1" value="2" required></label>
+      <label>Contact Info <input type="text" placeholder="WhatsApp / Email" required></label>
+      <button type="submit">Get Quick Quote</button>
+    </form>
+    <div class="booking-info-compact">Regulated by the Uganda Wildlife Authority & Member of the Uganda Tourism Association.</div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:64px;">
+      <div class="left">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 class="section-title">Why Travel with Best Safari Adventures?</h2>
+        <p class="section-sub">Because with us you're assured of professional local guides, personalized, and unforgettable wildlife tourism experiences.</p>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-cell">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 36 L24 8 L40 36 Z"/><path d="M14 30 L24 14 L34 30"/><circle cx="24" cy="24" r="2.5" fill="currentColor"/></svg>
+        <h3>Competitive Pricing</h3>
+        <p>Flexible options to suit different budgets without compromising on quality or safety.</p>
+      </div>
+      <div class="why-cell">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><path d="M24 10 V38 M10 24 H38"/></svg>
+        <h3>Fast Response</h3>
+        <p>Every inquiry is received with pleasure, and a detailed response is sent within hours.</p>
+      </div>
+      <div class="why-cell">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="20" r="5"/><circle cx="32" cy="20" r="5"/><path d="M8 38 c0-5 4-9 8-9 s8 4 8 9"/><path d="M24 38 c0-5 4-9 8-9 s8 4 8 9"/></svg>
+        <h3>Tailor-made Itineraries</h3>
+        <p>Our clients are given the chance to customize their own itineraries based on their desires.</p>
+      </div>
+      <div class="why-cell">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 c-7 7 -7 18 0 26 c7 -8 7 -19 0 -26 Z"/><path d="M16 30 c4 -2 8 -2 16 -2"/><path d="M12 38 h24"/></svg>
+        <h3>Decades of Experience</h3>
+        <p>We have spent over a decade in the tourism industry, ensuring excellent results and reputation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFARI PACKAGES ============ -->
+<section class="dest" id="packages">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">Our Safari Packages</span>
+        <h2 class="section-title">Curated Safari Experiences</h2>
+        <p class="section-sub">Explore our most popular safari packages designed to give you the absolute best of East Africa.</p>
+      </div>
+      <a href="safari-packages.html" class="section-link">All packages →</a>
+    </div>
+
+    <div class="dest-grid">
+      <article class="dest-card">
+        <div class="dest-img-wrap">
+          <img src="./img/ter-shoebill-2.jpg" alt="10-Day Uganda Safari" class="dest-img">
+        </div>
+        <div class="dest-body">
+          <h3 class="dest-name">10-Day Wildlife & Birding Safari</h3>
+          <div class="dest-meta">From $2,850 per Person</div>
+          <p class="dest-desc">Gorilla trekking in Bwindi Forest, game drives in Queen Elizabeth Park, and exclusive shoebill tracking.</p>
+          <a href="contact.html" class="dest-link">Request Itinerary</a>
+        </div>
+      </article>
+
+      <article class="dest-card">
+        <div class="dest-img-wrap">
+          <img src="./img/murchi-2.jpg" alt="5-Day Murchison Falls" class="dest-img">
+        </div>
+        <div class="dest-body">
+          <h3 class="dest-name">5-Day Murchison Falls Safari</h3>
+          <div class="dest-meta">From $850 per Person</div>
+          <p class="dest-desc">Big game viewing, a scenic Nile boat cruise, and a breathtaking hike to the top of the falls.</p>
+          <a href="contact.html" class="dest-link">Request Itinerary</a>
+        </div>
+      </article>
+
+      <article class="dest-card">
+        <div class="dest-img-wrap">
+          <img src="./img/gorilla-2.JPG" alt="3-Day Gorilla Trekking" class="dest-img">
+        </div>
+        <div class="dest-body">
+          <h3 class="dest-name">3-Day Gorilla Trekking Safari</h3>
+          <div class="dest-meta">From $1,250 per Person</div>
+          <p class="dest-desc">Gorilla permit included, guided trek through the impenetrable forest, and scenic drives.</p>
+          <a href="contact.html" class="dest-link">Request Itinerary</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTINATIONS ============ -->
+<section class="tours">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow on-dark">Most Visited Destinations</span>
+        <h2 class="section-title">Discover Uganda's Natural Wonders</h2>
+        <p class="section-sub">From thundering waterfalls to ancient forests, discover the most spectacular wildlife destinations.</p>
+      </div>
+      <a href="destinations.html" class="section-link" style="color:var(--color-safari-gold);border-color:var(--color-safari-gold);">All destinations →</a>
+    </div>
+
+    <div class="tours-grid">
+      <article class="tour-card">
+        <div class="tour-img-wrap">
+          <img src="./img/ter-murchison-boat-1.jpg" alt="Murchison Falls" class="tour-img">
+          <span class="tour-badge">Popular</span>
+        </div>
+        <div class="tour-body">
+          <h3 class="tour-name">Murchison Falls National Park</h3>
+          <p class="tour-desc">2nd heaviest waterfalls in the world. Uganda's largest park, featuring the big 5, bird watching, rhino tracking, and boat cruises.</p>
+          <div class="tour-foot">
+            <a href="murchison-falls.html" class="btn btn-secondary on-dark">Learn More</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <div class="tour-img-wrap">
+          <img src="./img/gorilla-trekking-pic-1.jpg" alt="Bwindi Forest" class="tour-img">
+        </div>
+        <div class="tour-body">
+          <h3 class="tour-name">Bwindi Impenetrable Forest</h3>
+          <p class="tour-desc">An ancient forest harbouring most of the world's Silverback mountain gorillas. Premier gorilla trekking and bird watching.</p>
+          <div class="tour-foot">
+            <a href="bwindi.html" class="btn btn-secondary on-dark">Learn More</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <div class="tour-img-wrap">
+          <img src="./img/ter-shoebill-in-swamp.jpg" alt="Mabamba Swamp" class="tour-img">
+        </div>
+        <div class="tour-body">
+          <h3 class="tour-name">Mabamba Swamp</h3>
+          <p class="tour-desc">Home to the rare Shoebill bird. Tourists track this gentle, prehistoric-looking bird with expert local guides in the wetlands.</p>
+          <div class="tour-foot">
+            <a href="shoebill.html" class="btn btn-secondary on-dark">Learn More</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="why" style="background: linear-gradient(180deg, rgba(152, 216, 170, 0.10) 0%, var(--color-parchment) 100%);">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:64px;">
+      <div class="left">
+        <span class="eyebrow">What You Can Experience</span>
+        <h2 class="section-title">Unforgettable Activities</h2>
+        <p class="section-sub">With Best Safari Adventures East-Africa, your itinerary is packed with diverse, thrilling activities.</p>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-cell">
+        <h3>⦁ Gorilla Trekking</h3>
+        <p>In Bwindi Impenetrable Forest Park, Mgahinga Gorilla National Park and in Rwanda.</p>
+      </div>
+      <div class="why-cell">
+        <h3>⦁ Chimpanzee Tracking</h3>
+        <p>In Kibale Forest Park and Queen Elizabeth National Park from Uganda.</p>
+      </div>
+      <div class="why-cell">
+        <h3>⦁ Photography</h3>
+        <p>In Murchison Falls, Queen Elizabeth, Serengeti, Masai mara, Amboseli National Parks.</p>
+      </div>
+      <div class="why-cell">
+        <h3>⦁ Hiking & Boat Cruises</h3>
+        <p>Mount Kenya, Rwenzori, Sabyinyo, Elgon, Kilimanjaro, and scenic Nile boat cruises.</p>
+      </div>
+      <!-- added services-->
+      <div class="why-cell">
+        <h3>⦁ Football Tourism</h3>
+        <p>Total Energies African Cup Of Nations (AFCON 2027) Execute Hospitality on Match-day and Other-days.</p>
+      </div>
+
+      <div class="why-cell">
+        <h3>⦁ Shoebill Tracking</h3>
+        <p>In Murchison Falls National Parks and Mabamba Swamp this Bird Spiece is found in Uganda only.</p>
+      </div>
+
+      <div class="why-cell">
+        <h3>⦁ The Great Migration</h3>
+        <p>In Serengeti National Parks when Animals migrate in thousands at the same time.</p>
+      </div>
+
+      <div class="why-cell">
+        <h3>⦁ Cultural Engagements</h3>
+        <p>East-Africa alone has over 200 different Cultures from the Masai, Abatwa, Baganda, Bachwezi e.t.c.</p>
+      </div>
+      <!--end of added services -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="testi">
+  <div class="container testi-inner">
+    <div class="testi-portrait" role="img" aria-label="Satisfied traveler in Uganda">
+    </div>
+    <div>
+      <span class="eyebrow">Guest Reviews</span>
+      <blockquote>Our gorilla trekking experience was absolutely phenomenal! The guides were knowledgeable, accommodations luxurious, and every detail perfectly arranged. Best wildlife tourism company in East Africa!</blockquote>
+      <div class="testi-attribution">
+        <p class="testi-name">Sarah Mitchell</p>
+        <p class="testi-meta">United Kingdom</p>
+        <p class="testi-journey">Visited Bwindi Park in 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+    </div>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question"><h3>How do I book my travel arrangements?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Simply fill out our quick booking form or contact us via WhatsApp at +256 757 212707. Our team will respond within hours with a customized itinerary and quote.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Is my personal information safe?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">We use industry-standard encryption and security protocols. Your information is never shared with third parties and is only used to process your safari booking.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><h3>Can I make changes to my booking?</h3><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><div class="faq-answer-content">Yes, we offer flexible booking options. Changes can be made up to 30 days before your safari date. Cancellation policies vary by package.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-left">
+      <span class="eyebrow on-dark">Connect with us</span>
+      <h2>Begin a conversation about your journey.</h2>
+      <p>Whether you are planning a private wildlife expedition, a small group retreat, or a corporate safari — reach us directly. We answer every enquiry within 12 hours.</p>
+
+      <a class="contact-phone-card" href="https://wa.me/256757212707" aria-label="Call or WhatsApp Best Safari Adventures">
+        <span class="lbl">Speak to us · EAT 08:00–19:00</span>
+        <span class="num">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/>
+          </svg>
+          +256 757 212707
+        </span>
+        <span class="hint">Click to call — or WhatsApp the same number.</span>
+      </a>
+
+      <div class="contact-extra">
+        Write to us at <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a><br>
+        Office · Makindye Boston, Kampala, Uganda (opposite Boston International school).
+      </div>
+    </div>
+
+    <form class="contact-form" id="ctaForm">
+      <label>Name <span class="req">*</span><input type="text" name="name" required placeholder="Your full name"></label>
+      <label>Email <span class="req">*</span><input type="email" name="email" required placeholder="you@example.com"></label>
+      <label>Phone (WhatsApp) <span class="req">*</span><input type="tel" name="phone" required placeholder="+country number"></label>
+      <label>Country <span class="req">*</span><input type="text" name="country" required placeholder="Your country"></label>
+      <label class="field-full">Safari Package of Interest <select required><option value="">Select a Package</option><option value="gorilla">Gorilla Trekking Safari</option><option value="wildlife">Wildlife Safari</option><option value="luxury">Luxury Safari</option><option value="custom">Custom Itinerary</option></select></label>
+      <label class="field-full">Message <span class="req">*</span><textarea name="message" required placeholder="Tell us about the journey you have in mind — dates, group size, places that call."></textarea></label>
+      <div class="contact-foot">
+        <span class="privacy">Your details stay with us · never shared</span>
+        <button type="submit">
+          Send message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="partners">
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 32px; justify-content: center; text-align: center;">
+      <div class="left">
+        <span class="eyebrow">Trusted Partners</span>
+        <h2 class="section-title" style="font-size: 28px;">Our Accredited Network</h2>
+      </div>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-item"><a href="https://www.safaribookings.com/" target="_blank">SafariBookings</a></div>
+      <div class="partner-item"><a href="https://www.tripadvisor.com/Profile/BESTsafariAdventures?tab=photos" target="_blank">TripAdvisor</a></div>
+      <div class="partner-item"><a href="https://utb.go.ug/" target="_blank">Uganda Tourism Board</a></div>
+      <div class="partner-item"><a href="https://www.ugandawildlife.org/" target="_blank">Uganda Wildlife Authority</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="Best Safari Adventures Home">
+          <span class="logo-word">
+            <span class="lw-1">BEST SAFARI</span>
+            <span class="lw-2">Adventures East-Africa</span>
+          </span>
+        </a>
+        <p class="foot-tagline">Trusted Local Experts <em style="font-style:italic;color:rgba(255,255,255,0.6);">Experience the wild with us.</em></p>
+        <address class="foot-addr">
+          Makindye Boston, Kampala, Uganda<br>
+          (opposite Boston International school)<br>
+          <a href="tel:+256757212707">+256 757 212707</a><br>
+          <a href="mailto:bestsafariadventureseastafrica@gmail.com">bestsafariadventureseastafrica@gmail.com</a>
+        </address>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@bestsafariadventureseastafrica" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9 L16 12 L10 15 Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22 V13 h3 l0.5 -4 H14 V7 c0-1.2.5-2 2-2 h2 V1.5 C17 1.2 15.7 1 14.5 1 c-3 0-5 1.8-5 5 v3 H6 v4 h3.5 V22"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 3H21l-7.4 8.45L22.5 21h-7.1l-5.55-7.05L3.5 21H.1l7.95-9.05L0 3h7.3l5 6.6L17.6 3zm-1.25 16h1.95L7.85 5H5.75l10.6 14z"/></svg></a>
+          <a href="https://www.tiktok.com/@bestsafariadventureseast?lang=en" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4V14.5A3.5 3.5 0 1 1 10.5 11"/>
+            <path d="M14 4C15 6 16.8 7.4 19 7.5"/>
+          </svg></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="safari-packages.html">Safari Packages</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shoebill.html">Shoebill Home Safari</a></li>
+          <li><a href="#">Kampala City Tours</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Gorilla trekking</a></li>
+          <li><a href="#">Bird Watching</a></li>
+          <li><a href="#">Accommodation</a></li>
+          <li><a href="#">Car hire services</a></li>
+          <li><a href="#">Community Engagements</a></li>
+          <li><a href="#">Bike Safaris</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#">Uganda</a></li>
+          <li><a href="#">Kenya</a></li>
+          <li><a href="#">Tanzania</a></li>
+          <li><a href="#">Rwanda</a></li>
+          <li><a href="#">Multi-Country Tours</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Best Safari Adventures East-Africa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp (Right Bottom) -->
+<div class="floating-whatsapp">
+  <a href="https://wa.me/256757212707" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+                                                                                                           alt="WhatsApp"></a>
+
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById('mm') ? document.querySelector('.nav-toggle') : null;
+  if(mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+      document.getElementById('mm').classList.toggle('open');
+    });
+  }
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); });
+      if (!isActive) { faqItem.classList.add('active'); }
+    });
+  });
+
+  // Form Submissions
+  document.getElementById('quickBookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    const message = `*New Safari Inquiry*%0A%0A*Destination:* ${data.get('Destination') || 'Not provided'}%0A*Date:* ${data.get('Travel Date') || 'Not provided'}%0A*Travelers:* ${data.get('Travelers') || 'Not provided'}%0A*Contact:* ${data.get('Contact Info') || 'Not provided'}`;
+    window.open(`https://wa.me/256757212707?text=${encodeURIComponent(message)}`, '_blank');
+    this.reset();
+  });
+
+  document.getElementById('ctaForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    const message = `*New Safari Quote Request*%0A%0A*Name:* ${data.name}%0A*Email:* ${data.email}%0A*Phone:* ${data.phone}%0A*Country:* ${data.country}%0A*Package:* ${data.querySelector('select').value}%0A*Message:* ${data.message}`;
+    window.open(`https://wa.me/256757212707?text=${encodeURIComponent(message)}`, '_blank');
+    alert('Thank you! Redirecting to WhatsApp to complete your request.');
+    this.reset();
+  });
+
+  // Smooth Scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if(document.getElementById('mm')) document.getElementById('mm').classList.remove('open');
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  /* =====================================================
+     PREMIUM SAFARI HAMBURGER MENU
+  ====================================================== */
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle =
+      document.getElementById("safariMenuToggle");
+
+    const mobileMenu =
+      document.getElementById("safariMobileMenu");
+
+    const menuOverlay =
+      document.getElementById("safariMenuOverlay");
+
+    const menuClose =
+      document.getElementById("safariMenuClose");
+
+    const menuLinks =
+      document.querySelectorAll(
+        ".safari-menu-links a, .safari-menu-cta"
+      );
+
+
+    /* -----------------------------------------------
+       OPEN MENU
+    ------------------------------------------------ */
+
+    function openSafariMenu() {
+
+      mobileMenu.classList.add("active");
+
+      menuOverlay.classList.add("active");
+
+      menuToggle.classList.add("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      mobileMenu.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+      document.body.classList.add(
+        "safari-menu-open"
+      );
+
+    }
+
+
+    /* -----------------------------------------------
+       CLOSE MENU
+    ------------------------------------------------ */
+
+    function closeSafariMenu() {
+
+      mobileMenu.classList.remove("active");
+
+      menuOverlay.classList.remove("active");
+
+      menuToggle.classList.remove("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      mobileMenu.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      document.body.classList.remove(
+        "safari-menu-open"
+      );
+
+    }
+
+
+    /* -----------------------------------------------
+       TOGGLE MENU
+    ------------------------------------------------ */
+
+    menuToggle.addEventListener(
+      "click",
+      function () {
+
+        if (
+          mobileMenu.classList.contains(
+            "active"
+          )
+        ) {
+
+          closeSafariMenu();
+
+        } else {
+
+          openSafariMenu();
+
+        }
+
+      }
+    );
+
+
+    /* -----------------------------------------------
+       CLOSE BUTTON
+    ------------------------------------------------ */
+
+    menuClose.addEventListener(
+      "click",
+      closeSafariMenu
+    );
+
+
+    /* -----------------------------------------------
+       CLICK OUTSIDE MENU
+    ------------------------------------------------ */
+
+    menuOverlay.addEventListener(
+      "click",
+      closeSafariMenu
+    );
+
+
+    /* -----------------------------------------------
+       CLOSE AFTER CLICKING LINK
+    ------------------------------------------------ */
+
+    menuLinks.forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          closeSafariMenu();
+
+        }
+      );
+
+    });
+
+
+    /* -----------------------------------------------
+       ESCAPE KEY
+    ------------------------------------------------ */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape" &&
+          mobileMenu.classList.contains(
+            "active"
+          )
+        ) {
+
+          closeSafariMenu();
+
+        }
+
+      }
+    );
+
+
+    /* -----------------------------------------------
+       RESET IF SCREEN BECOMES DESKTOP
+    ------------------------------------------------ */
+
+    window.addEventListener(
+      "resize",
+      function () {
+
+        if (window.innerWidth > 991) {
+
+          closeSafariMenu();
+
+        }
+
+      }
+    );
+
+  });
+</script>
+
+</body>
+</html>
