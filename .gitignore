@@ -8,3 +8,4 @@ dist
 node_modules/
 .env
 Thumbs.db
+.idea/
